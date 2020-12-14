@@ -1,0 +1,854 @@
+11:09:52 - Function:getAllMaps - Param: nil
+11:09:52 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["isBoss"] = false,["playerName"] = Klingni,["team"] = lobby,["player"] = 1,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,} ,} 
+11:09:55 - Function:[0]Klingni - playerSpawned - Param: { ["heading"] = 0,["x"] = -764.7618,["skipFade"] = false,["z"] = 67.4746,["y"] = 153.4494,["model"] = a_m_y_hipster_02,} 
+11:11:12 - Function:getAllMaps - Param: nil
+11:11:12 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["isBoss"] = false,["playerName"] = Klingni,["team"] = lobby,["player"] = 1,["coord"] = { ["z"] = 67.474510192871,["y"] = 155.28645324707,["x"] = -765.33563232422,} ,} ,[2] = { ["isBoss"] = false,["playerName"] = Schleppi,["team"] = lobby,["player"] = 2,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,} ,} 
+11:11:12 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["isBoss"] = false,["playerName"] = Klingni,["team"] = lobby,["player"] = 1,["coord"] = { ["z"] = 67.474510192871,["y"] = 155.28645324707,["x"] = -765.33563232422,} ,} ,[2] = { ["isBoss"] = false,["playerName"] = Schleppi,["team"] = lobby,["player"] = 2,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,} ,} 
+11:11:14 - Function:[1]Schleppi - playerSpawned - Param: { ["model"] = a_m_y_hipster_02,["x"] = -764.7618,["skipFade"] = false,["z"] = 67.4746,["y"] = 153.4494,["heading"] = 0,} 
+11:11:38 - Function:[1]Schleppi - playerSpawned - Param: { ["model"] = 349505262,["x"] = -764.7617,["z"] = 67.4747,["y"] = 153.4495,["idx"] = 1,["heading"] = 0,} 
+11:11:42 - Function:getAllMaps - Param: nil
+11:11:46 - Function:getAllMaps - Param: nil
+11:11:49 - Function:getAllMaps - Param: nil
+11:12:20 - Function:CNC:startRound - Param: 18
+11:12:20 - Function:CNC:startRound - Param: true
+11:12:20 - Function:startCNCRound - Param: 18
+11:12:20 - Function:getMap - Param: 18
+11:12:21 - Function:[0]Klingni - CNC:cleanAll - Param: nil
+11:12:21 - Function:[1]Schleppi - CNC:cleanAll - Param: nil
+11:12:23 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["isBoss"] = true,["playerName"] = Schleppi,["team"] = crook,["player"] = 2,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45190429688,["x"] = -764.76306152344,} ,} ,[2] = { ["isBoss"] = false,["playerName"] = Klingni,["team"] = cop,["player"] = 1,["coord"] = { ["z"] = 67.47412109375,["y"] = 147.37281799316,["x"] = -765.46435546875,} ,} ,} 
+11:12:23 - Function:[0]Klingni - CNC:StartRound - Param: nil
+11:12:23 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["isBoss"] = true,["playerName"] = Schleppi,["team"] = crook,["player"] = 2,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45190429688,["x"] = -764.76306152344,} ,} ,[2] = { ["isBoss"] = false,["playerName"] = Klingni,["team"] = cop,["player"] = 1,["coord"] = { ["z"] = 67.47412109375,["y"] = 147.37281799316,["x"] = -765.46435546875,} ,} ,} 
+11:12:23 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["isBoss"] = true,["playerName"] = Schleppi,["team"] = crook,["player"] = 2,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45190429688,["x"] = -764.76306152344,} ,} ,[2] = { ["isBoss"] = false,["playerName"] = Klingni,["team"] = cop,["player"] = 1,["coord"] = { ["z"] = 67.47412109375,["y"] = 147.37281799316,["x"] = -765.46435546875,} ,} ,} 
+11:12:23 - Function:[1]Schleppi - CNC:StartRound - Param: nil
+11:12:23 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["isBoss"] = true,["playerName"] = Schleppi,["team"] = crook,["player"] = 2,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45190429688,["x"] = -764.76306152344,} ,} ,[2] = { ["isBoss"] = false,["playerName"] = Klingni,["team"] = cop,["player"] = 1,["coord"] = { ["z"] = 67.47412109375,["y"] = 147.37281799316,["x"] = -765.46435546875,} ,} ,} 
+11:12:23 - Function:[1]Schleppi - CNC:eventCreateGetaway - Param: { ["coord"] = { ["z"] = 41.382930755615,["y"] = 3238.0285644531,["x"] = 1770.4864501953,} ,["hash"] = 1549126457,["model"] = BRIOSO,["rot"] = { ["z"] = 165.67411804199,["y"] = 1.6042633056641,["x"] = 1.5054564476013,} ,} 
+11:12:23 - Function:CNC:creatGetaway-NetGeta - Param: 258
+11:12:23 - Function:[0]Klingni - CNC:findGetawayCoord - Param: 258
+11:12:23 - Function:CNC:createSpawner - Param: { } 
+11:12:23 - Function:[1]Schleppi - CNC:findGetawayCoord - Param: 258
+11:12:24 - Function:spawnPlayer - Param: { ["isBoss"] = true,["playerName"] = Schleppi,["team"] = crook,["player"] = 2,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45190429688,["x"] = -764.76306152344,} ,} 
+11:12:24 - Function:getPlayerSettings - Param: boss
+11:12:24 - Function:CNC:createSpawner - Param: { } 
+11:12:54 - Function:getAllMaps - Param: nil
+11:12:54 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["team"] = lobby,["isBoss"] = false,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["playerName"] = Klingni,} ,} 
+11:12:54 - Function:getAllMaps - Param: nil
+11:12:54 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["isBoss"] = false,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["playerName"] = Klingni,["team"] = lobby,} ,} 
+11:12:54 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["team"] = lobby,["isBoss"] = false,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["playerName"] = Klingni,} ,[2] = { ["player"] = 2,["team"] = lobby,["isBoss"] = false,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["playerName"] = Schleppi,} ,} 
+11:12:54 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["isBoss"] = false,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["playerName"] = Klingni,["team"] = lobby,} ,[2] = { ["player"] = 2,["isBoss"] = false,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["playerName"] = Schleppi,["team"] = lobby,} ,} 
+11:12:55 - Function:[0]Klingni - playerSpawned - Param: { ["y"] = 153.4494,["x"] = -764.7618,["z"] = 67.4746,["heading"] = 0,["model"] = a_m_y_hipster_02,["skipFade"] = false,} 
+11:12:55 - Function:[1]Schleppi - playerSpawned - Param: { ["model"] = a_m_y_hipster_02,["x"] = -764.7618,["skipFade"] = false,["y"] = 153.4494,["heading"] = 0,["z"] = 67.4746,} 
+11:16:13 - Function:getAllMaps - Param: nil
+11:16:13 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["isBoss"] = false,["playerName"] = Klingni,["team"] = lobby,["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,} ,} 
+11:16:14 - Function:getAllMaps - Param: nil
+11:16:14 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["isBoss"] = false,["playerName"] = Klingni,["team"] = lobby,["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,} ,[2] = { ["player"] = 2,["isBoss"] = false,["playerName"] = Schleppi,["team"] = lobby,["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,} ,} 
+11:16:14 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["playerName"] = Klingni,["isBoss"] = false,["team"] = lobby,["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,} ,[2] = { ["player"] = 2,["playerName"] = Schleppi,["isBoss"] = false,["team"] = lobby,["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,} ,} 
+11:16:14 - Function:[0]Klingni - playerSpawned - Param: { ["heading"] = 0,["model"] = a_m_y_hipster_02,["x"] = -764.7618,["y"] = 153.4494,["z"] = 67.4746,["skipFade"] = false,} 
+11:16:15 - Function:[1]Schleppi - playerSpawned - Param: { ["heading"] = 0,["model"] = a_m_y_hipster_02,["skipFade"] = false,["y"] = 153.4494,["z"] = 67.4746,["x"] = -764.7618,} 
+11:17:36 - Function:getAllMaps - Param: nil
+11:17:36 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,["isBoss"] = false,["playerName"] = Klingni,["player"] = 1,["team"] = lobby,} ,} 
+11:17:36 - Function:getAllMaps - Param: nil
+11:17:36 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,["isBoss"] = false,["playerName"] = Klingni,["player"] = 1,["team"] = lobby,} ,[2] = { ["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,["isBoss"] = false,["playerName"] = Schleppi,["player"] = 2,["team"] = lobby,} ,} 
+11:17:36 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,["player"] = 1,["playerName"] = Klingni,["isBoss"] = false,["team"] = lobby,} ,[2] = { ["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,["player"] = 2,["playerName"] = Schleppi,["isBoss"] = false,["team"] = lobby,} ,} 
+11:17:37 - Function:[0]Klingni - playerSpawned - Param: { ["x"] = -764.7618,["z"] = 67.4746,["y"] = 153.4494,["skipFade"] = false,["heading"] = 0,["model"] = a_m_y_hipster_02,} 
+11:17:37 - Function:[1]Schleppi - playerSpawned - Param: { ["x"] = -764.7618,["heading"] = 0,["z"] = 67.4746,["model"] = a_m_y_hipster_02,["y"] = 153.4494,["skipFade"] = false,} 
+11:20:33 - Function:getAllMaps - Param: nil
+11:20:33 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["player"] = 1,["playerName"] = Klingni,["isBoss"] = false,} ,} 
+11:20:34 - Function:getAllMaps - Param: nil
+11:20:34 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["isBoss"] = false,["player"] = 1,["playerName"] = Klingni,} ,[2] = { ["team"] = lobby,["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["isBoss"] = false,["player"] = 2,["playerName"] = Schleppi,} ,} 
+11:20:34 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["player"] = 1,["playerName"] = Klingni,["isBoss"] = false,} ,[2] = { ["team"] = lobby,["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["player"] = 2,["playerName"] = Schleppi,["isBoss"] = false,} ,} 
+11:20:34 - Function:[0]Klingni - playerSpawned - Param: { ["heading"] = 0,["x"] = -764.7618,["skipFade"] = false,["z"] = 67.4746,["y"] = 153.4494,["model"] = a_m_y_hipster_02,} 
+11:20:35 - Function:[1]Schleppi - playerSpawned - Param: { ["heading"] = 0,["x"] = -764.7618,["y"] = 153.4494,["z"] = 67.4746,["model"] = a_m_y_hipster_02,["skipFade"] = false,} 
+11:21:51 - Function:getAllMaps - Param: nil
+11:21:51 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["player"] = 1,["isBoss"] = false,["team"] = lobby,} ,} 
+11:21:51 - Function:getAllMaps - Param: nil
+11:21:51 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["player"] = 1,["team"] = lobby,["isBoss"] = false,} ,[2] = { ["playerName"] = Schleppi,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["player"] = 2,["team"] = lobby,["isBoss"] = false,} ,} 
+11:21:51 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["player"] = 1,["isBoss"] = false,["team"] = lobby,} ,[2] = { ["playerName"] = Schleppi,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["player"] = 2,["isBoss"] = false,["team"] = lobby,} ,} 
+11:21:52 - Function:[0]Klingni - playerSpawned - Param: { ["model"] = a_m_y_hipster_02,["x"] = -764.7618,["y"] = 153.4494,["skipFade"] = false,["z"] = 67.4746,["heading"] = 0,} 
+11:21:52 - Function:[1]Schleppi - playerSpawned - Param: { ["model"] = a_m_y_hipster_02,["skipFade"] = false,["y"] = 153.4494,["x"] = -764.7618,["z"] = 67.4746,["heading"] = 0,} 
+11:21:54 - Function:getAllMaps - Param: nil
+11:21:54 - Function:getAllMaps - Param: nil
+11:21:54 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["playerName"] = Klingni,["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,["team"] = lobby,["isBoss"] = false,} ,} 
+11:21:54 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["isBoss"] = false,["playerName"] = Klingni,["team"] = lobby,["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,} ,} 
+11:21:54 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["playerName"] = Klingni,["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,["team"] = lobby,["isBoss"] = false,} ,[2] = { ["player"] = 2,["playerName"] = Schleppi,["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,["team"] = lobby,["isBoss"] = false,} ,} 
+11:21:54 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["isBoss"] = false,["playerName"] = Klingni,["team"] = lobby,["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,} ,[2] = { ["player"] = 2,["isBoss"] = false,["playerName"] = Schleppi,["team"] = lobby,["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,} ,} 
+11:21:55 - Function:[0]Klingni - playerSpawned - Param: { ["z"] = 67.4746,["y"] = 153.4494,["x"] = -764.7618,["skipFade"] = false,["heading"] = 0,["model"] = a_m_y_hipster_02,} 
+11:21:55 - Function:[1]Schleppi - playerSpawned - Param: { ["z"] = 67.4746,["y"] = 153.4494,["x"] = -764.7618,["skipFade"] = false,["heading"] = 0,["model"] = a_m_y_hipster_02,} 
+11:22:02 - Function:getAllMaps - Param: nil
+11:22:02 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["player"] = 1,["playerName"] = Klingni,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["isBoss"] = false,} ,} 
+11:22:02 - Function:getAllMaps - Param: nil
+11:22:02 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["player"] = 1,["playerName"] = Klingni,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["isBoss"] = false,} ,[2] = { ["team"] = lobby,["player"] = 2,["playerName"] = Schleppi,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["isBoss"] = false,} ,} 
+11:22:02 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["player"] = 1,["playerName"] = Klingni,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["isBoss"] = false,} ,[2] = { ["team"] = lobby,["player"] = 2,["playerName"] = Schleppi,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["isBoss"] = false,} ,} 
+11:22:03 - Function:[0]Klingni - playerSpawned - Param: { ["skipFade"] = false,["model"] = a_m_y_hipster_02,["z"] = 67.4746,["heading"] = 0,["y"] = 153.4494,["x"] = -764.7618,} 
+11:22:03 - Function:[1]Schleppi - playerSpawned - Param: { ["skipFade"] = false,["heading"] = 0,["model"] = a_m_y_hipster_02,["z"] = 67.4746,["y"] = 153.4494,["x"] = -764.7618,} 
+11:22:16 - Function:getAllMaps - Param: nil
+11:22:16 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["team"] = lobby,["player"] = 1,["isBoss"] = false,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,} ,} 
+11:22:16 - Function:getAllMaps - Param: nil
+11:22:16 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["team"] = lobby,["player"] = 1,["isBoss"] = false,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,} ,[2] = { ["playerName"] = Schleppi,["team"] = lobby,["player"] = 2,["isBoss"] = false,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,} ,} 
+11:22:16 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["team"] = lobby,["player"] = 1,["isBoss"] = false,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,} ,[2] = { ["playerName"] = Schleppi,["team"] = lobby,["player"] = 2,["isBoss"] = false,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,} ,} 
+11:22:17 - Function:[0]Klingni - playerSpawned - Param: { ["skipFade"] = false,["x"] = -764.7618,["heading"] = 0,["model"] = a_m_y_hipster_02,["y"] = 153.4494,["z"] = 67.4746,} 
+11:22:17 - Function:[1]Schleppi - playerSpawned - Param: { ["y"] = 153.4494,["x"] = -764.7618,["heading"] = 0,["skipFade"] = false,["model"] = a_m_y_hipster_02,["z"] = 67.4746,} 
+11:23:51 - Function:getAllMaps - Param: nil
+11:23:51 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["isBoss"] = false,["player"] = 1,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["team"] = lobby,} ,} 
+11:23:52 - Function:getAllMaps - Param: nil
+11:23:52 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["isBoss"] = false,["player"] = 1,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["team"] = lobby,} ,[2] = { ["playerName"] = Schleppi,["isBoss"] = false,["player"] = 2,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["team"] = lobby,} ,} 
+11:23:52 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["player"] = 1,["isBoss"] = false,["team"] = lobby,} ,[2] = { ["playerName"] = Schleppi,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["player"] = 2,["isBoss"] = false,["team"] = lobby,} ,} 
+11:23:54 - Function:getAllMaps - Param: nil
+11:23:54 - Function:getAllMaps - Param: nil
+11:23:54 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["playerName"] = Klingni,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,["player"] = 1,["isBoss"] = false,} ,} 
+11:23:54 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["playerName"] = Klingni,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,["player"] = 1,["isBoss"] = false,} ,} 
+11:23:54 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["playerName"] = Klingni,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,["player"] = 1,["isBoss"] = false,} ,[2] = { ["team"] = lobby,["playerName"] = Schleppi,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,["player"] = 2,["isBoss"] = false,} ,} 
+11:23:55 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["playerName"] = Klingni,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,["player"] = 1,["isBoss"] = false,} ,[2] = { ["team"] = lobby,["playerName"] = Schleppi,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,["player"] = 2,["isBoss"] = false,} ,} 
+11:24:24 - Function:getAllMaps - Param: nil
+11:24:25 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["player"] = 1,["isBoss"] = false,["team"] = lobby,["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,} ,} 
+11:24:25 - Function:getAllMaps - Param: nil
+11:24:25 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["player"] = 1,["isBoss"] = false,["team"] = lobby,["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,} ,[2] = { ["playerName"] = Schleppi,["player"] = 2,["isBoss"] = false,["team"] = lobby,["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,} ,} 
+11:24:25 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,["isBoss"] = false,["team"] = lobby,["player"] = 1,} ,[2] = { ["playerName"] = Schleppi,["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,["isBoss"] = false,["team"] = lobby,["player"] = 2,} ,} 
+11:24:25 - Function:[0]Klingni - playerSpawned - Param: { ["x"] = -764.7618,["y"] = 153.4494,["heading"] = 0,["model"] = a_m_y_hipster_02,["z"] = 67.4746,["skipFade"] = false,} 
+11:24:26 - Function:[1]Schleppi - playerSpawned - Param: { ["x"] = -764.7618,["y"] = 153.4494,["heading"] = 0,["model"] = a_m_y_hipster_02,["z"] = 67.4746,["skipFade"] = false,} 
+11:24:39 - Function:getAllMaps - Param: nil
+11:24:39 - Function:getAllMaps - Param: nil
+11:24:39 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["playerName"] = Klingni,["isBoss"] = false,["team"] = lobby,} ,} 
+11:24:39 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["playerName"] = Klingni,["isBoss"] = false,["team"] = lobby,} ,} 
+11:24:39 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["playerName"] = Klingni,["isBoss"] = false,["team"] = lobby,} ,[2] = { ["player"] = 2,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["playerName"] = Schleppi,["isBoss"] = false,["team"] = lobby,} ,} 
+11:24:39 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["playerName"] = Klingni,["isBoss"] = false,["team"] = lobby,} ,[2] = { ["player"] = 2,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["playerName"] = Schleppi,["isBoss"] = false,["team"] = lobby,} ,} 
+11:25:34 - Function:getAllMaps - Param: nil
+11:25:34 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["isBoss"] = false,["player"] = 1,["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["playerName"] = Klingni,} ,} 
+11:25:34 - Function:getAllMaps - Param: nil
+11:25:34 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["isBoss"] = false,["player"] = 1,["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["playerName"] = Klingni,} ,} 
+11:25:34 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["isBoss"] = false,["player"] = 1,["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["playerName"] = Klingni,} ,[2] = { ["team"] = lobby,["isBoss"] = false,["player"] = 2,["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["playerName"] = Schleppi,} ,} 
+11:25:34 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["isBoss"] = false,["player"] = 1,["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["playerName"] = Klingni,} ,[2] = { ["team"] = lobby,["isBoss"] = false,["player"] = 2,["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["playerName"] = Schleppi,} ,} 
+11:25:35 - Function:[0]Klingni - playerSpawned - Param: { ["y"] = 153.4494,["x"] = -764.7618,["skipFade"] = false,["heading"] = 0,["z"] = 67.4746,["model"] = a_m_y_hipster_02,} 
+11:25:35 - Function:[1]Schleppi - playerSpawned - Param: { ["y"] = 153.4494,["x"] = -764.7618,["skipFade"] = false,["z"] = 67.4746,["heading"] = 0,["model"] = a_m_y_hipster_02,} 
+11:26:03 - Function:getAllMaps - Param: nil
+11:26:03 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["isBoss"] = false,["team"] = lobby,["playerName"] = Klingni,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["player"] = 1,} ,} 
+11:26:03 - Function:getAllMaps - Param: nil
+11:26:03 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["isBoss"] = false,["team"] = lobby,["playerName"] = Klingni,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["player"] = 1,} ,[2] = { ["isBoss"] = false,["team"] = lobby,["playerName"] = Schleppi,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["player"] = 2,} ,} 
+11:26:03 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["isBoss"] = false,["team"] = lobby,["player"] = 1,["playerName"] = Klingni,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,} ,[2] = { ["isBoss"] = false,["team"] = lobby,["player"] = 2,["playerName"] = Schleppi,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,} ,} 
+11:26:04 - Function:[0]Klingni - playerSpawned - Param: { ["model"] = a_m_y_hipster_02,["z"] = 67.4746,["y"] = 153.4494,["x"] = -764.7618,["skipFade"] = false,["heading"] = 0,} 
+11:26:04 - Function:[1]Schleppi - playerSpawned - Param: { ["model"] = a_m_y_hipster_02,["x"] = -764.7618,["y"] = 153.4494,["skipFade"] = false,["z"] = 67.4746,["heading"] = 0,} 
+11:26:18 - Function:[0]Klingni - playerSpawned - Param: { ["heading"] = 0,["x"] = -764.7618,["skipFade"] = false,["model"] = a_m_y_hipster_02,["z"] = 67.4746,["y"] = 153.4494,} 
+11:26:19 - Function:[1]Schleppi - playerSpawned - Param: { ["x"] = -764.7618,["heading"] = 0,["model"] = a_m_y_hipster_02,["skipFade"] = false,["z"] = 67.4746,["y"] = 153.4494,} 
+11:28:00 - Function:[0]Klingni - playerSpawned - Param: { ["y"] = 153.4494,["skipFade"] = false,["z"] = 67.4746,["x"] = -764.7618,["model"] = a_m_y_hipster_02,["heading"] = 0,} 
+11:28:01 - Function:[1]Schleppi - playerSpawned - Param: { ["model"] = a_m_y_hipster_02,["skipFade"] = false,["z"] = 67.4746,["y"] = 153.4494,["x"] = -764.7618,["heading"] = 0,} 
+11:32:07 - Function:[0]Klingni - playerSpawned - Param: { ["skipFade"] = false,["heading"] = 0,["model"] = a_m_y_hipster_02,["z"] = 67.4746,["y"] = 153.4494,["x"] = -764.7618,} 
+11:32:07 - Function:[1]Schleppi - playerSpawned - Param: { ["model"] = a_m_y_hipster_02,["heading"] = 0,["skipFade"] = false,["z"] = 67.4746,["y"] = 153.4494,["x"] = -764.7618,} 
+11:32:35 - Function:getAllMaps - Param: nil
+11:32:35 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["playerName"] = Klingni,["team"] = lobby,["isBoss"] = false,} ,} 
+11:32:36 - Function:getAllMaps - Param: nil
+11:32:36 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["playerName"] = Klingni,["team"] = lobby,["isBoss"] = false,} ,[2] = { ["player"] = 2,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["playerName"] = Schleppi,["team"] = lobby,["isBoss"] = false,} ,} 
+11:32:36 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["isBoss"] = false,["playerName"] = Klingni,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["player"] = 1,} ,[2] = { ["team"] = lobby,["isBoss"] = false,["playerName"] = Schleppi,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["player"] = 2,} ,} 
+11:32:36 - Function:[0]Klingni - playerSpawned - Param: { ["model"] = a_m_y_hipster_02,["x"] = -764.7618,["y"] = 153.4494,["heading"] = 0,["skipFade"] = false,["z"] = 67.4746,} 
+11:32:37 - Function:[1]Schleppi - playerSpawned - Param: { ["skipFade"] = false,["x"] = -764.7618,["heading"] = 0,["z"] = 67.4746,["model"] = a_m_y_hipster_02,["y"] = 153.4494,} 
+11:32:52 - Function:getAllMaps - Param: nil
+11:32:58 - Function:CNC:startRound - Param: 18
+11:32:58 - Function:CNC:startRound - Param: true
+11:32:58 - Function:startCNCRound - Param: 18
+11:32:58 - Function:getMap - Param: 18
+11:32:58 - Function:[0]Klingni - CNC:cleanAll - Param: nil
+11:32:58 - Function:[1]Schleppi - CNC:cleanAll - Param: nil
+11:33:00 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["player"] = 1,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45069885254,["x"] = -764.7626953125,} ,["playerName"] = Klingni,["team"] = crook,["isBoss"] = true,} ,[2] = { ["player"] = 2,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45153808594,["x"] = -764.76287841797,} ,["playerName"] = Schleppi,["team"] = cop,["isBoss"] = false,} ,} 
+11:33:00 - Function:[0]Klingni - CNC:StartRound - Param: nil
+11:33:00 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["player"] = 1,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45069885254,["x"] = -764.7626953125,} ,["playerName"] = Klingni,["team"] = crook,["isBoss"] = true,} ,[2] = { ["player"] = 2,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45153808594,["x"] = -764.76287841797,} ,["playerName"] = Schleppi,["team"] = cop,["isBoss"] = false,} ,} 
+11:33:00 - Function:CNC:createSpawner - Param: { } 
+11:33:00 - Function:[0]Klingni - CNC:eventCreateGetaway - Param: { ["hash"] = 1549126457,["coord"] = { ["z"] = 41.382930755615,["y"] = 3238.0285644531,["x"] = 1770.4864501953,} ,["rot"] = { ["z"] = 165.67411804199,["y"] = 1.6042633056641,["x"] = 1.5054564476013,} ,["model"] = BRIOSO,} 
+11:33:00 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["team"] = crook,["isBoss"] = true,["playerName"] = Klingni,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45069885254,["x"] = -764.7626953125,} ,["player"] = 1,} ,[2] = { ["team"] = cop,["isBoss"] = false,["playerName"] = Schleppi,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45153808594,["x"] = -764.76287841797,} ,["player"] = 2,} ,} 
+11:33:00 - Function:[1]Schleppi - CNC:StartRound - Param: nil
+11:33:00 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["team"] = crook,["isBoss"] = true,["playerName"] = Klingni,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45069885254,["x"] = -764.7626953125,} ,["player"] = 1,} ,[2] = { ["team"] = cop,["isBoss"] = false,["playerName"] = Schleppi,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45153808594,["x"] = -764.76287841797,} ,["player"] = 2,} ,} 
+11:33:00 - Function:CNC:creatGetaway-NetGeta - Param: 44
+11:33:00 - Function:[0]Klingni - CNC:findGetawayCoord - Param: 44
+11:33:00 - Function:[1]Schleppi - CNC:findGetawayCoord - Param: 44
+11:33:01 - Function:spawnPlayer - Param: { ["player"] = 1,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45069885254,["x"] = -764.7626953125,} ,["playerName"] = Klingni,["team"] = crook,["isBoss"] = true,} 
+11:33:01 - Function:getPlayerSettings - Param: boss
+11:33:01 - Function:CNC:createSpawner - Param: { } 
+11:34:31 - Function:getAllMaps - Param: nil
+11:34:31 - Function:getAllMaps - Param: nil
+11:34:31 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["isBoss"] = false,["player"] = 1,["team"] = lobby,["playerName"] = Klingni,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,} ,} 
+11:34:31 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["player"] = 1,["playerName"] = Klingni,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,["isBoss"] = false,} ,} 
+11:34:31 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["isBoss"] = false,["player"] = 1,["team"] = lobby,["playerName"] = Klingni,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,} ,[2] = { ["isBoss"] = false,["player"] = 2,["team"] = lobby,["playerName"] = Schleppi,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,} ,} 
+11:34:31 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["player"] = 1,["playerName"] = Klingni,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,["isBoss"] = false,} ,[2] = { ["team"] = lobby,["player"] = 2,["playerName"] = Schleppi,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,["isBoss"] = false,} ,} 
+11:34:32 - Function:[0]Klingni - playerSpawned - Param: { ["heading"] = 0,["x"] = -764.7618,["y"] = 153.4494,["z"] = 67.4746,["model"] = a_m_y_hipster_02,["skipFade"] = false,} 
+11:34:32 - Function:[1]Schleppi - playerSpawned - Param: { ["heading"] = 0,["model"] = a_m_y_hipster_02,["y"] = 153.4494,["z"] = 67.4746,["x"] = -764.7618,["skipFade"] = false,} 
+11:34:37 - Function:getAllMaps - Param: nil
+11:34:40 - Function:CNC:startRound - Param: 18
+11:34:40 - Function:CNC:startRound - Param: true
+11:34:40 - Function:startCNCRound - Param: 18
+11:34:40 - Function:getMap - Param: 18
+11:34:40 - Function:[0]Klingni - CNC:cleanAll - Param: nil
+11:34:40 - Function:[1]Schleppi - CNC:cleanAll - Param: nil
+11:34:42 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["isBoss"] = true,["player"] = 2,["team"] = crook,["coord"] = { ["z"] = 67.474555969238,["x"] = -764.76300048828,["y"] = 153.45169067383,} ,["playerName"] = Schleppi,} ,[2] = { ["isBoss"] = false,["player"] = 1,["team"] = cop,["coord"] = { ["z"] = 67.474555969238,["x"] = -764.76275634766,["y"] = 153.45085144043,} ,["playerName"] = Klingni,} ,} 
+11:34:42 - Function:[0]Klingni - CNC:StartRound - Param: nil
+11:34:42 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["isBoss"] = true,["player"] = 2,["team"] = crook,["coord"] = { ["z"] = 67.474555969238,["x"] = -764.76300048828,["y"] = 153.45169067383,} ,["playerName"] = Schleppi,} ,[2] = { ["isBoss"] = false,["player"] = 1,["team"] = cop,["coord"] = { ["z"] = 67.474555969238,["x"] = -764.76275634766,["y"] = 153.45085144043,} ,["playerName"] = Klingni,} ,} 
+11:34:42 - Function:CNC:createSpawner - Param: { } 
+11:34:42 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["team"] = crook,["player"] = 2,["playerName"] = Schleppi,["coord"] = { ["z"] = 67.474555969238,["x"] = -764.76300048828,["y"] = 153.45169067383,} ,["isBoss"] = true,} ,[2] = { ["team"] = cop,["player"] = 1,["playerName"] = Klingni,["coord"] = { ["z"] = 67.474555969238,["x"] = -764.76275634766,["y"] = 153.45085144043,} ,["isBoss"] = false,} ,} 
+11:34:42 - Function:[1]Schleppi - CNC:StartRound - Param: nil
+11:34:42 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["team"] = crook,["player"] = 2,["playerName"] = Schleppi,["coord"] = { ["z"] = 67.474555969238,["x"] = -764.76300048828,["y"] = 153.45169067383,} ,["isBoss"] = true,} ,[2] = { ["team"] = cop,["player"] = 1,["playerName"] = Klingni,["coord"] = { ["z"] = 67.474555969238,["x"] = -764.76275634766,["y"] = 153.45085144043,} ,["isBoss"] = false,} ,} 
+11:34:42 - Function:CNC:createSpawner - Param: { } 
+11:34:42 - Function:[1]Schleppi - CNC:eventCreateGetaway - Param: { ["hash"] = 1549126457,["rot"] = { ["z"] = 165.67411804199,["x"] = 1.5054564476013,["y"] = 1.6042633056641,} ,["coord"] = { ["z"] = 41.382930755615,["x"] = 1770.4864501953,["y"] = 3238.0285644531,} ,["model"] = BRIOSO,} 
+11:34:43 - Function:CNC:creatGetaway-NetGeta - Param: 252
+11:34:43 - Function:[0]Klingni - CNC:findGetawayCoord - Param: 252
+11:34:43 - Function:[1]Schleppi - CNC:findGetawayCoord - Param: 252
+11:34:43 - Function:spawnPlayer - Param: { ["isBoss"] = true,["player"] = 2,["coord"] = { ["z"] = 67.474555969238,["x"] = -764.76300048828,["y"] = 153.45169067383,} ,["playerName"] = Schleppi,["team"] = crook,} 
+11:34:43 - Function:getPlayerSettings - Param: boss
+11:34:43 - Function:spawnPlayer - Param: { ["isBoss"] = false,["player"] = 1,["coord"] = { ["z"] = 67.474555969238,["x"] = -764.76275634766,["y"] = 153.45085144043,} ,["playerName"] = Klingni,["team"] = cop,} 
+11:34:43 - Function:getPlayerSettings - Param: cop
+11:34:43 - Function:[0]Klingni - CNC:setTeam - Param: cop
+11:34:43 - Function:[1]Schleppi - CNC:setTeam - Param: crook
+11:34:44 - Function:[1]Schleppi - CNC:eventCreateVehicles - Param: { [1] = { ["hash"] = -713569950,["rot"] = { ["z"] = 8.3844299316406,["x"] = -1.1992740631104,["y"] = -0.72669321298599,} ,["coord"] = { ["z"] = 41.376796722412,["x"] = 1746.8403320313,["y"] = 3258.9836425781,} ,["model"] = BUS,} ,} 
+11:34:44 - Function:CNC:createVehicle - Param: { [1] = 254,} 
+11:34:45 - Function:[0]Klingni - playerSpawned - Param: { ["heading"] = 0,["x"] = 1752.4354248047,["y"] = 3270.9641113281,["z"] = 41.191539764404,["model"] = S_M_Y_Cop_01,["skipFade"] = false,} 
+11:34:45 - Function:[0]Klingni - FirstSpawn - Param: { ["heading"] = 0,["x"] = 1752.4354248047,["y"] = 3270.9641113281,["z"] = 41.191539764404,["model"] = S_M_Y_Cop_01,["skipFade"] = false,} 
+11:34:45 - Function:[1]Schleppi - playerSpawned - Param: { ["heading"] = 0,["model"] = G_M_M_ArmBoss_01,["y"] = 3268.7297363281,["z"] = 41.21403503418,["x"] = 1740.0858154297,["skipFade"] = false,} 
+11:34:45 - Function:[1]Schleppi - FirstSpawn - Param: { ["heading"] = 0,["model"] = G_M_M_ArmBoss_01,["y"] = 3268.7297363281,["z"] = 41.21403503418,["x"] = 1740.0858154297,["skipFade"] = false,} 
+11:38:52 - Function:getAllMaps - Param: nil
+11:38:52 - Function:getAllMaps - Param: nil
+11:38:52 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["playerName"] = Klingni,["player"] = 1,["isBoss"] = false,["team"] = lobby,} ,} 
+11:38:52 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["playerName"] = Klingni,["player"] = 1,["isBoss"] = false,["team"] = lobby,} ,} 
+11:38:52 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["playerName"] = Klingni,["player"] = 1,["isBoss"] = false,["team"] = lobby,} ,[2] = { ["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["playerName"] = Schleppi,["player"] = 2,["isBoss"] = false,["team"] = lobby,} ,} 
+11:38:52 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["playerName"] = Klingni,["player"] = 1,["isBoss"] = false,["team"] = lobby,} ,[2] = { ["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["playerName"] = Schleppi,["player"] = 2,["isBoss"] = false,["team"] = lobby,} ,} 
+11:38:53 - Function:[0]Klingni - playerSpawned - Param: { ["y"] = 153.4494,["z"] = 67.4746,["heading"] = 0,["x"] = -764.7618,["skipFade"] = false,["model"] = a_m_y_hipster_02,} 
+11:38:53 - Function:[1]Schleppi - playerSpawned - Param: { ["y"] = 153.4494,["z"] = 67.4746,["heading"] = 0,["x"] = -764.7618,["skipFade"] = false,["model"] = a_m_y_hipster_02,} 
+11:39:07 - Function:getAllMaps - Param: nil
+11:39:10 - Function:CNC:startRound - Param: 18
+11:39:10 - Function:CNC:startRound - Param: true
+11:39:10 - Function:startCNCRound - Param: 18
+11:39:10 - Function:getMap - Param: 18
+11:39:11 - Function:[0]Klingni - CNC:cleanAll - Param: nil
+11:39:11 - Function:[1]Schleppi - CNC:cleanAll - Param: nil
+11:39:12 - Function:getAllMaps - Param: nil
+11:39:13 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["coord"] = { ["y"] = 153.45080566406,["z"] = 67.474555969238,["x"] = -764.76281738281,} ,["playerName"] = Klingni,["player"] = 1,["isBoss"] = true,["team"] = crook,} ,[2] = { ["coord"] = { ["y"] = 153.45141601562,["z"] = 67.474555969238,["x"] = -764.76281738281,} ,["playerName"] = Schleppi,["player"] = 2,["isBoss"] = false,["team"] = cop,} ,} 
+11:39:13 - Function:[0]Klingni - CNC:StartRound - Param: nil
+11:39:13 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["coord"] = { ["y"] = 153.45080566406,["z"] = 67.474555969238,["x"] = -764.76281738281,} ,["playerName"] = Klingni,["player"] = 1,["isBoss"] = true,["team"] = crook,} ,[2] = { ["coord"] = { ["y"] = 153.45141601562,["z"] = 67.474555969238,["x"] = -764.76281738281,} ,["playerName"] = Schleppi,["player"] = 2,["isBoss"] = false,["team"] = cop,} ,} 
+11:39:13 - Function:CNC:createSpawner - Param: { } 
+11:39:13 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["coord"] = { ["y"] = 153.45080566406,["z"] = 67.474555969238,["x"] = -764.76281738281,} ,["playerName"] = Klingni,["player"] = 1,["isBoss"] = true,["team"] = crook,} ,[2] = { ["coord"] = { ["y"] = 153.45141601562,["z"] = 67.474555969238,["x"] = -764.76281738281,} ,["playerName"] = Schleppi,["player"] = 2,["isBoss"] = false,["team"] = cop,} ,} 
+11:39:13 - Function:[1]Schleppi - CNC:StartRound - Param: nil
+11:39:13 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["coord"] = { ["y"] = 153.45080566406,["z"] = 67.474555969238,["x"] = -764.76281738281,} ,["playerName"] = Klingni,["player"] = 1,["isBoss"] = true,["team"] = crook,} ,[2] = { ["coord"] = { ["y"] = 153.45141601562,["z"] = 67.474555969238,["x"] = -764.76281738281,} ,["playerName"] = Schleppi,["player"] = 2,["isBoss"] = false,["team"] = cop,} ,} 
+11:39:13 - Function:[0]Klingni - CNC:eventCreateGetaway - Param: { ["rot"] = { ["y"] = 1.6042633056641,["z"] = 165.67411804199,["x"] = 1.5054564476013,} ,["coord"] = { ["y"] = 3238.0285644531,["z"] = 41.382930755615,["x"] = 1770.4864501953,} ,["hash"] = 1549126457,["model"] = BRIOSO,} 
+11:39:13 - Function:CNC:creatGetaway-NetGeta - Param: 12
+11:39:13 - Function:[0]Klingni - CNC:findGetawayCoord - Param: 12
+11:39:13 - Function:[1]Schleppi - CNC:findGetawayCoord - Param: 12
+11:39:14 - Function:spawnPlayer - Param: { ["coord"] = { ["y"] = 153.45080566406,["z"] = 67.474555969238,["x"] = -764.76281738281,} ,["playerName"] = Klingni,["player"] = 1,["isBoss"] = true,["team"] = crook,} 
+11:39:14 - Function:getPlayerSettings - Param: boss
+11:39:14 - Function:spawnPlayer - Param: { ["coord"] = { ["y"] = 153.45141601562,["z"] = 67.474555969238,["x"] = -764.76281738281,} ,["playerName"] = Schleppi,["player"] = 2,["isBoss"] = false,["team"] = cop,} 
+11:39:14 - Function:getPlayerSettings - Param: cop
+11:39:14 - Function:[0]Klingni - CNC:setTeam - Param: crook
+11:39:14 - Function:[1]Schleppi - CNC:setTeam - Param: cop
+11:39:14 - Function:CNC:createSpawner - Param: { } 
+11:39:14 - Function:[0]Klingni - CNC:eventCreateVehicles - Param: { [1] = { ["rot"] = { ["y"] = -0.72669321298599,["z"] = 8.3844299316406,["x"] = -1.1992740631104,} ,["coord"] = { ["y"] = 3258.9836425781,["z"] = 41.376796722412,["x"] = 1746.8403320313,} ,["hash"] = -713569950,["model"] = BUS,} ,} 
+11:39:14 - Function:CNC:createVehicle - Param: { [1] = 245,} 
+11:39:15 - Function:[0]Klingni - playerSpawned - Param: { ["y"] = 3268.7297363281,["z"] = 41.21403503418,["heading"] = 0,["x"] = 1740.0858154297,["skipFade"] = false,["model"] = G_M_M_ArmBoss_01,} 
+11:39:15 - Function:[0]Klingni - FirstSpawn - Param: { ["y"] = 3268.7297363281,["z"] = 41.21403503418,["heading"] = 0,["x"] = 1740.0858154297,["skipFade"] = false,["model"] = G_M_M_ArmBoss_01,} 
+11:39:15 - Function:[1]Schleppi - playerSpawned - Param: { ["y"] = 3270.9641113281,["z"] = 41.191539764404,["heading"] = 0,["x"] = 1752.4354248047,["skipFade"] = false,["model"] = S_M_Y_Cop_01,} 
+11:39:15 - Function:[1]Schleppi - FirstSpawn - Param: { ["y"] = 3270.9641113281,["z"] = 41.191539764404,["heading"] = 0,["x"] = 1752.4354248047,["skipFade"] = false,["model"] = S_M_Y_Cop_01,} 
+11:40:48 - Function:getAllMaps - Param: nil
+11:40:48 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["player"] = 1,["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,["team"] = lobby,["isBoss"] = false,} ,} 
+11:40:48 - Function:getAllMaps - Param: nil
+11:40:48 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["player"] = 1,["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,["team"] = lobby,["isBoss"] = false,} ,} 
+11:40:48 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["player"] = 1,["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,["team"] = lobby,["isBoss"] = false,} ,[2] = { ["playerName"] = Schleppi,["player"] = 2,["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,["team"] = lobby,["isBoss"] = false,} ,} 
+11:40:48 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["player"] = 1,["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,["team"] = lobby,["isBoss"] = false,} ,[2] = { ["playerName"] = Schleppi,["player"] = 2,["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,["team"] = lobby,["isBoss"] = false,} ,} 
+11:40:49 - Function:[0]Klingni - playerSpawned - Param: { ["heading"] = 0,["model"] = a_m_y_hipster_02,["skipFade"] = false,["x"] = -764.7618,["z"] = 67.4746,["y"] = 153.4494,} 
+11:40:49 - Function:[1]Schleppi - playerSpawned - Param: { ["skipFade"] = false,["model"] = a_m_y_hipster_02,["heading"] = 0,["x"] = -764.7618,["z"] = 67.4746,["y"] = 153.4494,} 
+11:40:52 - Function:getAllMaps - Param: nil
+11:40:55 - Function:CNC:startRound - Param: 18
+11:40:55 - Function:CNC:startRound - Param: true
+11:40:55 - Function:startCNCRound - Param: 18
+11:40:55 - Function:getMap - Param: 18
+11:40:55 - Function:[0]Klingni - CNC:cleanAll - Param: nil
+11:40:55 - Function:[1]Schleppi - CNC:cleanAll - Param: nil
+11:40:57 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["playerName"] = Klingni,["player"] = 1,["coord"] = { ["x"] = -764.76281738281,["z"] = 67.474555969238,["y"] = 153.45072937012,} ,["team"] = crook,["isBoss"] = true,} ,[2] = { ["playerName"] = Schleppi,["player"] = 2,["coord"] = { ["x"] = -764.76300048828,["z"] = 67.474555969238,["y"] = 153.45169067383,} ,["team"] = cop,["isBoss"] = false,} ,} 
+11:40:57 - Function:[0]Klingni - CNC:StartRound - Param: nil
+11:40:57 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["playerName"] = Klingni,["player"] = 1,["coord"] = { ["x"] = -764.76281738281,["z"] = 67.474555969238,["y"] = 153.45072937012,} ,["team"] = crook,["isBoss"] = true,} ,[2] = { ["playerName"] = Schleppi,["player"] = 2,["coord"] = { ["x"] = -764.76300048828,["z"] = 67.474555969238,["y"] = 153.45169067383,} ,["team"] = cop,["isBoss"] = false,} ,} 
+11:40:57 - Function:CNC:createSpawner - Param: { } 
+11:40:57 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["playerName"] = Klingni,["player"] = 1,["coord"] = { ["x"] = -764.76281738281,["z"] = 67.474555969238,["y"] = 153.45072937012,} ,["team"] = crook,["isBoss"] = true,} ,[2] = { ["playerName"] = Schleppi,["player"] = 2,["coord"] = { ["x"] = -764.76300048828,["z"] = 67.474555969238,["y"] = 153.45169067383,} ,["team"] = cop,["isBoss"] = false,} ,} 
+11:40:57 - Function:[1]Schleppi - CNC:StartRound - Param: nil
+11:40:57 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["playerName"] = Klingni,["player"] = 1,["coord"] = { ["x"] = -764.76281738281,["z"] = 67.474555969238,["y"] = 153.45072937012,} ,["team"] = crook,["isBoss"] = true,} ,[2] = { ["playerName"] = Schleppi,["player"] = 2,["coord"] = { ["x"] = -764.76300048828,["z"] = 67.474555969238,["y"] = 153.45169067383,} ,["team"] = cop,["isBoss"] = false,} ,} 
+11:40:57 - Function:[0]Klingni - CNC:eventCreateGetaway - Param: { ["hash"] = 1549126457,["coord"] = { ["x"] = 1770.4864501953,["z"] = 41.382930755615,["y"] = 3238.0285644531,} ,["rot"] = { ["x"] = 1.5054564476013,["z"] = 165.67411804199,["y"] = 1.6042633056641,} ,["model"] = BRIOSO,} 
+11:40:57 - Function:CNC:creatGetaway-NetGeta - Param: 118
+11:40:57 - Function:[0]Klingni - CNC:findGetawayCoord - Param: 118
+11:40:57 - Function:[1]Schleppi - CNC:findGetawayCoord - Param: 118
+11:40:58 - Function:spawnPlayer - Param: { ["playerName"] = Klingni,["player"] = 1,["coord"] = { ["x"] = -764.76281738281,["z"] = 67.474555969238,["y"] = 153.45072937012,} ,["isBoss"] = true,["team"] = crook,} 
+11:40:58 - Function:getPlayerSettings - Param: boss
+11:40:58 - Function:spawnPlayer - Param: { ["playerName"] = Schleppi,["player"] = 2,["coord"] = { ["x"] = -764.76300048828,["z"] = 67.474555969238,["y"] = 153.45169067383,} ,["isBoss"] = false,["team"] = cop,} 
+11:40:58 - Function:getPlayerSettings - Param: cop
+11:40:58 - Function:[0]Klingni - CNC:setTeam - Param: crook
+11:40:58 - Function:[1]Schleppi - CNC:setTeam - Param: cop
+11:40:58 - Function:CNC:createSpawner - Param: { } 
+11:40:58 - Function:[0]Klingni - CNC:eventCreateVehicles - Param: { [1] = { ["hash"] = -713569950,["coord"] = { ["x"] = 1746.8403320313,["z"] = 41.376796722412,["y"] = 3258.9836425781,} ,["rot"] = { ["x"] = -1.1992740631104,["z"] = 8.3844299316406,["y"] = -0.72669321298599,} ,["model"] = BUS,} ,} 
+11:40:58 - Function:CNC:createVehicle - Param: { [1] = 30,} 
+11:40:59 - Function:[0]Klingni - playerSpawned - Param: { ["heading"] = 0,["model"] = G_M_M_ArmBoss_01,["skipFade"] = false,["x"] = 1740.2829589844,["z"] = 41.238735198975,["y"] = 3265.7829589844,} 
+11:40:59 - Function:[0]Klingni - FirstSpawn - Param: { ["heading"] = 0,["model"] = G_M_M_ArmBoss_01,["skipFade"] = false,["x"] = 1740.2829589844,["z"] = 41.238735198975,["y"] = 3265.7829589844,} 
+11:40:59 - Function:[1]Schleppi - playerSpawned - Param: { ["skipFade"] = false,["model"] = S_M_Y_Cop_01,["heading"] = 0,["x"] = 1752.5712890625,["z"] = 41.156490325928,["y"] = 3273.142578125,} 
+11:40:59 - Function:[1]Schleppi - FirstSpawn - Param: { ["skipFade"] = false,["model"] = S_M_Y_Cop_01,["heading"] = 0,["x"] = 1752.5712890625,["z"] = 41.156490325928,["y"] = 3273.142578125,} 
+11:42:11 - Function:getAllMaps - Param: nil
+11:42:11 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["team"] = lobby,["isBoss"] = false,["playerName"] = Klingni,} ,} 
+11:42:11 - Function:getAllMaps - Param: nil
+11:42:11 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["team"] = lobby,["isBoss"] = false,["playerName"] = Klingni,} ,} 
+11:42:11 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["team"] = lobby,["isBoss"] = false,["playerName"] = Klingni,} ,[2] = { ["player"] = 2,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["team"] = lobby,["isBoss"] = false,["playerName"] = Schleppi,} ,} 
+11:42:11 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["team"] = lobby,["isBoss"] = false,["playerName"] = Klingni,} ,[2] = { ["player"] = 2,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["team"] = lobby,["isBoss"] = false,["playerName"] = Schleppi,} ,} 
+11:42:12 - Function:[0]Klingni - playerSpawned - Param: { ["z"] = 67.4746,["model"] = a_m_y_hipster_02,["heading"] = 0,["skipFade"] = false,["y"] = 153.4494,["x"] = -764.7618,} 
+11:42:12 - Function:[1]Schleppi - playerSpawned - Param: { ["z"] = 67.4746,["model"] = a_m_y_hipster_02,["heading"] = 0,["skipFade"] = false,["y"] = 153.4494,["x"] = -764.7618,} 
+11:42:15 - Function:getAllMaps - Param: nil
+11:42:23 - Function:CNC:startRound - Param: 18
+11:42:23 - Function:CNC:startRound - Param: true
+11:42:23 - Function:startCNCRound - Param: 18
+11:42:23 - Function:getMap - Param: 18
+11:42:23 - Function:[0]Klingni - CNC:cleanAll - Param: nil
+11:42:23 - Function:[1]Schleppi - CNC:cleanAll - Param: nil
+11:42:25 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["player"] = 2,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45182800293,["x"] = -764.76306152344,} ,["team"] = crook,["isBoss"] = true,["playerName"] = Schleppi,} ,[2] = { ["player"] = 1,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45072937012,["x"] = -764.7626953125,} ,["team"] = cop,["isBoss"] = false,["playerName"] = Klingni,} ,} 
+11:42:25 - Function:[0]Klingni - CNC:StartRound - Param: nil
+11:42:25 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["player"] = 2,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45182800293,["x"] = -764.76306152344,} ,["team"] = crook,["isBoss"] = true,["playerName"] = Schleppi,} ,[2] = { ["player"] = 1,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45072937012,["x"] = -764.7626953125,} ,["team"] = cop,["isBoss"] = false,["playerName"] = Klingni,} ,} 
+11:42:25 - Function:CNC:createSpawner - Param: { } 
+11:42:25 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["player"] = 2,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45182800293,["x"] = -764.76306152344,} ,["team"] = crook,["isBoss"] = true,["playerName"] = Schleppi,} ,[2] = { ["player"] = 1,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45072937012,["x"] = -764.7626953125,} ,["team"] = cop,["isBoss"] = false,["playerName"] = Klingni,} ,} 
+11:42:25 - Function:[1]Schleppi - CNC:StartRound - Param: nil
+11:42:25 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["player"] = 2,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45182800293,["x"] = -764.76306152344,} ,["team"] = crook,["isBoss"] = true,["playerName"] = Schleppi,} ,[2] = { ["player"] = 1,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45072937012,["x"] = -764.7626953125,} ,["team"] = cop,["isBoss"] = false,["playerName"] = Klingni,} ,} 
+11:42:25 - Function:[1]Schleppi - CNC:eventCreateGetaway - Param: { ["hash"] = 1549126457,["rot"] = { ["z"] = 165.67411804199,["y"] = 1.6042633056641,["x"] = 1.5054564476013,} ,["coord"] = { ["z"] = 41.382930755615,["y"] = 3238.0285644531,["x"] = 1770.4864501953,} ,["model"] = BRIOSO,} 
+11:42:25 - Function:CNC:creatGetaway-NetGeta - Param: 255
+11:42:25 - Function:[0]Klingni - CNC:findGetawayCoord - Param: 255
+11:42:25 - Function:[1]Schleppi - CNC:findGetawayCoord - Param: 255
+11:42:26 - Function:spawnPlayer - Param: { ["player"] = 2,["isBoss"] = true,["team"] = crook,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45182800293,["x"] = -764.76306152344,} ,["playerName"] = Schleppi,} 
+11:42:26 - Function:getPlayerSettings - Param: boss
+11:42:26 - Function:spawnPlayer - Param: { ["player"] = 1,["isBoss"] = false,["team"] = cop,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45072937012,["x"] = -764.7626953125,} ,["playerName"] = Klingni,} 
+11:42:26 - Function:getPlayerSettings - Param: cop
+11:42:26 - Function:[0]Klingni - CNC:setTeam - Param: cop
+11:42:26 - Function:[1]Schleppi - CNC:setTeam - Param: crook
+11:42:26 - Function:CNC:createSpawner - Param: { } 
+11:42:27 - Function:[1]Schleppi - CNC:eventCreateVehicles - Param: { [1] = { ["hash"] = -713569950,["rot"] = { ["z"] = 8.3844299316406,["y"] = -0.72669321298599,["x"] = -1.1992740631104,} ,["coord"] = { ["z"] = 41.376796722412,["y"] = 3258.9836425781,["x"] = 1746.8403320313,} ,["model"] = BUS,} ,} 
+11:42:27 - Function:[0]Klingni - playerSpawned - Param: { ["z"] = 41.156490325928,["model"] = S_M_Y_Cop_01,["heading"] = 0,["skipFade"] = false,["y"] = 3273.142578125,["x"] = 1752.5712890625,} 
+11:42:27 - Function:[0]Klingni - FirstSpawn - Param: { ["z"] = 41.156490325928,["model"] = S_M_Y_Cop_01,["heading"] = 0,["skipFade"] = false,["y"] = 3273.142578125,["x"] = 1752.5712890625,} 
+11:42:27 - Function:CNC:createVehicle - Param: { [1] = 256,} 
+11:42:28 - Function:[1]Schleppi - playerSpawned - Param: { ["z"] = 41.21403503418,["model"] = G_M_M_ArmBoss_01,["heading"] = 0,["skipFade"] = false,["y"] = 3268.7297363281,["x"] = 1740.0858154297,} 
+11:42:28 - Function:[1]Schleppi - FirstSpawn - Param: { ["z"] = 41.21403503418,["model"] = G_M_M_ArmBoss_01,["heading"] = 0,["skipFade"] = false,["y"] = 3268.7297363281,["x"] = 1740.0858154297,} 
+11:44:08 - Function:getAllMaps - Param: nil
+11:44:08 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["isBoss"] = false,["playerName"] = Klingni,["player"] = 1,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,} ,} 
+11:44:08 - Function:getAllMaps - Param: nil
+11:44:08 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["isBoss"] = false,["playerName"] = Klingni,["player"] = 1,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,} ,} 
+11:44:08 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["isBoss"] = false,["playerName"] = Klingni,["player"] = 1,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,} ,[2] = { ["team"] = lobby,["isBoss"] = false,["playerName"] = Schleppi,["player"] = 2,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,} ,} 
+11:44:08 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["isBoss"] = false,["playerName"] = Klingni,["player"] = 1,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,} ,[2] = { ["team"] = lobby,["isBoss"] = false,["playerName"] = Schleppi,["player"] = 2,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,} ,} 
+11:44:09 - Function:[0]Klingni - playerSpawned - Param: { ["model"] = a_m_y_hipster_02,["heading"] = 0,["skipFade"] = false,["z"] = 67.4746,["y"] = 153.4494,["x"] = -764.7618,} 
+11:44:09 - Function:[1]Schleppi - playerSpawned - Param: { ["model"] = a_m_y_hipster_02,["x"] = -764.7618,["y"] = 153.4494,["z"] = 67.4746,["heading"] = 0,["skipFade"] = false,} 
+11:44:12 - Function:getAllMaps - Param: nil
+11:44:18 - Function:CNC:startRound - Param: 18
+11:44:18 - Function:CNC:startRound - Param: true
+11:44:18 - Function:startCNCRound - Param: 18
+11:44:18 - Function:getMap - Param: 18
+11:44:18 - Function:[0]Klingni - CNC:cleanAll - Param: nil
+11:44:18 - Function:[1]Schleppi - CNC:cleanAll - Param: nil
+11:44:20 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["team"] = crook,["isBoss"] = true,["playerName"] = Klingni,["player"] = 1,["coord"] = { ["z"] = 67.474555969238,["x"] = -764.76281738281,["y"] = 153.4508972168,} ,} ,[2] = { ["team"] = cop,["isBoss"] = false,["playerName"] = Schleppi,["player"] = 2,["coord"] = { ["z"] = 67.474555969238,["x"] = -764.76281738281,["y"] = 153.4514465332,} ,} ,} 
+11:44:20 - Function:[0]Klingni - CNC:StartRound - Param: nil
+11:44:20 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["team"] = crook,["isBoss"] = true,["playerName"] = Klingni,["player"] = 1,["coord"] = { ["z"] = 67.474555969238,["x"] = -764.76281738281,["y"] = 153.4508972168,} ,} ,[2] = { ["team"] = cop,["isBoss"] = false,["playerName"] = Schleppi,["player"] = 2,["coord"] = { ["z"] = 67.474555969238,["x"] = -764.76281738281,["y"] = 153.4514465332,} ,} ,} 
+11:44:20 - Function:CNC:createSpawner - Param: { } 
+11:44:20 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["team"] = crook,["isBoss"] = true,["playerName"] = Klingni,["player"] = 1,["coord"] = { ["z"] = 67.474555969238,["x"] = -764.76281738281,["y"] = 153.4508972168,} ,} ,[2] = { ["team"] = cop,["isBoss"] = false,["playerName"] = Schleppi,["player"] = 2,["coord"] = { ["z"] = 67.474555969238,["x"] = -764.76281738281,["y"] = 153.4514465332,} ,} ,} 
+11:44:20 - Function:[1]Schleppi - CNC:StartRound - Param: nil
+11:44:20 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["team"] = crook,["isBoss"] = true,["playerName"] = Klingni,["player"] = 1,["coord"] = { ["z"] = 67.474555969238,["x"] = -764.76281738281,["y"] = 153.4508972168,} ,} ,[2] = { ["team"] = cop,["isBoss"] = false,["playerName"] = Schleppi,["player"] = 2,["coord"] = { ["z"] = 67.474555969238,["x"] = -764.76281738281,["y"] = 153.4514465332,} ,} ,} 
+11:44:20 - Function:[0]Klingni - CNC:eventCreateGetaway - Param: { ["model"] = BRIOSO,["hash"] = 1549126457,["rot"] = { ["z"] = 165.67411804199,["x"] = 1.5054564476013,["y"] = 1.6042633056641,} ,["coord"] = { ["z"] = 41.382930755615,["x"] = 1770.4864501953,["y"] = 3238.0285644531,} ,} 
+11:44:20 - Function:CNC:creatGetaway-NetGeta - Param: 74
+11:44:20 - Function:[0]Klingni - CNC:findGetawayCoord - Param: 74
+11:44:20 - Function:[1]Schleppi - CNC:findGetawayCoord - Param: 74
+11:44:21 - Function:spawnPlayer - Param: { ["team"] = crook,["player"] = 1,["playerName"] = Klingni,["isBoss"] = true,["coord"] = { ["z"] = 67.474555969238,["x"] = -764.76281738281,["y"] = 153.4508972168,} ,} 
+11:44:21 - Function:getPlayerSettings - Param: boss
+11:44:21 - Function:spawnPlayer - Param: { ["team"] = cop,["player"] = 2,["playerName"] = Schleppi,["isBoss"] = false,["coord"] = { ["z"] = 67.474555969238,["x"] = -764.76281738281,["y"] = 153.4514465332,} ,} 
+11:44:21 - Function:getPlayerSettings - Param: cop
+11:44:21 - Function:[0]Klingni - CNC:setTeam - Param: crook
+11:44:21 - Function:[1]Schleppi - CNC:setTeam - Param: cop
+11:44:21 - Function:CNC:createSpawner - Param: { } 
+11:44:22 - Function:[0]Klingni - CNC:eventCreateVehicles - Param: { [1] = { ["model"] = BUS,["hash"] = -713569950,["rot"] = { ["z"] = 8.3844299316406,["x"] = -1.1992740631104,["y"] = -0.72669321298599,} ,["coord"] = { ["z"] = 41.376796722412,["x"] = 1746.8403320313,["y"] = 3258.9836425781,} ,} ,} 
+11:44:22 - Function:CNC:createVehicle - Param: { [1] = 79,} 
+11:44:22 - Function:[0]Klingni - playerSpawned - Param: { ["model"] = G_M_M_ArmBoss_01,["heading"] = 0,["skipFade"] = false,["z"] = 41.198970794678,["y"] = 3267.4431152344,["x"] = 1736.0615234375,} 
+11:44:22 - Function:[0]Klingni - FirstSpawn - Param: { ["model"] = G_M_M_ArmBoss_01,["heading"] = 0,["skipFade"] = false,["z"] = 41.198970794678,["y"] = 3267.4431152344,["x"] = 1736.0615234375,} 
+11:44:23 - Function:[1]Schleppi - playerSpawned - Param: { ["model"] = S_M_Y_Cop_01,["x"] = 1752.5712890625,["y"] = 3273.142578125,["z"] = 41.156490325928,["heading"] = 0,["skipFade"] = false,} 
+11:44:23 - Function:[1]Schleppi - FirstSpawn - Param: { ["model"] = S_M_Y_Cop_01,["x"] = 1752.5712890625,["y"] = 3273.142578125,["z"] = 41.156490325928,["heading"] = 0,["skipFade"] = false,} 
+11:45:20 - Function:getAllMaps - Param: nil
+11:45:20 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["isBoss"] = false,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["team"] = lobby,["player"] = 1,} ,} 
+11:45:20 - Function:getAllMaps - Param: nil
+11:45:20 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["isBoss"] = false,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["team"] = lobby,["player"] = 1,} ,} 
+11:45:20 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["isBoss"] = false,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["team"] = lobby,["player"] = 1,} ,[2] = { ["playerName"] = Schleppi,["isBoss"] = false,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["team"] = lobby,["player"] = 2,} ,} 
+11:45:20 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["isBoss"] = false,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["team"] = lobby,["player"] = 1,} ,[2] = { ["playerName"] = Schleppi,["isBoss"] = false,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["team"] = lobby,["player"] = 2,} ,} 
+11:45:21 - Function:[0]Klingni - playerSpawned - Param: { ["z"] = 67.4746,["heading"] = 0,["x"] = -764.7618,["skipFade"] = false,["model"] = a_m_y_hipster_02,["y"] = 153.4494,} 
+11:45:21 - Function:[1]Schleppi - playerSpawned - Param: { ["z"] = 67.4746,["model"] = a_m_y_hipster_02,["skipFade"] = false,["y"] = 153.4494,["x"] = -764.7618,["heading"] = 0,} 
+11:45:26 - Function:getAllMaps - Param: nil
+11:45:29 - Function:CNC:startRound - Param: 18
+11:45:29 - Function:CNC:startRound - Param: true
+11:45:29 - Function:startCNCRound - Param: 18
+11:45:29 - Function:getMap - Param: 18
+11:45:29 - Function:[0]Klingni - CNC:cleanAll - Param: nil
+11:45:29 - Function:[1]Schleppi - CNC:cleanAll - Param: nil
+11:45:30 - Function:getAllMaps - Param: nil
+11:45:31 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["playerName"] = Klingni,["isBoss"] = true,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45088195801,["x"] = -764.76281738281,} ,["team"] = crook,["player"] = 1,} ,[2] = { ["playerName"] = Schleppi,["isBoss"] = false,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45153808594,["x"] = -764.76287841797,} ,["team"] = cop,["player"] = 2,} ,} 
+11:45:31 - Function:[0]Klingni - CNC:StartRound - Param: nil
+11:45:31 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["playerName"] = Klingni,["isBoss"] = true,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45088195801,["x"] = -764.76281738281,} ,["team"] = crook,["player"] = 1,} ,[2] = { ["playerName"] = Schleppi,["isBoss"] = false,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45153808594,["x"] = -764.76287841797,} ,["team"] = cop,["player"] = 2,} ,} 
+11:45:31 - Function:CNC:createSpawner - Param: { } 
+11:45:31 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["playerName"] = Klingni,["isBoss"] = true,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45088195801,["x"] = -764.76281738281,} ,["team"] = crook,["player"] = 1,} ,[2] = { ["playerName"] = Schleppi,["isBoss"] = false,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45153808594,["x"] = -764.76287841797,} ,["team"] = cop,["player"] = 2,} ,} 
+11:45:31 - Function:[1]Schleppi - CNC:StartRound - Param: nil
+11:45:31 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["playerName"] = Klingni,["isBoss"] = true,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45088195801,["x"] = -764.76281738281,} ,["team"] = crook,["player"] = 1,} ,[2] = { ["playerName"] = Schleppi,["isBoss"] = false,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45153808594,["x"] = -764.76287841797,} ,["team"] = cop,["player"] = 2,} ,} 
+11:45:31 - Function:[0]Klingni - CNC:eventCreateGetaway - Param: { ["coord"] = { ["z"] = 41.382930755615,["y"] = 3238.0285644531,["x"] = 1770.4864501953,} ,["hash"] = 1549126457,["model"] = BRIOSO,["rot"] = { ["z"] = 165.67411804199,["y"] = 1.6042633056641,["x"] = 1.5054564476013,} ,} 
+11:45:31 - Function:CNC:creatGetaway-NetGeta - Param: 215
+11:45:31 - Function:[0]Klingni - CNC:findGetawayCoord - Param: 215
+11:45:31 - Function:[1]Schleppi - CNC:findGetawayCoord - Param: 215
+11:45:32 - Function:spawnPlayer - Param: { ["playerName"] = Klingni,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45088195801,["x"] = -764.76281738281,} ,["team"] = crook,["player"] = 1,["isBoss"] = true,} 
+11:45:32 - Function:getPlayerSettings - Param: boss
+11:45:32 - Function:spawnPlayer - Param: { ["playerName"] = Schleppi,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45153808594,["x"] = -764.76287841797,} ,["team"] = cop,["player"] = 2,["isBoss"] = false,} 
+11:45:32 - Function:getPlayerSettings - Param: cop
+11:45:32 - Function:CNC:createSpawner - Param: { } 
+11:45:32 - Function:[0]Klingni - CNC:setTeam - Param: crook
+11:45:32 - Function:[1]Schleppi - CNC:setTeam - Param: cop
+11:45:33 - Function:[0]Klingni - CNC:eventCreateVehicles - Param: { [1] = { ["coord"] = { ["z"] = 41.376796722412,["y"] = 3258.9836425781,["x"] = 1746.8403320313,} ,["hash"] = -713569950,["model"] = BUS,["rot"] = { ["z"] = 8.3844299316406,["y"] = -0.72669321298599,["x"] = -1.1992740631104,} ,} ,} 
+11:45:33 - Function:CNC:createVehicle - Param: { [1] = 220,} 
+11:45:33 - Function:[0]Klingni - playerSpawned - Param: { ["z"] = 41.1770362854,["heading"] = 0,["x"] = 1739.7764892578,["skipFade"] = false,["model"] = G_M_M_ArmBoss_01,["y"] = 3272.6530761719,} 
+11:45:33 - Function:[0]Klingni - FirstSpawn - Param: { ["z"] = 41.1770362854,["heading"] = 0,["x"] = 1739.7764892578,["skipFade"] = false,["model"] = G_M_M_ArmBoss_01,["y"] = 3272.6530761719,} 
+11:45:34 - Function:[1]Schleppi - playerSpawned - Param: { ["z"] = 41.250629425049,["model"] = S_M_Y_Cop_01,["skipFade"] = false,["y"] = 3267.7976074219,["x"] = 1751.9819335938,["heading"] = 0,} 
+11:45:34 - Function:[1]Schleppi - FirstSpawn - Param: { ["z"] = 41.250629425049,["model"] = S_M_Y_Cop_01,["skipFade"] = false,["y"] = 3267.7976074219,["x"] = 1751.9819335938,["heading"] = 0,} 
+11:46:27 - Function:getAllMaps - Param: nil
+11:46:27 - Function:getAllMaps - Param: nil
+11:46:27 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["isBoss"] = false,["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["player"] = 1,["team"] = lobby,} ,} 
+11:46:27 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["isBoss"] = false,["playerName"] = Klingni,["player"] = 1,["team"] = lobby,} ,} 
+11:46:27 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["isBoss"] = false,["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["player"] = 1,["team"] = lobby,} ,[2] = { ["playerName"] = Schleppi,["isBoss"] = false,["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["player"] = 2,["team"] = lobby,} ,} 
+11:46:27 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["isBoss"] = false,["playerName"] = Klingni,["player"] = 1,["team"] = lobby,} ,[2] = { ["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["isBoss"] = false,["playerName"] = Schleppi,["player"] = 2,["team"] = lobby,} ,} 
+11:46:28 - Function:[0]Klingni - playerSpawned - Param: { ["y"] = 153.4494,["z"] = 67.4746,["heading"] = 0,["skipFade"] = false,["x"] = -764.7618,["model"] = a_m_y_hipster_02,} 
+11:46:29 - Function:[1]Schleppi - playerSpawned - Param: { ["y"] = 153.4494,["z"] = 67.4746,["model"] = a_m_y_hipster_02,["x"] = -764.7618,["heading"] = 0,["skipFade"] = false,} 
+11:46:33 - Function:getAllMaps - Param: nil
+11:46:36 - Function:CNC:startRound - Param: 18
+11:46:36 - Function:CNC:startRound - Param: true
+11:46:36 - Function:startCNCRound - Param: 18
+11:46:36 - Function:getMap - Param: 18
+11:46:36 - Function:[0]Klingni - CNC:cleanAll - Param: nil
+11:46:36 - Function:[1]Schleppi - CNC:cleanAll - Param: nil
+11:46:36 - Function:getAllMaps - Param: nil
+11:46:38 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["playerName"] = Schleppi,["isBoss"] = true,["coord"] = { ["y"] = 153.45170593262,["z"] = 67.474555969238,["x"] = -764.76300048828,} ,["player"] = 2,["team"] = crook,} ,[2] = { ["playerName"] = Klingni,["isBoss"] = false,["coord"] = { ["y"] = 153.45074462891,["z"] = 67.474555969238,["x"] = -764.7626953125,} ,["player"] = 1,["team"] = cop,} ,} 
+11:46:38 - Function:[0]Klingni - CNC:StartRound - Param: nil
+11:46:38 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["playerName"] = Schleppi,["isBoss"] = true,["coord"] = { ["y"] = 153.45170593262,["z"] = 67.474555969238,["x"] = -764.76300048828,} ,["player"] = 2,["team"] = crook,} ,[2] = { ["playerName"] = Klingni,["isBoss"] = false,["coord"] = { ["y"] = 153.45074462891,["z"] = 67.474555969238,["x"] = -764.7626953125,} ,["player"] = 1,["team"] = cop,} ,} 
+11:46:38 - Function:CNC:createSpawner - Param: { } 
+11:46:38 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["coord"] = { ["y"] = 153.45170593262,["z"] = 67.474555969238,["x"] = -764.76300048828,} ,["isBoss"] = true,["playerName"] = Schleppi,["player"] = 2,["team"] = crook,} ,[2] = { ["coord"] = { ["y"] = 153.45074462891,["z"] = 67.474555969238,["x"] = -764.7626953125,} ,["isBoss"] = false,["playerName"] = Klingni,["player"] = 1,["team"] = cop,} ,} 
+11:46:38 - Function:[1]Schleppi - CNC:StartRound - Param: nil
+11:46:38 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["coord"] = { ["y"] = 153.45170593262,["z"] = 67.474555969238,["x"] = -764.76300048828,} ,["isBoss"] = true,["playerName"] = Schleppi,["player"] = 2,["team"] = crook,} ,[2] = { ["coord"] = { ["y"] = 153.45074462891,["z"] = 67.474555969238,["x"] = -764.7626953125,} ,["isBoss"] = false,["playerName"] = Klingni,["player"] = 1,["team"] = cop,} ,} 
+11:46:38 - Function:[1]Schleppi - CNC:eventCreateGetaway - Param: { ["rot"] = { ["y"] = 1.6042633056641,["z"] = 165.67411804199,["x"] = 1.5054564476013,} ,["hash"] = 1549126457,["coord"] = { ["y"] = 3238.0285644531,["z"] = 41.382930755615,["x"] = 1770.4864501953,} ,["model"] = BRIOSO,} 
+11:46:38 - Function:CNC:creatGetaway-NetGeta - Param: 254
+11:46:38 - Function:[0]Klingni - CNC:findGetawayCoord - Param: 254
+11:46:38 - Function:[1]Schleppi - CNC:findGetawayCoord - Param: 254
+11:46:39 - Function:spawnPlayer - Param: { ["playerName"] = Schleppi,["team"] = crook,["isBoss"] = true,["player"] = 2,["coord"] = { ["y"] = 153.45170593262,["z"] = 67.474555969238,["x"] = -764.76300048828,} ,} 
+11:46:39 - Function:getPlayerSettings - Param: boss
+11:46:39 - Function:spawnPlayer - Param: { ["playerName"] = Klingni,["team"] = cop,["isBoss"] = false,["player"] = 1,["coord"] = { ["y"] = 153.45074462891,["z"] = 67.474555969238,["x"] = -764.7626953125,} ,} 
+11:46:39 - Function:getPlayerSettings - Param: cop
+11:46:39 - Function:[0]Klingni - CNC:setTeam - Param: cop
+11:46:39 - Function:[1]Schleppi - CNC:setTeam - Param: crook
+11:46:39 - Function:CNC:createSpawner - Param: { } 
+11:46:39 - Function:[1]Schleppi - CNC:eventCreateVehicles - Param: { [1] = { ["rot"] = { ["y"] = -0.72669321298599,["z"] = 8.3844299316406,["x"] = -1.1992740631104,} ,["hash"] = -713569950,["coord"] = { ["y"] = 3258.9836425781,["z"] = 41.376796722412,["x"] = 1746.8403320313,} ,["model"] = BUS,} ,} 
+11:46:40 - Function:[0]Klingni - playerSpawned - Param: { ["y"] = 3267.7976074219,["z"] = 41.250629425049,["heading"] = 0,["skipFade"] = false,["x"] = 1751.9819335938,["model"] = S_M_Y_Cop_01,} 
+11:46:40 - Function:[0]Klingni - FirstSpawn - Param: { ["y"] = 3267.7976074219,["z"] = 41.250629425049,["heading"] = 0,["skipFade"] = false,["x"] = 1751.9819335938,["model"] = S_M_Y_Cop_01,} 
+11:46:40 - Function:CNC:createVehicle - Param: { [1] = 255,} 
+11:46:40 - Function:[1]Schleppi - playerSpawned - Param: { ["y"] = 3268.7297363281,["z"] = 41.21403503418,["model"] = G_M_M_ArmBoss_01,["x"] = 1740.0858154297,["heading"] = 0,["skipFade"] = false,} 
+11:46:40 - Function:[1]Schleppi - FirstSpawn - Param: { ["y"] = 3268.7297363281,["z"] = 41.21403503418,["model"] = G_M_M_ArmBoss_01,["x"] = 1740.0858154297,["heading"] = 0,["skipFade"] = false,} 
+11:48:00 - Function:getAllMaps - Param: nil
+11:48:00 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["player"] = 1,["playerName"] = Klingni,["isBoss"] = false,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,} ,} 
+11:48:00 - Function:getAllMaps - Param: nil
+11:48:00 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["player"] = 1,["isBoss"] = false,["playerName"] = Klingni,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,} ,} 
+11:48:00 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["player"] = 1,["playerName"] = Klingni,["isBoss"] = false,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,} ,[2] = { ["team"] = lobby,["player"] = 2,["playerName"] = Schleppi,["isBoss"] = false,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,} ,} 
+11:48:00 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["player"] = 1,["isBoss"] = false,["playerName"] = Klingni,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,} ,[2] = { ["team"] = lobby,["player"] = 2,["isBoss"] = false,["playerName"] = Schleppi,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,} ,} 
+11:48:01 - Function:[0]Klingni - playerSpawned - Param: { ["heading"] = 0,["x"] = -764.7618,["skipFade"] = false,["z"] = 67.4746,["y"] = 153.4494,["model"] = a_m_y_hipster_02,} 
+11:48:01 - Function:[1]Schleppi - playerSpawned - Param: { ["heading"] = 0,["x"] = -764.7618,["skipFade"] = false,["z"] = 67.4746,["model"] = a_m_y_hipster_02,["y"] = 153.4494,} 
+11:48:03 - Function:getAllMaps - Param: nil
+11:48:06 - Function:CNC:startRound - Param: 18
+11:48:06 - Function:CNC:startRound - Param: true
+11:48:06 - Function:startCNCRound - Param: 18
+11:48:06 - Function:getMap - Param: 18
+11:48:06 - Function:[0]Klingni - CNC:cleanAll - Param: nil
+11:48:06 - Function:[1]Schleppi - CNC:cleanAll - Param: nil
+11:48:07 - Function:getAllMaps - Param: nil
+11:48:08 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["team"] = crook,["player"] = 2,["playerName"] = Schleppi,["isBoss"] = true,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45155334473,["x"] = -764.76287841797,} ,} ,[2] = { ["team"] = cop,["player"] = 1,["playerName"] = Klingni,["isBoss"] = false,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45079040527,["x"] = -764.76275634766,} ,} ,} 
+11:48:08 - Function:[0]Klingni - CNC:StartRound - Param: nil
+11:48:08 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["team"] = crook,["player"] = 2,["playerName"] = Schleppi,["isBoss"] = true,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45155334473,["x"] = -764.76287841797,} ,} ,[2] = { ["team"] = cop,["player"] = 1,["playerName"] = Klingni,["isBoss"] = false,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45079040527,["x"] = -764.76275634766,} ,} ,} 
+11:48:08 - Function:CNC:createSpawner - Param: { } 
+11:48:08 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["team"] = crook,["player"] = 2,["isBoss"] = true,["playerName"] = Schleppi,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45155334473,["x"] = -764.76287841797,} ,} ,[2] = { ["team"] = cop,["player"] = 1,["isBoss"] = false,["playerName"] = Klingni,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45079040527,["x"] = -764.76275634766,} ,} ,} 
+11:48:08 - Function:[1]Schleppi - CNC:StartRound - Param: nil
+11:48:08 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["team"] = crook,["player"] = 2,["isBoss"] = true,["playerName"] = Schleppi,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45155334473,["x"] = -764.76287841797,} ,} ,[2] = { ["team"] = cop,["player"] = 1,["isBoss"] = false,["playerName"] = Klingni,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45079040527,["x"] = -764.76275634766,} ,} ,} 
+11:48:08 - Function:[1]Schleppi - CNC:eventCreateGetaway - Param: { ["model"] = BRIOSO,["hash"] = 1549126457,["rot"] = { ["z"] = 165.67411804199,["y"] = 1.6042633056641,["x"] = 1.5054564476013,} ,["coord"] = { ["z"] = 41.382930755615,["y"] = 3238.0285644531,["x"] = 1770.4864501953,} ,} 
+11:48:09 - Function:CNC:creatGetaway-NetGeta - Param: 254
+11:48:09 - Function:[0]Klingni - CNC:findGetawayCoord - Param: 254
+11:48:09 - Function:[1]Schleppi - CNC:findGetawayCoord - Param: 254
+11:48:09 - Function:spawnPlayer - Param: { ["team"] = crook,["player"] = 2,["playerName"] = Schleppi,["isBoss"] = true,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45155334473,["x"] = -764.76287841797,} ,} 
+11:48:09 - Function:getPlayerSettings - Param: boss
+11:48:09 - Function:spawnPlayer - Param: { ["team"] = cop,["player"] = 1,["playerName"] = Klingni,["isBoss"] = false,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45079040527,["x"] = -764.76275634766,} ,} 
+11:48:09 - Function:getPlayerSettings - Param: cop
+11:48:09 - Function:[0]Klingni - CNC:setTeam - Param: cop
+11:48:09 - Function:[1]Schleppi - CNC:setTeam - Param: crook
+11:48:09 - Function:CNC:createSpawner - Param: { } 
+11:48:10 - Function:[1]Schleppi - CNC:eventCreateVehicles - Param: { [1] = { ["model"] = BUS,["hash"] = -713569950,["rot"] = { ["z"] = 8.3844299316406,["y"] = -0.72669321298599,["x"] = -1.1992740631104,} ,["coord"] = { ["z"] = 41.376796722412,["y"] = 3258.9836425781,["x"] = 1746.8403320313,} ,} ,} 
+11:48:10 - Function:[0]Klingni - playerSpawned - Param: { ["heading"] = 0,["x"] = 1752.4354248047,["skipFade"] = false,["z"] = 41.191539764404,["y"] = 3270.9641113281,["model"] = S_M_Y_Cop_01,} 
+11:48:10 - Function:[0]Klingni - FirstSpawn - Param: { ["heading"] = 0,["x"] = 1752.4354248047,["skipFade"] = false,["z"] = 41.191539764404,["y"] = 3270.9641113281,["model"] = S_M_Y_Cop_01,} 
+11:48:11 - Function:CNC:createVehicle - Param: { [1] = 256,} 
+11:48:11 - Function:[1]Schleppi - playerSpawned - Param: { ["heading"] = 0,["x"] = 1736.0615234375,["skipFade"] = false,["z"] = 41.198970794678,["model"] = G_M_M_ArmBoss_01,["y"] = 3267.4431152344,} 
+11:48:11 - Function:[1]Schleppi - FirstSpawn - Param: { ["heading"] = 0,["x"] = 1736.0615234375,["skipFade"] = false,["z"] = 41.198970794678,["model"] = G_M_M_ArmBoss_01,["y"] = 3267.4431152344,} 
+11:48:15 - Function:respawnPlayer - Param: nil
+11:50:42 - Function:getAllMaps - Param: nil
+11:50:42 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["playerName"] = Klingni,["team"] = lobby,["player"] = 1,["isBoss"] = false,} ,} 
+11:50:42 - Function:getAllMaps - Param: nil
+11:50:42 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["playerName"] = Klingni,["player"] = 1,["team"] = lobby,["isBoss"] = false,} ,} 
+11:50:42 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["playerName"] = Klingni,["team"] = lobby,["player"] = 1,["isBoss"] = false,} ,[2] = { ["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["playerName"] = Schleppi,["team"] = lobby,["player"] = 2,["isBoss"] = false,} ,} 
+11:50:42 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["playerName"] = Klingni,["player"] = 1,["team"] = lobby,["isBoss"] = false,} ,[2] = { ["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["playerName"] = Schleppi,["player"] = 2,["team"] = lobby,["isBoss"] = false,} ,} 
+11:50:43 - Function:[0]Klingni - playerSpawned - Param: { ["z"] = 67.4746,["y"] = 153.4494,["x"] = -764.7618,["heading"] = 0,["skipFade"] = false,["model"] = a_m_y_hipster_02,} 
+11:50:43 - Function:[1]Schleppi - playerSpawned - Param: { ["z"] = 67.4746,["y"] = 153.4494,["x"] = -764.7618,["heading"] = 0,["skipFade"] = false,["model"] = a_m_y_hipster_02,} 
+11:50:45 - Function:getAllMaps - Param: nil
+11:50:58 - Function:CNC:startRound - Param: 18
+11:50:58 - Function:CNC:startRound - Param: true
+11:50:58 - Function:startCNCRound - Param: 18
+11:50:58 - Function:getMap - Param: 18
+11:50:58 - Function:[0]Klingni - CNC:cleanAll - Param: nil
+11:50:58 - Function:[1]Schleppi - CNC:cleanAll - Param: nil
+11:51:00 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45153808594,["x"] = -764.76287841797,} ,["playerName"] = Schleppi,["team"] = crook,["player"] = 2,["isBoss"] = true,} ,[2] = { ["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45097351074,["x"] = -764.76281738281,} ,["playerName"] = Klingni,["team"] = cop,["player"] = 1,["isBoss"] = false,} ,} 
+11:51:00 - Function:[0]Klingni - CNC:StartRound - Param: nil
+11:51:00 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45153808594,["x"] = -764.76287841797,} ,["playerName"] = Schleppi,["team"] = crook,["player"] = 2,["isBoss"] = true,} ,[2] = { ["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45097351074,["x"] = -764.76281738281,} ,["playerName"] = Klingni,["team"] = cop,["player"] = 1,["isBoss"] = false,} ,} 
+11:51:00 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45153808594,["x"] = -764.76287841797,} ,["playerName"] = Schleppi,["player"] = 2,["team"] = crook,["isBoss"] = true,} ,[2] = { ["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45097351074,["x"] = -764.76281738281,} ,["playerName"] = Klingni,["player"] = 1,["team"] = cop,["isBoss"] = false,} ,} 
+11:51:00 - Function:CNC:createSpawner - Param: { } 
+11:51:00 - Function:[1]Schleppi - CNC:StartRound - Param: nil
+11:51:00 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45153808594,["x"] = -764.76287841797,} ,["playerName"] = Schleppi,["player"] = 2,["team"] = crook,["isBoss"] = true,} ,[2] = { ["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45097351074,["x"] = -764.76281738281,} ,["playerName"] = Klingni,["player"] = 1,["team"] = cop,["isBoss"] = false,} ,} 
+11:51:00 - Function:[1]Schleppi - CNC:eventCreateGetaway - Param: { ["rot"] = { ["z"] = 165.67411804199,["y"] = 1.6042633056641,["x"] = 1.5054564476013,} ,["coord"] = { ["z"] = 41.382930755615,["y"] = 3238.0285644531,["x"] = 1770.4864501953,} ,["hash"] = 1549126457,["model"] = BRIOSO,} 
+11:51:00 - Function:CNC:creatGetaway-NetGeta - Param: 253
+11:51:00 - Function:[0]Klingni - CNC:findGetawayCoord - Param: 253
+11:51:00 - Function:[1]Schleppi - CNC:findGetawayCoord - Param: 253
+11:51:01 - Function:CNC:createSpawner - Param: { } 
+11:51:01 - Function:spawnPlayer - Param: { ["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45153808594,["x"] = -764.76287841797,} ,["playerName"] = Schleppi,["player"] = 2,["team"] = crook,["isBoss"] = true,} 
+11:51:01 - Function:getPlayerSettings - Param: boss
+11:51:01 - Function:spawnPlayer - Param: { ["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45097351074,["x"] = -764.76281738281,} ,["playerName"] = Klingni,["player"] = 1,["team"] = cop,["isBoss"] = false,} 
+11:51:01 - Function:getPlayerSettings - Param: cop
+11:51:01 - Function:[0]Klingni - CNC:setTeam - Param: cop
+11:51:01 - Function:[1]Schleppi - CNC:setTeam - Param: crook
+11:51:01 - Function:[1]Schleppi - CNC:eventCreateVehicles - Param: { [1] = { ["rot"] = { ["z"] = 8.3844299316406,["y"] = -0.72669321298599,["x"] = -1.1992740631104,} ,["coord"] = { ["z"] = 41.376796722412,["y"] = 3258.9836425781,["x"] = 1746.8403320313,} ,["hash"] = -713569950,["model"] = BUS,} ,} 
+11:51:02 - Function:[0]Klingni - playerSpawned - Param: { ["z"] = 41.221687316895,["y"] = 3271.6059570312,["x"] = 1756.8367919922,["heading"] = 0,["skipFade"] = false,["model"] = S_M_Y_Cop_01,} 
+11:51:02 - Function:[0]Klingni - FirstSpawn - Param: { ["z"] = 41.221687316895,["y"] = 3271.6059570312,["x"] = 1756.8367919922,["heading"] = 0,["skipFade"] = false,["model"] = S_M_Y_Cop_01,} 
+11:51:02 - Function:CNC:createVehicle - Param: { [1] = 256,} 
+11:51:03 - Function:[1]Schleppi - playerSpawned - Param: { ["z"] = 41.1770362854,["y"] = 3272.6530761719,["x"] = 1739.7764892578,["heading"] = 0,["skipFade"] = false,["model"] = G_M_M_ArmBoss_01,} 
+11:51:03 - Function:[1]Schleppi - FirstSpawn - Param: { ["z"] = 41.1770362854,["y"] = 3272.6530761719,["x"] = 1739.7764892578,["heading"] = 0,["skipFade"] = false,["model"] = G_M_M_ArmBoss_01,} 
+11:51:08 - Function:respawnPlayer - Param: { ["coord"] = { ["z"] = 41.221687316895,["y"] = 3271.6059570312,["x"] = 1756.8367919922,} ,["playerName"] = Klingni,["player"] = 1,["team"] = cop,["isBoss"] = false,} 
+11:51:08 - Function:getPlayerSettings - Param: cop
+11:51:08 - Function:respawnPlayer - frisch geholte Player Settings - Param: { ["weapons"] = { [1] = { ["type"] = WEAPON_MICROSMG,["equipt"] = true,["ammo"] = 250,} ,[2] = { ["type"] = WEAPON_PISTOL,["equipt"] = false,["ammo"] = 250,} ,[3] = { ["type"] = GADGET_PARACHUTE,["equipt"] = false,["ammo"] = 10,} ,} ,["model"] = S_M_Y_Cop_01,} 
+11:51:11 - Function:[0]Klingni - CNC:setTeam - Param: cop
+11:51:12 - Function:[0]Klingni - playerSpawned - Param: { ["z"] = 46.0125,["y"] = 3128.6589355469,["x"] = 1886.7725830078,["heading"] = 0,["skipFade"] = false,["model"] = S_M_Y_Cop_01,} 
+11:51:48 - Function:copsWinsTheRound - Param: nil
+11:51:53 - Function:StopGame - Param: nil
+11:51:53 - Function:CNC:clearVehicles - Param: nil
+11:51:53 - Function:[0]Klingni - CNC:StopRound - Param: nil
+11:51:53 - Function:[1]Schleppi - CNC:StopRound - Param: nil
+11:51:55 - Function:[1]Schleppi - playerSpawned - Param: { ["idx"] = 31,["z"] = 67.4747,["y"] = 153.4495,["x"] = -764.7617,["heading"] = 0,["model"] = 349505262,} 
+11:51:56 - Function:[0]Klingni - playerSpawned - Param: { ["idx"] = 31,["z"] = 67.4747,["y"] = 153.4495,["x"] = -764.7617,["heading"] = 0,["model"] = 349505262,} 
+11:52:03 - Function:startCNCRound - Param: 18
+11:52:03 - Function:getMap - Param: 18
+11:52:03 - Function:[0]Klingni - CNC:cleanAll - Param: nil
+11:52:03 - Function:[1]Schleppi - CNC:cleanAll - Param: nil
+11:52:05 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45190429688,["x"] = -764.76300048828,} ,["playerName"] = Schleppi,["team"] = cop,["player"] = 2,["isBoss"] = false,} ,[2] = { ["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45114135742,["x"] = -764.76281738281,} ,["playerName"] = Klingni,["team"] = crook,["player"] = 1,["isBoss"] = true,} ,} 
+11:52:05 - Function:[0]Klingni - CNC:StartRound - Param: nil
+11:52:05 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45190429688,["x"] = -764.76300048828,} ,["playerName"] = Schleppi,["team"] = cop,["player"] = 2,["isBoss"] = false,} ,[2] = { ["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45114135742,["x"] = -764.76281738281,} ,["playerName"] = Klingni,["team"] = crook,["player"] = 1,["isBoss"] = true,} ,} 
+11:52:05 - Function:CNC:createSpawner - Param: { } 
+11:52:05 - Function:[0]Klingni - CNC:eventCreateGetaway - Param: { ["rot"] = { ["z"] = 165.67411804199,["y"] = 1.6042633056641,["x"] = 1.5054564476013,} ,["coord"] = { ["z"] = 41.382930755615,["y"] = 3238.0285644531,["x"] = 1770.4864501953,} ,["hash"] = 1549126457,["model"] = BRIOSO,} 
+11:52:05 - Function:CNC:creatGetaway-NetGeta - Param: 2
+11:52:05 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45190429688,["x"] = -764.76300048828,} ,["playerName"] = Schleppi,["player"] = 2,["team"] = cop,["isBoss"] = false,} ,[2] = { ["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45114135742,["x"] = -764.76281738281,} ,["playerName"] = Klingni,["player"] = 1,["team"] = crook,["isBoss"] = true,} ,} 
+11:52:05 - Function:[1]Schleppi - CNC:StartRound - Param: nil
+11:52:05 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45190429688,["x"] = -764.76300048828,} ,["playerName"] = Schleppi,["player"] = 2,["team"] = cop,["isBoss"] = false,} ,[2] = { ["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45114135742,["x"] = -764.76281738281,} ,["playerName"] = Klingni,["player"] = 1,["team"] = crook,["isBoss"] = true,} ,} 
+11:52:05 - Function:CNC:createSpawner - Param: { } 
+11:52:05 - Function:[0]Klingni - CNC:findGetawayCoord - Param: 2
+11:52:05 - Function:[1]Schleppi - CNC:findGetawayCoord - Param: 2
+11:52:06 - Function:spawnPlayer - Param: { ["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45190429688,["x"] = -764.76300048828,} ,["playerName"] = Schleppi,["player"] = 2,["team"] = cop,["isBoss"] = false,} 
+11:52:06 - Function:getPlayerSettings - Param: cop
+11:52:06 - Function:spawnPlayer - Param: { ["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45114135742,["x"] = -764.76281738281,} ,["playerName"] = Klingni,["player"] = 1,["team"] = crook,["isBoss"] = true,} 
+11:52:06 - Function:getPlayerSettings - Param: boss
+11:52:06 - Function:[0]Klingni - CNC:setTeam - Param: crook
+11:52:06 - Function:[1]Schleppi - CNC:setTeam - Param: cop
+11:52:07 - Function:[1]Schleppi - CNC:eventCreateVehicles - Param: { [1] = { ["rot"] = { ["z"] = 8.3844299316406,["y"] = -0.72669321298599,["x"] = -1.1992740631104,} ,["coord"] = { ["z"] = 41.376796722412,["y"] = 3258.9836425781,["x"] = 1746.8403320313,} ,["hash"] = -713569950,["model"] = BUS,} ,} 
+11:52:07 - Function:CNC:createVehicle - Param: { [1] = 401,} 
+11:52:07 - Function:[0]Klingni - playerSpawned - Param: { ["z"] = 41.21403503418,["y"] = 3268.7297363281,["x"] = 1740.0858154297,["heading"] = 0,["skipFade"] = false,["model"] = G_M_M_ArmBoss_01,} 
+11:52:07 - Function:[0]Klingni - FirstSpawn - Param: { ["z"] = 41.21403503418,["y"] = 3268.7297363281,["x"] = 1740.0858154297,["heading"] = 0,["skipFade"] = false,["model"] = G_M_M_ArmBoss_01,} 
+11:52:08 - Function:[1]Schleppi - playerSpawned - Param: { ["z"] = 41.191539764404,["y"] = 3270.9641113281,["x"] = 1752.4354248047,["heading"] = 0,["skipFade"] = false,["model"] = S_M_Y_Cop_01,} 
+11:52:08 - Function:[1]Schleppi - FirstSpawn - Param: { ["z"] = 41.191539764404,["y"] = 3270.9641113281,["x"] = 1752.4354248047,["heading"] = 0,["skipFade"] = false,["model"] = S_M_Y_Cop_01,} 
+11:52:13 - Function:respawnPlayer - Param: { ["coord"] = { ["z"] = 41.188457489014,["y"] = 3270.9641113281,["x"] = 1752.4354248047,} ,["playerName"] = Schleppi,["player"] = 2,["team"] = cop,["isBoss"] = false,} 
+11:52:13 - Function:getPlayerSettings - Param: cop
+11:52:13 - Function:respawnPlayer - frisch geholte Player Settings - Param: { ["weapons"] = { [1] = { ["type"] = WEAPON_MICROSMG,["equipt"] = true,["ammo"] = 250,} ,[2] = { ["type"] = WEAPON_PISTOL,["equipt"] = false,["ammo"] = 250,} ,[3] = { ["type"] = GADGET_PARACHUTE,["equipt"] = false,["ammo"] = 10,} ,} ,["model"] = S_M_Y_Cop_01,} 
+11:52:16 - Function:[1]Schleppi - CNC:setTeam - Param: cop
+11:52:17 - Function:[1]Schleppi - playerSpawned - Param: { ["z"] = 44.3875,["y"] = 3227.73046875,["x"] = 1866.0853271484,["heading"] = 0,["skipFade"] = false,["model"] = S_M_Y_Cop_01,} 
+11:53:22 - Function:getAllMaps - Param: nil
+11:53:22 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["player"] = 1,["playerName"] = Klingni,["isBoss"] = false,} ,} 
+11:53:22 - Function:getAllMaps - Param: nil
+11:53:22 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["player"] = 1,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["playerName"] = Klingni,["isBoss"] = false,} ,} 
+11:53:22 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["player"] = 1,["playerName"] = Klingni,["isBoss"] = false,} ,[2] = { ["team"] = lobby,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["player"] = 2,["playerName"] = Schleppi,["isBoss"] = false,} ,} 
+11:53:22 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["player"] = 1,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["playerName"] = Klingni,["isBoss"] = false,} ,[2] = { ["team"] = lobby,["player"] = 2,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["playerName"] = Schleppi,["isBoss"] = false,} ,} 
+11:53:23 - Function:[0]Klingni - playerSpawned - Param: { ["skipFade"] = false,["y"] = 153.4494,["model"] = a_m_y_hipster_02,["x"] = -764.7618,["heading"] = 0,["z"] = 67.4746,} 
+11:53:23 - Function:[1]Schleppi - playerSpawned - Param: { ["heading"] = 0,["model"] = a_m_y_hipster_02,["y"] = 153.4494,["x"] = -764.7618,["skipFade"] = false,["z"] = 67.4746,} 
+11:55:05 - Function:getAllMaps - Param: nil
+11:55:05 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,["playerName"] = Klingni,["player"] = 1,["isBoss"] = false,} ,} 
+11:55:05 - Function:getAllMaps - Param: nil
+11:55:05 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,["playerName"] = Klingni,["player"] = 1,["isBoss"] = false,} ,[2] = { ["team"] = lobby,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,["playerName"] = Schleppi,["player"] = 2,["isBoss"] = false,} ,} 
+11:55:05 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,["isBoss"] = false,["player"] = 1,["playerName"] = Klingni,} ,[2] = { ["team"] = lobby,["coord"] = { ["z"] = 0,["x"] = 0,["y"] = 0,} ,["isBoss"] = false,["player"] = 2,["playerName"] = Schleppi,} ,} 
+11:55:06 - Function:[0]Klingni - playerSpawned - Param: { ["z"] = 67.4746,["model"] = a_m_y_hipster_02,["heading"] = 0,["skipFade"] = false,["x"] = -764.7618,["y"] = 153.4494,} 
+11:55:06 - Function:[1]Schleppi - playerSpawned - Param: { ["z"] = 67.4746,["model"] = a_m_y_hipster_02,["heading"] = 0,["skipFade"] = false,["x"] = -764.7618,["y"] = 153.4494,} 
+11:56:43 - Function:getAllMaps - Param: nil
+11:56:43 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,["isBoss"] = false,["playerName"] = Klingni,["team"] = lobby,} ,} 
+11:56:43 - Function:getAllMaps - Param: nil
+11:56:43 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["team"] = lobby,["isBoss"] = false,["playerName"] = Klingni,["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,} ,} 
+11:56:43 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,["isBoss"] = false,["playerName"] = Klingni,["team"] = lobby,} ,[2] = { ["player"] = 2,["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,["isBoss"] = false,["playerName"] = Schleppi,["team"] = lobby,} ,} 
+11:56:43 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["team"] = lobby,["isBoss"] = false,["playerName"] = Klingni,["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,} ,[2] = { ["player"] = 2,["team"] = lobby,["isBoss"] = false,["playerName"] = Schleppi,["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,} ,} 
+11:56:44 - Function:[0]Klingni - playerSpawned - Param: { ["model"] = a_m_y_hipster_02,["z"] = 67.4746,["skipFade"] = false,["x"] = -764.7618,["heading"] = 0,["y"] = 153.4494,} 
+11:56:44 - Function:[1]Schleppi - playerSpawned - Param: { ["y"] = 153.4494,["z"] = 67.4746,["x"] = -764.7618,["skipFade"] = false,["heading"] = 0,["model"] = a_m_y_hipster_02,} 
+11:57:22 - Function:getAllMaps - Param: nil
+11:57:22 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,["playerName"] = Klingni,["team"] = lobby,["player"] = 1,["isBoss"] = false,} ,} 
+11:57:22 - Function:getAllMaps - Param: nil
+11:57:22 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,["playerName"] = Klingni,["team"] = lobby,["player"] = 1,["isBoss"] = false,} ,} 
+11:57:22 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,["playerName"] = Klingni,["team"] = lobby,["player"] = 1,["isBoss"] = false,} ,[2] = { ["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,["playerName"] = Schleppi,["team"] = lobby,["player"] = 2,["isBoss"] = false,} ,} 
+11:57:22 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,["playerName"] = Klingni,["team"] = lobby,["player"] = 1,["isBoss"] = false,} ,[2] = { ["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,["playerName"] = Schleppi,["team"] = lobby,["player"] = 2,["isBoss"] = false,} ,} 
+11:57:23 - Function:[0]Klingni - playerSpawned - Param: { ["model"] = a_m_y_hipster_02,["skipFade"] = false,["x"] = -764.7618,["z"] = 67.4746,["heading"] = 0,["y"] = 153.4494,} 
+11:57:23 - Function:[1]Schleppi - playerSpawned - Param: { ["model"] = a_m_y_hipster_02,["skipFade"] = false,["x"] = -764.7618,["z"] = 67.4746,["heading"] = 0,["y"] = 153.4494,} 
+11:57:23 - Function:getAllMaps - Param: nil
+11:57:27 - Function:CNC:startRound - Param: 18
+11:57:27 - Function:CNC:startRound - Param: true
+11:57:27 - Function:startCNCRound - Param: 18
+11:57:27 - Function:getMap - Param: 18
+11:57:27 - Function:[0]Klingni - CNC:cleanAll - Param: nil
+11:57:27 - Function:[1]Schleppi - CNC:cleanAll - Param: nil
+11:57:29 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["coord"] = { ["x"] = -764.76281738281,["z"] = 67.474555969238,["y"] = 153.45141601562,} ,["playerName"] = Schleppi,["team"] = crook,["player"] = 2,["isBoss"] = true,} ,[2] = { ["coord"] = { ["x"] = -764.76287841797,["z"] = 67.474555969238,["y"] = 153.45098876953,} ,["playerName"] = Klingni,["team"] = cop,["player"] = 1,["isBoss"] = false,} ,} 
+11:57:29 - Function:[0]Klingni - CNC:StartRound - Param: nil
+11:57:29 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["coord"] = { ["x"] = -764.76281738281,["z"] = 67.474555969238,["y"] = 153.45141601562,} ,["playerName"] = Schleppi,["team"] = crook,["player"] = 2,["isBoss"] = true,} ,[2] = { ["coord"] = { ["x"] = -764.76287841797,["z"] = 67.474555969238,["y"] = 153.45098876953,} ,["playerName"] = Klingni,["team"] = cop,["player"] = 1,["isBoss"] = false,} ,} 
+11:57:29 - Function:CNC:createSpawner - Param: { } 
+11:57:29 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["coord"] = { ["x"] = -764.76281738281,["z"] = 67.474555969238,["y"] = 153.45141601562,} ,["playerName"] = Schleppi,["team"] = crook,["player"] = 2,["isBoss"] = true,} ,[2] = { ["coord"] = { ["x"] = -764.76287841797,["z"] = 67.474555969238,["y"] = 153.45098876953,} ,["playerName"] = Klingni,["team"] = cop,["player"] = 1,["isBoss"] = false,} ,} 
+11:57:29 - Function:[1]Schleppi - CNC:StartRound - Param: nil
+11:57:29 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["coord"] = { ["x"] = -764.76281738281,["z"] = 67.474555969238,["y"] = 153.45141601562,} ,["playerName"] = Schleppi,["team"] = crook,["player"] = 2,["isBoss"] = true,} ,[2] = { ["coord"] = { ["x"] = -764.76287841797,["z"] = 67.474555969238,["y"] = 153.45098876953,} ,["playerName"] = Klingni,["team"] = cop,["player"] = 1,["isBoss"] = false,} ,} 
+11:57:29 - Function:[1]Schleppi - CNC:eventCreateGetaway - Param: { ["coord"] = { ["x"] = 1770.4864501953,["z"] = 41.382930755615,["y"] = 3238.0285644531,} ,["rot"] = { ["x"] = 1.5054564476013,["z"] = 165.67411804199,["y"] = 1.6042633056641,} ,["model"] = BRIOSO,["hash"] = 1549126457,} 
+11:57:29 - Function:CNC:creatGetaway-NetGeta - Param: 252
+11:57:29 - Function:[0]Klingni - CNC:findGetawayCoord - Param: 252
+11:57:29 - Function:[1]Schleppi - CNC:findGetawayCoord - Param: 252
+11:57:30 - Function:spawnPlayer - Param: { ["coord"] = { ["x"] = -764.76281738281,["z"] = 67.474555969238,["y"] = 153.45141601562,} ,["playerName"] = Schleppi,["team"] = crook,["player"] = 2,["isBoss"] = true,} 
+11:57:30 - Function:getPlayerSettings - Param: boss
+11:57:30 - Function:spawnPlayer - Param: { ["coord"] = { ["x"] = -764.76287841797,["z"] = 67.474555969238,["y"] = 153.45098876953,} ,["playerName"] = Klingni,["team"] = cop,["player"] = 1,["isBoss"] = false,} 
+11:57:30 - Function:getPlayerSettings - Param: cop
+11:57:30 - Function:[0]Klingni - CNC:setTeam - Param: cop
+11:57:30 - Function:CNC:createSpawner - Param: { } 
+11:57:30 - Function:[1]Schleppi - CNC:setTeam - Param: crook
+11:57:30 - Function:[1]Schleppi - CNC:eventCreateVehicles - Param: { [1] = { ["coord"] = { ["x"] = 1746.8403320313,["z"] = 41.376796722412,["y"] = 3258.9836425781,} ,["rot"] = { ["x"] = -1.1992740631104,["z"] = 8.3844299316406,["y"] = -0.72669321298599,} ,["model"] = BUS,["hash"] = -713569950,} ,} 
+11:57:31 - Function:CNC:createVehicle - Param: { [1] = 256,} 
+11:57:31 - Function:[0]Klingni - playerSpawned - Param: { ["model"] = S_M_Y_Cop_01,["skipFade"] = false,["x"] = 1752.4354248047,["z"] = 41.191539764404,["heading"] = 0,["y"] = 3270.9641113281,} 
+11:57:31 - Function:[0]Klingni - FirstSpawn - Param: { ["model"] = S_M_Y_Cop_01,["skipFade"] = false,["x"] = 1752.4354248047,["z"] = 41.191539764404,["heading"] = 0,["y"] = 3270.9641113281,} 
+11:57:32 - Function:[1]Schleppi - playerSpawned - Param: { ["model"] = G_M_M_ArmBoss_01,["skipFade"] = false,["x"] = 1740.2829589844,["z"] = 41.238735198975,["heading"] = 0,["y"] = 3265.7829589844,} 
+11:57:32 - Function:[1]Schleppi - FirstSpawn - Param: { ["model"] = G_M_M_ArmBoss_01,["skipFade"] = false,["x"] = 1740.2829589844,["z"] = 41.238735198975,["heading"] = 0,["y"] = 3265.7829589844,} 
+11:57:40 - Function:respawnPlayer - Param: { ["coord"] = { ["x"] = 1752.4354248047,["z"] = 41.191230773926,["y"] = 3270.9641113281,} ,["playerName"] = Klingni,["team"] = cop,["player"] = 1,["isBoss"] = false,} 
+11:57:40 - Function:getPlayerSettings - Param: cop
+11:57:40 - Function:respawnPlayer - frisch geholte Player Settings - Param: { ["model"] = S_M_Y_Cop_01,["weapons"] = { [1] = { ["equipt"] = true,["type"] = WEAPON_MICROSMG,["ammo"] = 250,} ,[2] = { ["equipt"] = false,["type"] = WEAPON_PISTOL,["ammo"] = 250,} ,[3] = { ["equipt"] = false,["type"] = GADGET_PARACHUTE,["ammo"] = 10,} ,} ,} 
+11:57:43 - Function:[0]Klingni - CNC:setTeam - Param: cop
+11:57:44 - Function:[0]Klingni - playerSpawned - Param: { ["model"] = S_M_Y_Cop_01,["skipFade"] = false,["x"] = 1839.2788085938,["z"] = 44.8484375,["heading"] = 0,["y"] = 3172.7897949219,} 
+11:58:29 - Function:getAllMaps - Param: nil
+11:58:29 - Function:getAllMaps - Param: nil
+11:58:29 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["playerName"] = Klingni,["isBoss"] = false,["team"] = lobby,} ,} 
+11:58:29 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["playerName"] = Klingni,["isBoss"] = false,["team"] = lobby,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,} ,} 
+11:58:29 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["playerName"] = Klingni,["isBoss"] = false,["team"] = lobby,} ,[2] = { ["player"] = 2,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,["playerName"] = Schleppi,["isBoss"] = false,["team"] = lobby,} ,} 
+11:58:29 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["playerName"] = Klingni,["isBoss"] = false,["team"] = lobby,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,} ,[2] = { ["player"] = 2,["playerName"] = Schleppi,["isBoss"] = false,["team"] = lobby,["coord"] = { ["z"] = 0,["y"] = 0,["x"] = 0,} ,} ,} 
+11:58:30 - Function:[0]Klingni - playerSpawned - Param: { ["skipFade"] = false,["model"] = a_m_y_hipster_02,["heading"] = 0,["z"] = 67.4746,["y"] = 153.4494,["x"] = -764.7618,} 
+11:58:30 - Function:[1]Schleppi - playerSpawned - Param: { ["skipFade"] = false,["model"] = a_m_y_hipster_02,["heading"] = 0,["z"] = 67.4746,["y"] = 153.4494,["x"] = -764.7618,} 
+11:58:33 - Function:getAllMaps - Param: nil
+11:58:38 - Function:CNC:startRound - Param: 18
+11:58:38 - Function:CNC:startRound - Param: true
+11:58:38 - Function:startCNCRound - Param: 18
+11:58:38 - Function:getMap - Param: 18
+11:58:38 - Function:[0]Klingni - CNC:cleanAll - Param: nil
+11:58:38 - Function:[1]Schleppi - CNC:cleanAll - Param: nil
+11:58:38 - Function:getAllMaps - Param: nil
+11:58:40 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["player"] = 2,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.4514465332,["x"] = -764.76281738281,} ,["playerName"] = Schleppi,["isBoss"] = true,["team"] = crook,} ,[2] = { ["player"] = 1,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45069885254,["x"] = -764.76281738281,} ,["playerName"] = Klingni,["isBoss"] = false,["team"] = cop,} ,} 
+11:58:40 - Function:[0]Klingni - CNC:StartRound - Param: nil
+11:58:40 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["player"] = 2,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.4514465332,["x"] = -764.76281738281,} ,["playerName"] = Schleppi,["isBoss"] = true,["team"] = crook,} ,[2] = { ["player"] = 1,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45069885254,["x"] = -764.76281738281,} ,["playerName"] = Klingni,["isBoss"] = false,["team"] = cop,} ,} 
+11:58:40 - Function:CNC:createSpawner - Param: { } 
+11:58:40 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["player"] = 2,["playerName"] = Schleppi,["isBoss"] = true,["team"] = crook,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.4514465332,["x"] = -764.76281738281,} ,} ,[2] = { ["player"] = 1,["playerName"] = Klingni,["isBoss"] = false,["team"] = cop,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45069885254,["x"] = -764.76281738281,} ,} ,} 
+11:58:40 - Function:[1]Schleppi - CNC:StartRound - Param: nil
+11:58:40 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["player"] = 2,["playerName"] = Schleppi,["isBoss"] = true,["team"] = crook,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.4514465332,["x"] = -764.76281738281,} ,} ,[2] = { ["player"] = 1,["playerName"] = Klingni,["isBoss"] = false,["team"] = cop,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45069885254,["x"] = -764.76281738281,} ,} ,} 
+11:58:40 - Function:[1]Schleppi - CNC:eventCreateGetaway - Param: { ["rot"] = { ["z"] = 165.67411804199,["y"] = 1.6042633056641,["x"] = 1.5054564476013,} ,["model"] = BRIOSO,["hash"] = 1549126457,["coord"] = { ["z"] = 41.382930755615,["y"] = 3238.0285644531,["x"] = 1770.4864501953,} ,} 
+11:58:40 - Function:CNC:creatGetaway-NetGeta - Param: 255
+11:58:40 - Function:[0]Klingni - CNC:findGetawayCoord - Param: 255
+11:58:41 - Function:[1]Schleppi - CNC:findGetawayCoord - Param: 255
+11:58:41 - Function:spawnPlayer - Param: { ["player"] = 2,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.4514465332,["x"] = -764.76281738281,} ,["playerName"] = Schleppi,["isBoss"] = true,["team"] = crook,} 
+11:58:41 - Function:getPlayerSettings - Param: boss
+11:58:41 - Function:spawnPlayer - Param: { ["player"] = 1,["coord"] = { ["z"] = 67.474555969238,["y"] = 153.45069885254,["x"] = -764.76281738281,} ,["playerName"] = Klingni,["isBoss"] = false,["team"] = cop,} 
+11:58:41 - Function:getPlayerSettings - Param: cop
+11:58:41 - Function:CNC:createSpawner - Param: { } 
+11:58:41 - Function:[0]Klingni - CNC:setTeam - Param: cop
+11:58:41 - Function:[1]Schleppi - CNC:setTeam - Param: crook
+11:58:42 - Function:[1]Schleppi - CNC:eventCreateVehicles - Param: { [1] = { ["rot"] = { ["z"] = 8.3844299316406,["y"] = -0.72669321298599,["x"] = -1.1992740631104,} ,["model"] = BUS,["hash"] = -713569950,["coord"] = { ["z"] = 41.376796722412,["y"] = 3258.9836425781,["x"] = 1746.8403320313,} ,} ,} 
+11:58:42 - Function:[0]Klingni - playerSpawned - Param: { ["skipFade"] = false,["model"] = S_M_Y_Cop_01,["heading"] = 0,["z"] = 41.156490325928,["y"] = 3273.142578125,["x"] = 1752.5712890625,} 
+11:58:42 - Function:[0]Klingni - FirstSpawn - Param: { ["skipFade"] = false,["model"] = S_M_Y_Cop_01,["heading"] = 0,["z"] = 41.156490325928,["y"] = 3273.142578125,["x"] = 1752.5712890625,} 
+11:58:42 - Function:CNC:createVehicle - Param: { [1] = 259,} 
+11:58:43 - Function:[1]Schleppi - playerSpawned - Param: { ["skipFade"] = false,["model"] = G_M_M_ArmBoss_01,["heading"] = 0,["z"] = 41.21403503418,["y"] = 3268.7297363281,["x"] = 1740.0858154297,} 
+11:58:43 - Function:[1]Schleppi - FirstSpawn - Param: { ["skipFade"] = false,["model"] = G_M_M_ArmBoss_01,["heading"] = 0,["z"] = 41.21403503418,["y"] = 3268.7297363281,["x"] = 1740.0858154297,} 
+11:58:47 - Function:respawnPlayer - Param: { ["player"] = 1,["coord"] = { ["z"] = 41.156120300293,["y"] = 3273.142578125,["x"] = 1752.5712890625,} ,["playerName"] = Klingni,["isBoss"] = false,["team"] = cop,} 
+11:58:47 - Function:getPlayerSettings - Param: cop
+11:58:47 - Function:respawnPlayer - frisch geholte Player Settings - Param: { ["weapons"] = { [1] = { ["ammo"] = 250,["equipt"] = true,["type"] = WEAPON_MICROSMG,} ,[2] = { ["ammo"] = 250,["equipt"] = false,["type"] = WEAPON_PISTOL,} ,[3] = { ["ammo"] = 10,["equipt"] = false,["type"] = GADGET_PARACHUTE,} ,} ,["model"] = S_M_Y_Cop_01,} 
+11:58:50 - Function:[0]Klingni - CNC:setTeam - Param: cop
+11:58:52 - Function:[0]Klingni - playerSpawned - Param: { ["skipFade"] = false,["model"] = S_M_Y_Cop_01,["heading"] = 0,["z"] = 42.575,["y"] = 3205.7360839844,["x"] = 1753.0819091797,} 
+11:59:23 - Function:getAllMaps - Param: nil
+11:59:23 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["isBoss"] = false,["team"] = lobby,["playerName"] = Klingni,} ,} 
+11:59:23 - Function:getAllMaps - Param: nil
+11:59:23 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["isBoss"] = false,["team"] = lobby,["playerName"] = Klingni,} ,} 
+11:59:23 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["isBoss"] = false,["team"] = lobby,["playerName"] = Klingni,} ,[2] = { ["player"] = 2,["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["isBoss"] = false,["team"] = lobby,["playerName"] = Schleppi,} ,} 
+11:59:23 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["player"] = 1,["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["isBoss"] = false,["team"] = lobby,["playerName"] = Klingni,} ,[2] = { ["player"] = 2,["coord"] = { ["y"] = 0,["z"] = 0,["x"] = 0,} ,["isBoss"] = false,["team"] = lobby,["playerName"] = Schleppi,} ,} 
+11:59:24 - Function:[0]Klingni - playerSpawned - Param: { ["model"] = a_m_y_hipster_02,["x"] = -764.7618,["y"] = 153.4494,["z"] = 67.4746,["skipFade"] = false,["heading"] = 0,} 
+11:59:24 - Function:[1]Schleppi - playerSpawned - Param: { ["model"] = a_m_y_hipster_02,["x"] = -764.7618,["skipFade"] = false,["z"] = 67.4746,["y"] = 153.4494,["heading"] = 0,} 
+11:59:27 - Function:getAllMaps - Param: nil
+11:59:31 - Function:CNC:startRound - Param: 18
+11:59:31 - Function:CNC:startRound - Param: true
+11:59:31 - Function:startCNCRound - Param: 18
+11:59:31 - Function:getMap - Param: 18
+11:59:31 - Function:[0]Klingni - CNC:cleanAll - Param: nil
+11:59:31 - Function:[1]Schleppi - CNC:cleanAll - Param: nil
+11:59:33 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["player"] = 2,["coord"] = { ["y"] = 153.45169067383,["z"] = 67.474555969238,["x"] = -764.76300048828,} ,["isBoss"] = true,["team"] = crook,["playerName"] = Schleppi,} ,[2] = { ["player"] = 1,["coord"] = { ["y"] = 153.45072937012,["z"] = 67.474555969238,["x"] = -764.76281738281,} ,["isBoss"] = false,["team"] = cop,["playerName"] = Klingni,} ,} 
+11:59:33 - Function:[0]Klingni - CNC:StartRound - Param: nil
+11:59:33 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["player"] = 2,["coord"] = { ["y"] = 153.45169067383,["z"] = 67.474555969238,["x"] = -764.76300048828,} ,["isBoss"] = true,["team"] = crook,["playerName"] = Schleppi,} ,[2] = { ["player"] = 1,["coord"] = { ["y"] = 153.45072937012,["z"] = 67.474555969238,["x"] = -764.76281738281,} ,["isBoss"] = false,["team"] = cop,["playerName"] = Klingni,} ,} 
+11:59:33 - Function:CNC:createSpawner - Param: { } 
+11:59:33 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["player"] = 2,["coord"] = { ["y"] = 153.45169067383,["z"] = 67.474555969238,["x"] = -764.76300048828,} ,["isBoss"] = true,["team"] = crook,["playerName"] = Schleppi,} ,[2] = { ["player"] = 1,["coord"] = { ["y"] = 153.45072937012,["z"] = 67.474555969238,["x"] = -764.76281738281,} ,["isBoss"] = false,["team"] = cop,["playerName"] = Klingni,} ,} 
+11:59:33 - Function:[1]Schleppi - CNC:StartRound - Param: nil
+11:59:33 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["player"] = 2,["coord"] = { ["y"] = 153.45169067383,["z"] = 67.474555969238,["x"] = -764.76300048828,} ,["isBoss"] = true,["team"] = crook,["playerName"] = Schleppi,} ,[2] = { ["player"] = 1,["coord"] = { ["y"] = 153.45072937012,["z"] = 67.474555969238,["x"] = -764.76281738281,} ,["isBoss"] = false,["team"] = cop,["playerName"] = Klingni,} ,} 
+11:59:33 - Function:[1]Schleppi - CNC:eventCreateGetaway - Param: { ["hash"] = 1549126457,["model"] = BRIOSO,["rot"] = { ["y"] = 1.6042633056641,["z"] = 165.67411804199,["x"] = 1.5054564476013,} ,["coord"] = { ["y"] = 3238.0285644531,["z"] = 41.382930755615,["x"] = 1770.4864501953,} ,} 
+11:59:33 - Function:CNC:creatGetaway-NetGeta - Param: 257
+11:59:34 - Function:[0]Klingni - CNC:findGetawayCoord - Param: 257
+11:59:34 - Function:[1]Schleppi - CNC:findGetawayCoord - Param: 257
+11:59:34 - Function:spawnPlayer - Param: { ["player"] = 2,["coord"] = { ["y"] = 153.45169067383,["z"] = 67.474555969238,["x"] = -764.76300048828,} ,["isBoss"] = true,["playerName"] = Schleppi,["team"] = crook,} 
+11:59:34 - Function:getPlayerSettings - Param: boss
+11:59:34 - Function:spawnPlayer - Param: { ["player"] = 1,["coord"] = { ["y"] = 153.45072937012,["z"] = 67.474555969238,["x"] = -764.76281738281,} ,["isBoss"] = false,["playerName"] = Klingni,["team"] = cop,} 
+11:59:34 - Function:getPlayerSettings - Param: cop
+11:59:34 - Function:CNC:createSpawner - Param: { } 
+11:59:34 - Function:[0]Klingni - CNC:setTeam - Param: cop
+11:59:34 - Function:[1]Schleppi - CNC:setTeam - Param: crook
+11:59:35 - Function:[1]Schleppi - CNC:eventCreateVehicles - Param: { [1] = { ["hash"] = -713569950,["model"] = BUS,["rot"] = { ["y"] = -0.72669321298599,["z"] = 8.3844299316406,["x"] = -1.1992740631104,} ,["coord"] = { ["y"] = 3258.9836425781,["z"] = 41.376796722412,["x"] = 1746.8403320313,} ,} ,} 
+11:59:35 - Function:[0]Klingni - playerSpawned - Param: { ["model"] = S_M_Y_Cop_01,["x"] = 1756.8367919922,["y"] = 3271.6059570312,["z"] = 41.221687316895,["skipFade"] = false,["heading"] = 0,} 
+11:59:35 - Function:[0]Klingni - FirstSpawn - Param: { ["model"] = S_M_Y_Cop_01,["x"] = 1756.8367919922,["y"] = 3271.6059570312,["z"] = 41.221687316895,["skipFade"] = false,["heading"] = 0,} 
+11:59:35 - Function:CNC:createVehicle - Param: { [1] = 258,} 
+11:59:36 - Function:[1]Schleppi - playerSpawned - Param: { ["model"] = G_M_M_ArmBoss_01,["x"] = 1736.0615234375,["skipFade"] = false,["z"] = 41.198970794678,["y"] = 3267.4431152344,["heading"] = 0,} 
+11:59:36 - Function:[1]Schleppi - FirstSpawn - Param: { ["model"] = G_M_M_ArmBoss_01,["x"] = 1736.0615234375,["skipFade"] = false,["z"] = 41.198970794678,["y"] = 3267.4431152344,["heading"] = 0,} 
+11:59:41 - Function:respawnPlayer - Param: { ["player"] = 1,["coord"] = { ["y"] = 3271.6059570312,["z"] = 41.221687316895,["x"] = 1756.8367919922,} ,["isBoss"] = false,["playerName"] = Klingni,["team"] = cop,} 
+11:59:41 - Function:getPlayerSettings - Param: cop
+11:59:41 - Function:respawnPlayer - frisch geholte Player Settings - Param: { ["weapons"] = { [1] = { ["type"] = WEAPON_MICROSMG,["ammo"] = 250,["equipt"] = true,} ,[2] = { ["type"] = WEAPON_PISTOL,["ammo"] = 250,["equipt"] = false,} ,[3] = { ["type"] = GADGET_PARACHUTE,["ammo"] = 10,["equipt"] = false,} ,} ,["model"] = S_M_Y_Cop_01,} 
+11:59:44 - Function:[0]Klingni - CNC:setTeam - Param: cop
+11:59:45 - Function:[0]Klingni - playerSpawned - Param: { ["model"] = S_M_Y_Cop_01,["x"] = 1696.0568847656,["y"] = 3276.4509277344,["z"] = 40.3015625,["skipFade"] = false,["heading"] = 0,} 
+12:01:01 - Function:getAllMaps - Param: nil
+12:01:01 - Function:getAllMaps - Param: nil
+12:01:01 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["player"] = 1,["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,["team"] = lobby,["isBoss"] = false,} ,} 
+12:01:01 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["player"] = 1,["team"] = lobby,["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,["isBoss"] = false,} ,} 
+12:01:01 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["player"] = 1,["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,["team"] = lobby,["isBoss"] = false,} ,[2] = { ["playerName"] = Schleppi,["player"] = 2,["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,["team"] = lobby,["isBoss"] = false,} ,} 
+12:01:01 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["player"] = 1,["team"] = lobby,["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,["isBoss"] = false,} ,[2] = { ["playerName"] = Schleppi,["player"] = 2,["team"] = lobby,["coord"] = { ["x"] = 0,["y"] = 0,["z"] = 0,} ,["isBoss"] = false,} ,} 
+12:01:02 - Function:[0]Klingni - playerSpawned - Param: { ["x"] = -764.7618,["y"] = 153.4494,["z"] = 67.4746,["skipFade"] = false,["model"] = a_m_y_hipster_02,["heading"] = 0,} 
+12:01:02 - Function:[1]Schleppi - playerSpawned - Param: { ["x"] = -764.7618,["y"] = 153.4494,["z"] = 67.4746,["skipFade"] = false,["model"] = a_m_y_hipster_02,["heading"] = 0,} 
+12:01:05 - Function:getAllMaps - Param: nil
+12:01:10 - Function:CNC:startRound - Param: 18
+12:01:10 - Function:CNC:startRound - Param: true
+12:01:10 - Function:startCNCRound - Param: 18
+12:01:10 - Function:getMap - Param: 18
+12:01:10 - Function:[0]Klingni - CNC:cleanAll - Param: nil
+12:01:10 - Function:[1]Schleppi - CNC:cleanAll - Param: nil
+12:01:12 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["playerName"] = Klingni,["player"] = 1,["coord"] = { ["x"] = -764.76281738281,["y"] = 153.45072937012,["z"] = 67.474555969238,} ,["isBoss"] = true,["team"] = crook,} ,[2] = { ["playerName"] = Schleppi,["player"] = 2,["coord"] = { ["x"] = -764.76287841797,["y"] = 153.45150756836,["z"] = 67.474555969238,} ,["isBoss"] = false,["team"] = cop,} ,} 
+12:01:12 - Function:[0]Klingni - CNC:StartRound - Param: nil
+12:01:12 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["playerName"] = Klingni,["player"] = 1,["coord"] = { ["x"] = -764.76281738281,["y"] = 153.45072937012,["z"] = 67.474555969238,} ,["isBoss"] = true,["team"] = crook,} ,[2] = { ["playerName"] = Schleppi,["player"] = 2,["coord"] = { ["x"] = -764.76287841797,["y"] = 153.45150756836,["z"] = 67.474555969238,} ,["isBoss"] = false,["team"] = cop,} ,} 
+12:01:12 - Function:CNC:createSpawner - Param: { } 
+12:01:12 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["playerName"] = Klingni,["player"] = 1,["team"] = crook,["coord"] = { ["x"] = -764.76281738281,["y"] = 153.45072937012,["z"] = 67.474555969238,} ,["isBoss"] = true,} ,[2] = { ["playerName"] = Schleppi,["player"] = 2,["team"] = cop,["coord"] = { ["x"] = -764.76287841797,["y"] = 153.45150756836,["z"] = 67.474555969238,} ,["isBoss"] = false,} ,} 
+12:01:12 - Function:[1]Schleppi - CNC:StartRound - Param: nil
+12:01:12 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["playerName"] = Klingni,["player"] = 1,["team"] = crook,["coord"] = { ["x"] = -764.76281738281,["y"] = 153.45072937012,["z"] = 67.474555969238,} ,["isBoss"] = true,} ,[2] = { ["playerName"] = Schleppi,["player"] = 2,["team"] = cop,["coord"] = { ["x"] = -764.76287841797,["y"] = 153.45150756836,["z"] = 67.474555969238,} ,["isBoss"] = false,} ,} 
+12:01:12 - Function:[0]Klingni - CNC:eventCreateGetaway - Param: { ["coord"] = { ["x"] = 1770.4864501953,["y"] = 3238.0285644531,["z"] = 41.382930755615,} ,["rot"] = { ["x"] = 1.5054564476013,["y"] = 1.6042633056641,["z"] = 165.67411804199,} ,["hash"] = 1549126457,["model"] = BRIOSO,} 
+12:01:12 - Function:CNC:creatGetaway-NetGeta - Param: 4
+12:01:12 - Function:[0]Klingni - CNC:findGetawayCoord - Param: 4
+12:01:12 - Function:[1]Schleppi - CNC:findGetawayCoord - Param: 4
+12:01:13 - Function:spawnPlayer - Param: { ["playerName"] = Klingni,["player"] = 1,["team"] = crook,["coord"] = { ["x"] = -764.76281738281,["y"] = 153.45072937012,["z"] = 67.474555969238,} ,["isBoss"] = true,} 
+12:01:13 - Function:getPlayerSettings - Param: boss
+12:01:13 - Function:spawnPlayer - Param: { ["playerName"] = Schleppi,["player"] = 2,["team"] = cop,["coord"] = { ["x"] = -764.76287841797,["y"] = 153.45150756836,["z"] = 67.474555969238,} ,["isBoss"] = false,} 
+12:01:13 - Function:getPlayerSettings - Param: cop
+12:01:13 - Function:CNC:createSpawner - Param: { } 
+12:01:13 - Function:[0]Klingni - CNC:setTeam - Param: crook
+12:01:13 - Function:[1]Schleppi - CNC:setTeam - Param: cop
+12:01:13 - Function:[0]Klingni - CNC:eventCreateVehicles - Param: { [1] = { ["coord"] = { ["x"] = 1746.8403320313,["y"] = 3258.9836425781,["z"] = 41.376796722412,} ,["rot"] = { ["x"] = -1.1992740631104,["y"] = -0.72669321298599,["z"] = 8.3844299316406,} ,["hash"] = -713569950,["model"] = BUS,} ,} 
+12:01:13 - Function:CNC:createVehicle - Param: { [1] = 66,} 
+12:01:14 - Function:[0]Klingni - playerSpawned - Param: { ["x"] = 1740.2829589844,["y"] = 3265.7829589844,["z"] = 41.238735198975,["skipFade"] = false,["model"] = G_M_M_ArmBoss_01,["heading"] = 0,} 
+12:01:14 - Function:[0]Klingni - FirstSpawn - Param: { ["x"] = 1740.2829589844,["y"] = 3265.7829589844,["z"] = 41.238735198975,["skipFade"] = false,["model"] = G_M_M_ArmBoss_01,["heading"] = 0,} 
+12:01:15 - Function:[1]Schleppi - playerSpawned - Param: { ["x"] = 1752.4354248047,["y"] = 3270.9641113281,["z"] = 41.191539764404,["skipFade"] = false,["model"] = S_M_Y_Cop_01,["heading"] = 0,} 
+12:01:15 - Function:[1]Schleppi - FirstSpawn - Param: { ["x"] = 1752.4354248047,["y"] = 3270.9641113281,["z"] = 41.191539764404,["skipFade"] = false,["model"] = S_M_Y_Cop_01,["heading"] = 0,} 
+12:01:22 - Function:respawnPlayer - Param: { ["playerName"] = Schleppi,["player"] = 2,["team"] = cop,["coord"] = { ["x"] = 1752.4354248047,["y"] = 3270.9641113281,["z"] = 41.180843353271,} ,["isBoss"] = false,} 
+12:01:22 - Function:getPlayerSettings - Param: cop
+12:01:22 - Function:respawnPlayer - frisch geholte Player Settings - Param: { ["model"] = S_M_Y_Cop_01,["weapons"] = { [1] = { ["type"] = WEAPON_MICROSMG,["ammo"] = 250,["equipt"] = true,} ,[2] = { ["type"] = WEAPON_PISTOL,["ammo"] = 250,["equipt"] = false,} ,[3] = { ["type"] = GADGET_PARACHUTE,["ammo"] = 10,["equipt"] = false,} ,} ,} 
+12:01:25 - Function:[1]Schleppi - CNC:setTeam - Param: cop
+12:01:26 - Function:[1]Schleppi - playerSpawned - Param: { ["x"] = 1720.2822265625,["y"] = 3361.7841796875,["z"] = 40.1453125,["skipFade"] = false,["model"] = S_M_Y_Cop_01,["heading"] = 0,} 
+12:01:58 - Function:getAllMaps - Param: nil
+12:01:58 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["player"] = 1,["isBoss"] = false,["team"] = lobby,} ,} 
+12:01:58 - Function:getAllMaps - Param: nil
+12:01:58 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["player"] = 1,["isBoss"] = false,["playerName"] = Klingni,} ,} 
+12:01:58 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["playerName"] = Klingni,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["player"] = 1,["isBoss"] = false,["team"] = lobby,} ,[2] = { ["playerName"] = Schleppi,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["player"] = 2,["isBoss"] = false,["team"] = lobby,} ,} 
+12:01:58 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["player"] = 1,["isBoss"] = false,["playerName"] = Klingni,} ,[2] = { ["team"] = lobby,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,["player"] = 2,["isBoss"] = false,["playerName"] = Schleppi,} ,} 
+12:01:59 - Function:[0]Klingni - playerSpawned - Param: { ["model"] = a_m_y_hipster_02,["y"] = 153.4494,["skipFade"] = false,["x"] = -764.7618,["heading"] = 0,["z"] = 67.4746,} 
+12:02:00 - Function:[1]Schleppi - playerSpawned - Param: { ["y"] = 153.4494,["skipFade"] = false,["model"] = a_m_y_hipster_02,["x"] = -764.7618,["heading"] = 0,["z"] = 67.4746,} 
+12:02:00 - Function:getAllMaps - Param: nil
+12:02:03 - Function:CNC:startRound - Param: 18
+12:02:04 - Function:CNC:startRound - Param: true
+12:02:04 - Function:startCNCRound - Param: 18
+12:02:04 - Function:getMap - Param: 18
+12:02:04 - Function:[0]Klingni - CNC:cleanAll - Param: nil
+12:02:04 - Function:[1]Schleppi - CNC:cleanAll - Param: nil
+12:02:06 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["playerName"] = Schleppi,["coord"] = { ["y"] = 153.45178222656,["x"] = -764.76306152344,["z"] = 67.474555969238,} ,["player"] = 2,["isBoss"] = true,["team"] = crook,} ,[2] = { ["playerName"] = Klingni,["coord"] = { ["y"] = 153.45066833496,["x"] = -764.7626953125,["z"] = 67.474555969238,} ,["player"] = 1,["isBoss"] = false,["team"] = cop,} ,} 
+12:02:06 - Function:[0]Klingni - CNC:StartRound - Param: nil
+12:02:06 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["playerName"] = Schleppi,["coord"] = { ["y"] = 153.45178222656,["x"] = -764.76306152344,["z"] = 67.474555969238,} ,["player"] = 2,["isBoss"] = true,["team"] = crook,} ,[2] = { ["playerName"] = Klingni,["coord"] = { ["y"] = 153.45066833496,["x"] = -764.7626953125,["z"] = 67.474555969238,} ,["player"] = 1,["isBoss"] = false,["team"] = cop,} ,} 
+12:02:06 - Function:CNC:createSpawner - Param: { } 
+12:02:06 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["team"] = crook,["coord"] = { ["y"] = 153.45178222656,["x"] = -764.76306152344,["z"] = 67.474555969238,} ,["player"] = 2,["isBoss"] = true,["playerName"] = Schleppi,} ,[2] = { ["team"] = cop,["coord"] = { ["y"] = 153.45066833496,["x"] = -764.7626953125,["z"] = 67.474555969238,} ,["player"] = 1,["isBoss"] = false,["playerName"] = Klingni,} ,} 
+12:02:06 - Function:[1]Schleppi - CNC:StartRound - Param: nil
+12:02:06 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["team"] = crook,["coord"] = { ["y"] = 153.45178222656,["x"] = -764.76306152344,["z"] = 67.474555969238,} ,["player"] = 2,["isBoss"] = true,["playerName"] = Schleppi,} ,[2] = { ["team"] = cop,["coord"] = { ["y"] = 153.45066833496,["x"] = -764.7626953125,["z"] = 67.474555969238,} ,["player"] = 1,["isBoss"] = false,["playerName"] = Klingni,} ,} 
+12:02:06 - Function:[1]Schleppi - CNC:eventCreateGetaway - Param: { ["rot"] = { ["y"] = 1.6042633056641,["x"] = 1.5054564476013,["z"] = 165.67411804199,} ,["hash"] = 1549126457,["model"] = BRIOSO,["coord"] = { ["y"] = 3238.0285644531,["x"] = 1770.4864501953,["z"] = 41.382930755615,} ,} 
+12:02:06 - Function:CNC:creatGetaway-NetGeta - Param: 256
+12:02:06 - Function:[0]Klingni - CNC:findGetawayCoord - Param: 256
+12:02:06 - Function:[1]Schleppi - CNC:findGetawayCoord - Param: 256
+12:02:07 - Function:spawnPlayer - Param: { ["team"] = crook,["coord"] = { ["y"] = 153.45178222656,["x"] = -764.76306152344,["z"] = 67.474555969238,} ,["player"] = 2,["isBoss"] = true,["playerName"] = Schleppi,} 
+12:02:07 - Function:getPlayerSettings - Param: boss
+12:02:07 - Function:spawnPlayer - Param: { ["team"] = cop,["coord"] = { ["y"] = 153.45066833496,["x"] = -764.7626953125,["z"] = 67.474555969238,} ,["player"] = 1,["isBoss"] = false,["playerName"] = Klingni,} 
+12:02:07 - Function:getPlayerSettings - Param: cop
+12:02:07 - Function:[0]Klingni - CNC:setTeam - Param: cop
+12:02:07 - Function:[1]Schleppi - CNC:setTeam - Param: crook
+12:02:07 - Function:[1]Schleppi - CNC:eventCreateVehicles - Param: { [1] = { ["rot"] = { ["y"] = -0.72669321298599,["x"] = -1.1992740631104,["z"] = 8.3844299316406,} ,["hash"] = -713569950,["model"] = BUS,["coord"] = { ["y"] = 3258.9836425781,["x"] = 1746.8403320313,["z"] = 41.376796722412,} ,} ,} 
+12:02:07 - Function:CNC:createVehicle - Param: { [1] = 259,} 
+12:02:08 - Function:[0]Klingni - playerSpawned - Param: { ["model"] = S_M_Y_Cop_01,["y"] = 3273.142578125,["skipFade"] = false,["x"] = 1752.5712890625,["heading"] = 0,["z"] = 41.156490325928,} 
+12:02:08 - Function:[0]Klingni - FirstSpawn - Param: { ["model"] = S_M_Y_Cop_01,["y"] = 3273.142578125,["skipFade"] = false,["x"] = 1752.5712890625,["heading"] = 0,["z"] = 41.156490325928,} 
+12:02:08 - Function:[1]Schleppi - playerSpawned - Param: { ["y"] = 3267.4431152344,["skipFade"] = false,["model"] = G_M_M_ArmBoss_01,["x"] = 1736.0615234375,["heading"] = 0,["z"] = 41.198970794678,} 
+12:02:08 - Function:[1]Schleppi - FirstSpawn - Param: { ["y"] = 3267.4431152344,["skipFade"] = false,["model"] = G_M_M_ArmBoss_01,["x"] = 1736.0615234375,["heading"] = 0,["z"] = 41.198970794678,} 
+12:02:11 - Function:CNC:createSpawner - Param: { } 
+12:02:12 - Function:respawnPlayer - Param: { ["team"] = cop,["coord"] = { ["y"] = 3273.142578125,["x"] = 1752.5712890625,["z"] = 41.156120300293,} ,["player"] = 1,["isBoss"] = false,["playerName"] = Klingni,} 
+12:02:12 - Function:getPlayerSettings - Param: cop
+12:02:12 - Function:respawnPlayer - frisch geholte Player Settings - Param: { ["model"] = S_M_Y_Cop_01,["weapons"] = { [1] = { ["type"] = WEAPON_MICROSMG,["ammo"] = 250,["equipt"] = true,} ,[2] = { ["type"] = WEAPON_PISTOL,["ammo"] = 250,["equipt"] = false,} ,[3] = { ["type"] = GADGET_PARACHUTE,["ammo"] = 10,["equipt"] = false,} ,} ,} 
+12:02:15 - Function:[0]Klingni - CNC:setTeam - Param: cop
+12:02:16 - Function:[0]Klingni - playerSpawned - Param: { ["model"] = S_M_Y_Cop_01,["y"] = 3318.4465332031,["skipFade"] = false,["x"] = 1676.0590820312,["heading"] = 0,["z"] = 39.934375,} 
+12:02:55 - Function:getAllMaps - Param: nil
+12:02:55 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["playerName"] = Klingni,["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,["isBoss"] = false,["player"] = 1,} ,} 
+12:02:55 - Function:getAllMaps - Param: nil
+12:02:55 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["playerName"] = Klingni,["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,["isBoss"] = false,["player"] = 1,} ,} 
+12:02:55 - Function:[0]Klingni - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["playerName"] = Klingni,["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,["isBoss"] = false,["player"] = 1,} ,[2] = { ["team"] = lobby,["playerName"] = Schleppi,["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,["isBoss"] = false,["player"] = 2,} ,} 
+12:02:55 - Function:[1]Schleppi - CNC:ClientUpdate - Param: { [1] = { ["team"] = lobby,["playerName"] = Klingni,["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,["isBoss"] = false,["player"] = 1,} ,[2] = { ["team"] = lobby,["playerName"] = Schleppi,["coord"] = { ["x"] = 0,["z"] = 0,["y"] = 0,} ,["isBoss"] = false,["player"] = 2,} ,} 
+12:02:56 - Function:[0]Klingni - playerSpawned - Param: { ["x"] = -764.7618,["z"] = 67.4746,["y"] = 153.4494,["model"] = a_m_y_hipster_02,["heading"] = 0,["skipFade"] = false,} 
+12:02:56 - Function:[1]Schleppi - playerSpawned - Param: { ["x"] = -764.7618,["heading"] = 0,["skipFade"] = false,["model"] = a_m_y_hipster_02,["z"] = 67.4746,["y"] = 153.4494,} 
+12:02:57 - Function:getAllMaps - Param: nil
+12:03:01 - Function:CNC:startRound - Param: 18
+12:03:01 - Function:CNC:startRound - Param: true
+12:03:01 - Function:startCNCRound - Param: 18
+12:03:01 - Function:getMap - Param: 18
+12:03:01 - Function:[0]Klingni - CNC:cleanAll - Param: nil
+12:03:01 - Function:[1]Schleppi - CNC:cleanAll - Param: nil
+12:03:03 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["team"] = crook,["playerName"] = Klingni,["coord"] = { ["x"] = -764.76275634766,["z"] = 67.474555969238,["y"] = 153.45088195801,} ,["isBoss"] = true,["player"] = 1,} ,[2] = { ["team"] = cop,["playerName"] = Schleppi,["coord"] = { ["x"] = -764.76281738281,["z"] = 67.474555969238,["y"] = 153.4514465332,} ,["isBoss"] = false,["player"] = 2,} ,} 
+12:03:03 - Function:[0]Klingni - CNC:StartRound - Param: nil
+12:03:03 - Function:[0]Klingni - CNC:StartRound - Param: { [1] = { ["team"] = crook,["playerName"] = Klingni,["coord"] = { ["x"] = -764.76275634766,["z"] = 67.474555969238,["y"] = 153.45088195801,} ,["isBoss"] = true,["player"] = 1,} ,[2] = { ["team"] = cop,["playerName"] = Schleppi,["coord"] = { ["x"] = -764.76281738281,["z"] = 67.474555969238,["y"] = 153.4514465332,} ,["isBoss"] = false,["player"] = 2,} ,} 
+12:03:03 - Function:CNC:createSpawner - Param: { } 
+12:03:03 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["team"] = crook,["playerName"] = Klingni,["coord"] = { ["x"] = -764.76275634766,["z"] = 67.474555969238,["y"] = 153.45088195801,} ,["isBoss"] = true,["player"] = 1,} ,[2] = { ["team"] = cop,["playerName"] = Schleppi,["coord"] = { ["x"] = -764.76281738281,["z"] = 67.474555969238,["y"] = 153.4514465332,} ,["isBoss"] = false,["player"] = 2,} ,} 
+12:03:03 - Function:[1]Schleppi - CNC:StartRound - Param: nil
+12:03:03 - Function:[1]Schleppi - CNC:StartRound - Param: { [1] = { ["team"] = crook,["playerName"] = Klingni,["coord"] = { ["x"] = -764.76275634766,["z"] = 67.474555969238,["y"] = 153.45088195801,} ,["isBoss"] = true,["player"] = 1,} ,[2] = { ["team"] = cop,["playerName"] = Schleppi,["coord"] = { ["x"] = -764.76281738281,["z"] = 67.474555969238,["y"] = 153.4514465332,} ,["isBoss"] = false,["player"] = 2,} ,} 
+12:03:03 - Function:[0]Klingni - CNC:eventCreateGetaway - Param: { ["model"] = BRIOSO,["hash"] = 1549126457,["rot"] = { ["x"] = 1.5054564476013,["z"] = 165.67411804199,["y"] = 1.6042633056641,} ,["coord"] = { ["x"] = 1770.4864501953,["z"] = 41.382930755615,["y"] = 3238.0285644531,} ,} 
+12:03:03 - Function:CNC:creatGetaway-NetGeta - Param: 221
+12:03:03 - Function:[0]Klingni - CNC:findGetawayCoord - Param: 221
+12:03:03 - Function:[1]Schleppi - CNC:findGetawayCoord - Param: 221
+12:03:04 - Function:CNC:createSpawner - Param: { } 
+12:03:04 - Function:spawnPlayer - Param: { ["team"] = crook,["playerName"] = Klingni,["player"] = 1,["isBoss"] = true,["coord"] = { ["x"] = -764.76275634766,["z"] = 67.474555969238,["y"] = 153.45088195801,} ,} 
+12:03:04 - Function:getPlayerSettings - Param: boss
+12:03:04 - Function:spawnPlayer - Param: { ["team"] = cop,["playerName"] = Schleppi,["player"] = 2,["isBoss"] = false,["coord"] = { ["x"] = -764.76281738281,["z"] = 67.474555969238,["y"] = 153.4514465332,} ,} 
+12:03:04 - Function:getPlayerSettings - Param: cop
+12:03:04 - Function:[0]Klingni - CNC:setTeam - Param: crook
+12:03:04 - Function:[1]Schleppi - CNC:setTeam - Param: cop
+12:03:04 - Function:[0]Klingni - CNC:eventCreateVehicles - Param: { [1] = { ["model"] = BUS,["hash"] = -713569950,["rot"] = { ["x"] = -1.1992740631104,["z"] = 8.3844299316406,["y"] = -0.72669321298599,} ,["coord"] = { ["x"] = 1746.8403320313,["z"] = 41.376796722412,["y"] = 3258.9836425781,} ,} ,} 
+12:03:04 - Function:CNC:createVehicle - Param: { [1] = 88,} 
+12:03:05 - Function:[0]Klingni - playerSpawned - Param: { ["x"] = 1736.0615234375,["z"] = 41.198970794678,["y"] = 3267.4431152344,["model"] = G_M_M_ArmBoss_01,["heading"] = 0,["skipFade"] = false,} 
+12:03:05 - Function:[0]Klingni - FirstSpawn - Param: { ["x"] = 1736.0615234375,["z"] = 41.198970794678,["y"] = 3267.4431152344,["model"] = G_M_M_ArmBoss_01,["heading"] = 0,["skipFade"] = false,} 
+12:03:05 - Function:[1]Schleppi - playerSpawned - Param: { ["x"] = 1756.8367919922,["heading"] = 0,["skipFade"] = false,["model"] = S_M_Y_Cop_01,["z"] = 41.221687316895,["y"] = 3271.6059570312,} 
+12:03:05 - Function:[1]Schleppi - FirstSpawn - Param: { ["x"] = 1756.8367919922,["heading"] = 0,["skipFade"] = false,["model"] = S_M_Y_Cop_01,["z"] = 41.221687316895,["y"] = 3271.6059570312,} 
+12:03:10 - Function:respawnPlayer - Param: { ["team"] = cop,["playerName"] = Schleppi,["player"] = 2,["isBoss"] = false,["coord"] = { ["x"] = 1756.8367919922,["z"] = 41.218933105469,["y"] = 3271.6059570312,} ,} 
+12:03:10 - Function:getPlayerSettings - Param: cop
+12:03:10 - Function:respawnPlayer - frisch geholte Player Settings - Param: { ["model"] = S_M_Y_Cop_01,["weapons"] = { [1] = { ["equipt"] = true,["type"] = WEAPON_MICROSMG,["ammo"] = 250,} ,[2] = { ["equipt"] = false,["type"] = WEAPON_PISTOL,["ammo"] = 250,} ,[3] = { ["equipt"] = false,["type"] = GADGET_PARACHUTE,["ammo"] = 10,} ,} ,} 
+12:03:13 - Function:[1]Schleppi - CNC:setTeam - Param: cop
+12:03:14 - Function:[1]Schleppi - playerSpawned - Param: { ["x"] = 1633.0604248047,["heading"] = 0,["skipFade"] = false,["model"] = S_M_Y_Cop_01,["z"] = 40.35625,["y"] = 3200.4438476562,} 
+12:03:34 - Function:getAllMaps - Param: nil
+12:03:46 - Function:StopGame - Param: nil
+12:03:46 - Function:CNC:clearVehicles - Param: nil

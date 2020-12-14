@@ -1,0 +1,7 @@
+23:06:46 - Function:getAllMaps - Param: nil
+23:06:46 - Function:[0]yorks - CNC:ClientUpdate - Param: { [1] = { ["isBoss"] = false,["player"] = 1,["playerName"] = yorks,["team"] = lobby,["coord"] = { ["y"] = 0,["x"] = 0,["z"] = 0,} ,} ,} 
+23:06:56 - Function:[0]yorks - playerSpawned - Param: { ["y"] = 153.4494,["skipFade"] = false,["heading"] = 0,["x"] = -764.7618,["model"] = a_m_y_hipster_02,["z"] = 67.4746,} 
+23:08:46 - Function:getAllMaps - Param: nil
+23:08:53 - Function:CNC:startRound - Param: 5
+23:08:53 - Function:CNC:startRound - Param: true
+23:08:53 - Function:startCNCRound - Param: 5

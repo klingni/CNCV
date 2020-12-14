@@ -1,0 +1,111 @@
+/* @import url('res/futurastd-medium.css'); */
+
+/* html {
+	color: rgba(255, 255, 255, 0);
+} */
+
+#wrap {
+	width: 500px;
+	min-height: 185px;
+	margin-top: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(0, 0, 0, 1);
+	opacity: 0.8;
+    color: rgba(255, 255, 255, 0.9);
+	 vertical-align: center;
+}
+
+#score {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: solid;
+	border-color: #000000;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+	margin-bottom: 0px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    vertical-align: center
+}
+
+p {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #ffffff;
+	margin-bottom: 0px;
+	margin-top: 0px;
+    vertical-align: center
+}
+
+th {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+
+    overflow: hidden;
+    word-break: normal;
+    border-color: #ffffff;
+    text-align: left;
+    color: #ffffff;
+    vertical-align: top
+}
+
+#score td {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 5px 20px;
+
+    overflow: hidden;
+    word-break: normal;
+    text-align: left;
+    vertical-align: top;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+#score th {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+
+    overflow: hidden;
+    word-break: normal;
+    border-color: #ffffff;
+    text-align: left;
+    color: #ffffff;
+    vertical-align: top
+}
+
+#score #lobby_head {
+    background-color: #1D8348;
+	border: solid;
+}
+
+#score #lobby_data {
+    background-color: #28b463;
+}
+
+#score #cop_head {
+    background-color: #4A235A;
+	border: solid;
+}
+#score #cop_data {
+    background-color: #7D3C98;
+}
+
+
+#score #crook_head {
+    background-color: #AF601A;
+	border: solid;
+}
+
+#score #crook_data {
+    background-color: #E67E22;
+}

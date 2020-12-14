@@ -1,0 +1,58 @@
+{
+    "comment":[
+        "models: https://wiki.fivem.net/wiki/Peds#MEXICAN_WORKER",
+        "weapons: https://wiki.fivem.net/wiki/Weapons"
+    ],
+    "cop":{
+        "model": "S_M_Y_Cop_01",
+        "weapons": [
+            {
+                "type": "WEAPON_MICROSMG",
+                "ammo": 250,
+                "equipt": true
+            },
+            {
+                "type": "WEAPON_PISTOL",
+                "ammo": 250,
+                "equipt": false
+            },
+            {
+                "type": "GADGET_PARACHUTE",
+                "ammo": 10,
+                "equipt": false
+            }
+        ]
+    },
+
+    "crook":{
+        "model": "G_M_M_ArmGoon_01",
+        "weapons": [
+            {
+                "type": "weapon_pistol",
+                "ammo": 250,
+                "equipt": true
+            },
+            {
+                "type": "GADGET_PARACHUTE",
+                "ammo": 10,
+                "equipt": false
+            }
+        ]
+    },
+
+    "boss":{
+        "model": "G_M_M_ArmBoss_01",
+        "weapons": [
+            {
+                "type": "weapon_pistol",
+                "ammo": 250,
+                "equipt": true
+            },
+            {
+                "type": "GADGET_PARACHUTE",
+                "ammo": 10,
+                "equipt": false
+            }
+        ]
+    }
+}

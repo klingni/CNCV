@@ -1,0 +1,34 @@
+BUGS:
+v- Despawn von Vehicles vor Rundenstart
+v- Cop stirbt -> Crook Teams
+v- Respawn auf Wasser -> schneller Radius erhöhen.
+v- Scoby hat selten Waffen (gelöst durch timer, eventuell mal eine rückfrage von Client ob fertig)
+v- scoring system
+v- Getaway spawnt manchmal nicht
+v- Boss near Blips
+v- Boss Blip != Crookblip
+v- unlimit stamina
+v- mit waffe in der hand spawnen
+v - Vehilces aufräumen, keine doppel spawns, SetEntityAsNoLongerNeeded(vehicle) -> irgendwie später setzen (vehicles.lua - Zeile 75)
+v   -- ähnlich wie beim Getaway machen. NotLongerNeeded erst beim einsteigen oder wenn runde beendet wurde, dann aber auch gleich löschen
+v - Blips bei Crooks für Cops ist sichtbar hinter einem Haus
+v - Spawner: siehe in Helper.lua -> testen ob auf aktivsetzen nach 10 sek funktioniert -> evtl. schon fertig, muss nich getestet werden
+v - Getaway Blip manchmal ein Punkt
+v - Teams manuell wählen (Kunden die nicht im Kreis stehen, irgendwie cool abfangen)
+v - despawn von Krämpelkacke (Militärgelumbe, Buzzard, Jets, Panzer, ...)
+v - Scoreboard nach und zwischen den Runden anzeigen
+v - TeamChat -> cl_chat.lua Zeile 200 variable für server setzten welche Taste gedrückt wurde und dann in der sv_chat den text an alle oder nur an team senden.
+v - Uselity überarbeiten / Hilfe / Hilfe bei Start und mit F1 wegdrücken
+
+
+T - wenn ein Team leer, dann 2. Runde verzichten -> direkt zur Lobby
+T - flip Getaway
+
+ - Heli reparieren^
+ - Send Player Coord nur bei Respawn
+
+Ideen:
+ - Waffen / Munition droppen
+ - Spawner nicht gleich da
+ - Settings-> Wetter / Zeit / ...
+ -  

@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="listener.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="nui://cnc/client/gui/scoreboard/html/reset.css">
+    <link rel="stylesheet" href="nui://cnc/client/gui/scoreboard/html/style.css">
+</head>
+
+<body>
+    <div style="display: none;" id="wrap">
+        <!-- <img src="nui://cnc/misc/scoreboard/res/cnc-logo.png"> -->
+        <h1>CnC - Scoreboard</h1>
+		<p>(press UP to show it again)</p>
+
+        <table id="score" width="100%">
+
+            <tr id="cop_head">
+                <th>Cops</th>
+                <th id=cop_score>1100</th>
+            </tr>
+            <tbody id="cop_data"></tbody>
+
+
+            <tr id="crook_head">
+                <th>Crooks</th>
+                <th id=crook_score>1100</th>
+            </tr>
+            <tbody id="crook_data"> </tbody>
+
+
+
+            <tr id="lobby_head">
+                <th>Lobby</th>
+                <th id=lobby_score></th>
+            </tr>
+            <tbody id="lobby_data"></tbody>
+
+        </table>
+    </div>
+</body>
+
+</html>

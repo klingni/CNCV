@@ -47,7 +47,7 @@ Citizen.CreateThread(function()
 	while true do
 		Wait(100)
 		local currentPlayerTeam = GetPlayerTeam(currentPlayer)
-		local players = GetPlayers()
+		-- local players = GetPlayers()
         
 
 		for player = 0, 25 do

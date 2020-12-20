@@ -3,7 +3,6 @@ BossID = 0
 isBossInGetaway = false
 PlayerInfos ={}
 
-GetawayCoord = {x=0,y=0,z=0}
 Getaway = {}
 net_Getaway = 0
 net_Spawner = {}

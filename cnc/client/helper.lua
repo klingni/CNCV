@@ -92,6 +92,13 @@ AddEventHandler("CNC:setWeapon",function(val)
 end)
 
 
+RegisterNetEvent("CNC:getWeapon")
+AddEventHandler("CNC:getWeapon",function()
+    print("get Weapons")
+    GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("WEAPON_PISTOL"), 10, true, true)
+end)
+
+
 -- Citizen.CreateThread(function (  )
 --     while true do
 --         Citizen.Wait(0)
@@ -189,6 +196,26 @@ AddEventHandler("CNC:flipGeta",function()
     SetVehicleOnGroundProperly(entity)
 
     SetEntityRotation(entity , rot.x ,0.0, rot.z, false, true)
+
+end)
+
+RegisterNetEvent("CNC:getid")
+AddEventHandler("CNC:getid",function(netId)
+
+    -- local result, entity = GetEntityPlayerIsFreeAimingAt(PlayerId())
+    -- print('Aimed entity:' .. entity)
+    -- print('Aimed entity (net_id):' .. VehToNet(entity) )
+
+
+    local veh = NetToVeh(tonumber(netId))
+    
+
+    local blip = AddBlipForEntity(veh)
+
+    SetBlipSprite(blip, 103)
+    SetBlipColour(blip, 57)
+
+    
 
 end)
 

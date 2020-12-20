@@ -103,6 +103,9 @@ RegisterCommand("cnc", function(source, args, rawCommand)
     elseif args[1] == "setWeapon" then
         TriggerClientEvent('CNC:setWeapon', -1, args[2])
 
+    elseif args[1] == "getWeapon" then
+        TriggerClientEvent('CNC:getWeapon', -1)
+
     elseif args[1] == "showScaleform" then
         TriggerClientEvent('CNC:showScaleform', -1, args[2], args[3], args[4])
 
@@ -138,6 +141,10 @@ RegisterCommand("cnc", function(source, args, rawCommand)
         
     elseif args[1] == "wakeup" then
         TriggerClientEvent('CNC:wakeup', source, args[2])
+
+    elseif args[1] == "getid" then
+        TriggerClientEvent('CNC:getid', source, args[2])
+
 
     end
 end, false)

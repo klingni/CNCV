@@ -86,13 +86,17 @@ AddEventHandler("eventSpawnCar",function(car, coord)
 
 
     veh_net = VehToNet(vehicle)
-    --print('NetworkID von Cheat Karre: ' .. veh_net)
+    -- print('NetworkID von Cheat Karre: ' .. veh_net)
 
     veh = NetToVeh(veh_net)
-    --print('VehicleID von Cheat Karre: ' .. veh_net)
+    -- print('VehicleID von Cheat Karre: ' .. veh)
+    -- print('Veh aus Net:' .. NetToVeh(veh_net))
+    -- print('Ent aus Net:' .. NetToEnt(veh_net))
 
 
-    --NetworkRegisterEntityAsNetworked(vehicle)
+    NetworkRegisterEntityAsNetworked(vehicle)
+    SetNetworkIdSyncToPlayer(veh_net, -1, true)
+    NetworkSetNetworkIdDynamic(veh_net, true)
     
     local blip = AddBlipForEntity(vehicle)
 

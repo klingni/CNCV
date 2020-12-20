@@ -4,33 +4,17 @@
 -- =========================================================================
 
 local checked = false
-local OldGetawayCoord = {x=0, y=0, z=0}
-local dist = 1000
 
 
-RegisterNetEvent('CNC:UpdateGetawayCoord')
-AddEventHandler('CNC:UpdateGetawayCoord', function( getawayCoord )
-    GetawayCoord = getawayCoord
-end)
+RegisterNetEvent('CNC:forceCreateGetawayBlip')
+AddEventHandler('CNC:forceCreateGetawayBlip', function()
 
-
-RegisterNetEvent('CNC:forceUpdateGetawayBlip')
-AddEventHandler('CNC:forceUpdateGetawayBlip', function()
-    Citizen.CreateThread(function ( )
-        while isRoundOngoing do
-            Citizen.Wait(10)
-            dist = DistanceBetweenCoords2D(GetawayCoord.x, GetawayCoord.y, OldGetawayCoord.x, OldGetawayCoord.y)
-            if dist > 5.0 then
-                OldGetawayCoord = GetawayCoord
-
-                for i,player in ipairs(PlayerInfos) do
-                    if player.team == 'crook' then
-                        TriggerClientEvent("CNC:UpdateGetawayBlip", player.player, GetawayCoord)
-                    end
-                end
-            end
+    for i,playerInfo in ipairs(PlayerInfos) do
+        if playerInfo.team == 'crook' then
+            TriggerClientEvent("CNC:CreateGetawayBlip", playerInfo.player, net_Getaway)
         end
-    end)
+    end
+
 end)
 
 
@@ -43,8 +27,7 @@ AddEventHandler('CNC:creatGetaway', function(net_getaway)
 
 
     net_Getaway = net_getaway
-    TriggerClientEvent('CNC:findGetawayCoord', -1, net_Getaway)
-    TriggerEvent('CNC:forceUpdateGetawayBlip')
+    TriggerEvent('CNC:forceCreateGetawayBlip')
 end)
 
 

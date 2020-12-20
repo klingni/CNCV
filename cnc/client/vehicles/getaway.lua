@@ -34,10 +34,15 @@ AddEventHandler("CNC:eventCreateGetaway", function(getaway)
     end
 
     SetVehicleNumberPlateText(vehicle, 'GETAWAY')
+
+    NetworkRegisterEntityAsNetworked(vehicle)
+    SetNetworkIdSyncToPlayer(veh_net, -1, true)
+
     veh_net = VehToNet(vehicle)
 
     SetNetworkIdExistsOnAllMachines(veh_net, true)
     SetEntityAsMissionEntity(veh_net, true, true)
+    SetNetworkIdCanMigrate(veh_net, true)
     --print('veh_net: ' .. veh_net)
     TriggerServerEvent("CNC:creatGetaway", veh_net)
 end)
@@ -85,57 +90,8 @@ AddEventHandler("CNC:StopRound",function()
 end)
 
 
--- RegisterNetEvent("CNC:findGetawayCoord")
--- AddEventHandler("CNC:findGetawayCoord",function(GetawayNetId)
-
---     TriggerServerEvent('Log', '['.. PlayerId() .. ']' .. GetPlayerName(PlayerId()) .. ' - CNC:findGetawayCoord', GetawayNetId)
-
---     Citizen.CreateThread(function ( )
---         local time = 1000
---         while isRoundOngoing do
---             Citizen.Wait(time)
---             --print('search for Getaway')
---             local vehicle = NetToVeh(tonumber(GetawayNetId))
---             --print('NetId:' .. GetawayNetId .. ' / Veh:' .. tostring(vehicle))
---             if vehicle ~= 0 then
---                 -- send Getaway Coordinate
---                 local x,y,z = table.unpack(GetEntityCoords(vehicle, true))
---                 TriggerServerEvent('CNC:UpdateGetawayCoord', {x=x, y=y, z=z})
---                 time = 1000
---             else
---                 time = 5000
---             end 
---         end
---     end)
--- end)
 
 
-
-RegisterNetEvent("CNC:findGetawayCoord")
-AddEventHandler("CNC:findGetawayCoord",function(GetawayNetId)
-
-    TriggerServerEvent('Log', '['.. PlayerId() .. ']' .. GetPlayerName(PlayerId()) .. ' - CNC:findGetawayCoord', GetawayNetId)
-
-    Citizen.CreateThread(function ( )
-        while isRoundOngoing do
-            Citizen.Wait(10)
-            --print('search for Getaway')
-            local vehicle = NetToVeh(tonumber(GetawayNetId))
-            --print('NetId:' .. GetawayNetId .. ' / Veh:' .. tostring(vehicle))
-            if vehicle ~= 0 then
-                -- send Getaway Coordinate
-                local x,y,z = table.unpack(GetEntityCoords(vehicle, true))
-
-                local dist = DistanceBetweenCoords2D(x, y, OldGetawayCoord.x, OldGetawayCoord.y)
-                if dist > 5.0 then
-                    TriggerServerEvent('CNC:UpdateGetawayCoord', {x=x, y=y, z=z})
-                    OldGetawayCoord.x = x
-                    OldGetawayCoord.y = y
-                end
-            end 
-        end
-    end)
-end)
 
 
 RegisterNetEvent("CNC:UpdateGetawayBlip")
@@ -143,6 +99,31 @@ AddEventHandler("CNC:UpdateGetawayBlip",function(coord)
     RemoveBlip(getaway_blip)
     
     getaway_blip = AddBlipForCoord(coord.x, coord.y, coord.z)
+    SetBlipSprite(getaway_blip, 315)
+    SetBlipColour(getaway_blip, 47)
+    BeginTextCommandSetBlipName("STRING")
+    AddTextComponentString("Getaway")
+    EndTextCommandSetBlipName(getaway_blip)
+
+end)
+
+
+RegisterNetEvent("CNC:CreateGetawayBlip")
+AddEventHandler("CNC:CreateGetawayBlip",function(ga_netid)
+
+    print("set Getaway Blip")
+
+    while not NetworkDoesNetworkIdExist(ga_netid) do
+        Citizen.Wait(1000)
+    end
+
+
+    print("GA_NetId: " .. ga_netid)
+    
+    local GA_Entity = NetToVeh(tonumber(ga_netid))
+    print("GA_Entity: " .. GA_Entity)
+    
+    getaway_blip = AddBlipForEntity(GA_Entity)
     SetBlipSprite(getaway_blip, 315)
     SetBlipColour(getaway_blip, 47)
     BeginTextCommandSetBlipName("STRING")

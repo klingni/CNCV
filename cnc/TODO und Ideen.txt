@@ -19,16 +19,17 @@ v - despawn von Krämpelkacke (Militärgelumbe, Buzzard, Jets, Panzer, ...)
 v - Scoreboard nach und zwischen den Runden anzeigen
 v - TeamChat -> cl_chat.lua Zeile 200 variable für server setzten welche Taste gedrückt wurde und dann in der sv_chat den text an alle oder nur an team senden.
 v - Uselity überarbeiten / Hilfe / Hilfe bei Start und mit F1 wegdrücken
+v - Send Player Coord nur bei Respawn
+v - Wenn Cop ins Getaway einsteig Meldung ausgeben das er das nicht darf
+v - Getaway Godmode disabled wenn Crook einsteigt
 
 
 T - wenn ein Team leer, dann 2. Runde verzichten -> direkt zur Lobby
 T - flip Getaway
 
  - Heli reparieren^
- - Send Player Coord nur bei Respawn
 
 Ideen:
  - Waffen / Munition droppen
  - Spawner nicht gleich da
  - Settings-> Wetter / Zeit / ...
- -  

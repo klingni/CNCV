@@ -25,7 +25,7 @@ AddEventHandler("CNC:eventCreateGetaway", function(getaway)
 
     local vehicle = CreateVehicle(hash, getaway.coord.x, getaway.coord.y, getaway.coord.z, 0.0, true, true)
     SetEntityRotation(vehicle, getaway.rot.x, getaway.rot.y, getaway.rot.z, false, true)
-    FreezeEntityPosition(vehicle, false)
+    FreezeEntityPosition(vehicle, true)
 
 
     --All Getaways are godmoded, exept submarine
@@ -178,6 +178,16 @@ AddEventHandler("CNC:cleanAll", function()
     end
 
     print("STOP clean Map-Getaway")
+
+
+end)
+
+
+RegisterNetEvent("CNC:unfrezzeGetaway")
+AddEventHandler("CNC:unfrezzeGetaway", function(veh)
+    print("UNFREZZE GETAWAY")
+    FreezeEntityPosition(veh, false)
+    SetEntityCanBeDamaged(veh, true)
 
 
 end)

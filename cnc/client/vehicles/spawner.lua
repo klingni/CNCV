@@ -21,12 +21,12 @@ AddEventHandler("CNC:eventCreateSpawner", function(vehicles)
             Citizen.Wait(1)
         end
 
-        for i=1,5 do
+        -- for i=1,5 do
             local carGen = CreateScriptVehicleGenerator(vehicle.coord.x, vehicle.coord.y, vehicle.coord.z, vehicle.rot.z, 5.0, 3.0, hash, 1, 1, -1, -1, true, false, false, true, true, -1)
             SetScriptVehicleGenerator(carGen, true)
             SetAllVehicleGeneratorsActive(true)
             
-        end
+        -- end
 
         
         spawner_blip = AddBlipForCoord(vehicle.coord.x, vehicle.coord.y, vehicle.coord.z)

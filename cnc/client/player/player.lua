@@ -163,23 +163,14 @@ end
 
 
 RegisterNetEvent("CNC:newSpawnPlayer")
-AddEventHandler("CNC:newSpawnPlayer", function(coord, PlayerSetting, firstSpawn, playerInfo)
+AddEventHandler("CNC:newSpawnPlayer", function(coord, PlayerSetting, playerInfo)
     -- SET TEAM
     TriggerEvent('CNC:setTeam', playerInfo)
 
     print("Spawn Player")
-
-    if not coord then
-        coord = getSpawnCoords(playerInfo, playerInfos)
-    end
-
-
-    -- SPAWN ON POSSITION
-
-    if firstSpawn then
     
+    if coord then
         print("FirstSpawn")
-
         exports.spawnmanager:spawnPlayer({
             x = coord.x,
             y = coord.y,
@@ -191,21 +182,22 @@ AddEventHandler("CNC:newSpawnPlayer", function(coord, PlayerSetting, firstSpawn,
             TriggerServerEvent('Log', '['.. PlayerId() .. ']' .. GetPlayerName(PlayerId()) .. ' - FirstSpawn', spawn)
             playerStartNotification(playerInfo)
             setWeapons(PlayerSetting)
-
+    
         end)
-        
 
-    else
+    elseif not coord then
+        coord = getSpawnCoords(playerInfo, playerInfos)
+
         spawnRadius = 150
         spawnX = coord.xw
         spawnY = coord.y
         spawnZ = 0
-
+    
         
         i = 0
         j = 0
         k = 0
-
+    
         FreezeEntityPosition(GetPlayerPed(PlayerId()), true)
         SetEntityCoords(GetPlayerPed(PlayerId()), coord.x, coord.y, coord.z + 100, 1, 0, 0, 1)
         
@@ -214,9 +206,9 @@ AddEventHandler("CNC:newSpawnPlayer", function(coord, PlayerSetting, firstSpawn,
             if i > 100 then
                 spawnRadius = spawnRadius + 100
                 i = 0
-
+    
             end
-
+    
             
             repeat
                 
@@ -227,11 +219,11 @@ AddEventHandler("CNC:newSpawnPlayer", function(coord, PlayerSetting, firstSpawn,
                 _,spawnZ = GetGroundZFor_3dCoord(spawnX+.0, spawnY+.0, 99999.0, 1)
                 
                 -- TriggerServerEvent('Debug', 'spawnX:' .. spawnX .. ' spawnY:' .. spawnY .. ' spawnZ:' .. spawnZ)
-
+    
             until spawnZ ~= 0
-
+    
             --j = 0
-
+    
             -- NEU START
             if GetWaterHeight(spawnX, spawnY, spawnZ) then
                 k = k + 1
@@ -241,11 +233,11 @@ AddEventHandler("CNC:newSpawnPlayer", function(coord, PlayerSetting, firstSpawn,
                 end
             end
             -- NEU ENDE
-
+    
         until not GetWaterHeight(spawnX, spawnY, spawnZ)
-
+    
         spawnZ = spawnZ + 0.2
-
+    
         spawn = {
             x = spawnX,
             y = spawnY,

@@ -24,7 +24,6 @@ AddEventHandler("CNC:eventCreateGetaway", function(getaway)
     end
 
     local vehicle = CreateVehicle(hash, getaway.coord.x, getaway.coord.y, getaway.coord.z , 0.0, true, true)
-    SetVehicleOnGroundProperly(vehicle)
     SetEntityRotation(vehicle, getaway.rot.x, getaway.rot.y, getaway.rot.z, false, true)
     
     
@@ -43,7 +42,6 @@ AddEventHandler("CNC:eventCreateGetaway", function(getaway)
     SetNetworkIdExistsOnAllMachines(veh_net, true)
     SetEntityAsMissionEntity(veh_net, true, true)
     SetNetworkIdCanMigrate(veh_net, true)
-    --print('veh_net: ' .. veh_net)
     TriggerServerEvent("CNC:creatGetaway", veh_net)
 
 

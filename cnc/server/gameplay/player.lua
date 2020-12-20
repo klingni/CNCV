@@ -79,62 +79,11 @@ end
 
 function respawnPlayer(PlayerInfo)
     if DoesRoundIsGoingOn() then
-        -- TriggerEvent('Debug', 'CNC:Server:player:respawnPlayer')
-        local coord
-        TriggerEvent("Log", "respawnPlayer", PlayerInfo)
-
-        print("Respawn Player")
 
         PlayerSetting = getPlayerSettings(PlayerInfo.team)
-        TriggerEvent("Log", "respawnPlayer - frisch geholte Player Settings", PlayerSetting)
-
-        -- Respawn Crooks in the near of the Boss
-        if PlayerInfo.team == "crook" then
-            -- Respawn Cops mean all Cops
-            print("Respawn Player crook")
-            Boss = getBossInfo()
-
-            coord = {
-                x = Boss.coord.x,
-                y = Boss.coord.y,
-                z = Boss.coord.z
-            }
-        elseif PlayerInfo.team == "cop" then
-            print("Respawn Player cop")
-
-            local CopXPos = {}
-            local CopYPos = {}
-            local count = 0
-
-            for i, PlInfo in ipairs(PlayerInfos) do
-                if tonumber(PlInfo.player) ~= tonumber(PlayerInfo.player) and PlInfo.team == "cop" then
-                    count = count + 1
-                    local x, y, z = table.unpack(GetEntityCoords(GetPlayerPed(PlInfo.player), false))
-                    table.insert(CopXPos, PlInfo.coord.x)
-                    table.insert(CopYPos, PlInfo.coord.y)
-                end
-            end
-
-            if count > 0 then
-                print("Other Cops")
-                coord = {
-                    x = mean(CopXPos),
-                    y = mean(CopYPos),
-                    z = 0.0
-                }
-            else
-                print("no Cops")
-                Boss = getBossInfo()
-                coord = {
-                    x = Boss.coord.x,
-                    y = Boss.coord.y,
-                    z = Boss.coord.z
-                }
-            end
-        end
 
         Citizen.Wait(3000)
-        TriggerClientEvent("CNC:newSpawnPlayer", PlayerInfo.player, coord, PlayerSetting, false, PlayerInfo)
+        TriggerClientEvent("CNC:newSpawnPlayer", PlayerInfo.player, nil, PlayerSetting, false, PlayerInfo)
     end
 end
 

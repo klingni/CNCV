@@ -69,7 +69,7 @@ function tobool( v )
     end
 end
 
-function mean( t )
+function average( t )
     local sum = 0
     local count= 0
   

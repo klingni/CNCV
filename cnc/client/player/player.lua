@@ -8,6 +8,8 @@ AddEventHandler('CNC:ClientUpdate', function(PlayerInfos)
     print('CNC:ClientUpdate')
     TriggerServerEvent('Log', '['.. PlayerId() .. ']' .. GetPlayerName(PlayerId()) .. ' - CNC:ClientUpdate', PlayerInfos)
     playerInfos = PlayerInfos
+    playerInfos = UpdatePlayerPositions(playerInfos)
+
 end)
 
 
@@ -17,6 +19,7 @@ AddEventHandler('CNC:StartRound', function(PlayerInfos)
 
     isRoundGoingOn = true
     playerInfos = PlayerInfos
+    playerInfos = UpdatePlayerPositions(playerInfos)
 end)
 
 RegisterNetEvent('CNC:StopRound')
@@ -92,17 +95,6 @@ end)
 
 
 
-RegisterNetEvent("CNC:getPlayerPosition")
-AddEventHandler("CNC:getPlayerPosition", function()
-    TriggerServerEvent('Log', '['.. PlayerId() .. ']' .. GetPlayerName(PlayerId()) .. ' - CNC:getPlayerPosition')
-
-    local px, py, pz = table.unpack(GetEntityCoords(GetPlayerPed(-1), false))
-    coord = {x = px, y=py, z=pz}
-    print("getPlayerPosition - X: " .. px .. " / Y: " .. py)
-
-    TriggerServerEvent('CNC:sendPlayerCoord', coord)
-end)
-
 
 RegisterNetEvent("CNC:getPos")
 AddEventHandler("CNC:getPos", function()
@@ -114,15 +106,15 @@ AddEventHandler("CNC:getPos", function()
 end)
 
 
-Citizen.CreateThread(function ( )
-    while true do
-        Citizen.Wait(1000)
-        local px, py, pz = table.unpack(GetEntityCoords(GetPlayerPed(-1), false))
-        coord = {x = px, y=py, z=pz}
+-- Citizen.CreateThread(function ( )
+--     while true do
+--         Citizen.Wait(1000)
+--         local px, py, pz = table.unpack(GetEntityCoords(GetPlayerPed(-1), false))
+--         coord = {x = px, y=py, z=pz}
 
-        TriggerServerEvent('CNC:sendPlayerCoord', coord)
-    end
-end)
+--         TriggerServerEvent('CNC:sendPlayerCoord', coord)
+--     end
+-- end)
 
 
 Citizen.CreateThread(function (  )
@@ -175,12 +167,18 @@ AddEventHandler("CNC:newSpawnPlayer", function(coord, PlayerSetting, firstSpawn,
     -- SET TEAM
     TriggerEvent('CNC:setTeam', playerInfo)
 
+    print("Spawn Player")
+
+    if not coord then
+        coord = getSpawnCoords(playerInfo, playerInfos)
+    end
+
 
     -- SPAWN ON POSSITION
 
     if firstSpawn then
     
-        print("FiestSpawn")
+        print("FirstSpawn")
 
         exports.spawnmanager:spawnPlayer({
             x = coord.x,
@@ -228,7 +226,7 @@ AddEventHandler("CNC:newSpawnPlayer", function(coord, PlayerSetting, firstSpawn,
                 
                 _,spawnZ = GetGroundZFor_3dCoord(spawnX+.0, spawnY+.0, 99999.0, 1)
                 
-                TriggerServerEvent('Debug', 'spawnX:' .. spawnX .. ' spawnY:' .. spawnY .. ' spawnZ:' .. spawnZ)
+                -- TriggerServerEvent('Debug', 'spawnX:' .. spawnX .. ' spawnY:' .. spawnY .. ' spawnZ:' .. spawnZ)
 
             until spawnZ ~= 0
 
@@ -261,12 +259,7 @@ AddEventHandler("CNC:newSpawnPlayer", function(coord, PlayerSetting, firstSpawn,
             function(spawn)
             setWeapons(PlayerSetting)
         end)
-
-
     end
- 
-
-
 end)
 
 
@@ -278,4 +271,79 @@ function setWeapons(PlayerSetting)
     end
 end
 
+function UpdatePlayerPositions(PlInfos)
+    for i, PlInfo in ipairs(PlInfos) do
+        local localPlayerID = GetPlayerFromServerId(PlInfo.Player)
+            
+        local px, py, pz = table.unpack(GetEntityCoords(GetPlayerPed(localPlayerID)))
+        PlInfos[i].coord.x = px
+        PlInfos[i].coord.y = py
+        PlInfos[i].coord.z = pz
+    end
 
+    return PlInfos
+
+end
+
+function getSpawnCoords(PlayerInfo, PlayerInfos)
+      -- TriggerEvent('Debug', 'CNC:Server:player:respawnPlayer')
+      local coord
+      TriggerServerEvent("Log", "respawnPlayer", PlayerInfo)
+      print("Respawn Player")
+      TriggerEvent("Log", "respawnPlayer - frisch geholte Player Settings", PlayerSetting)
+
+      playerInfos = UpdatePlayerPositions(playerInfos)
+      
+      if PlayerInfo.team == "crook" then -- Respawn Crooks in the near of the Boss
+          print("Respawn Player crook")
+
+          local localBossID = GetPlayerFromServerId(ServerBossID)
+          
+          local bx, by, bz = table.unpack(GetEntityCoords(GetPlayerPed(localBossID)))
+          
+          coord = {
+              x = bx,
+              y = by,
+              z = bz
+          }
+          
+      elseif PlayerInfo.team == "cop" then -- Respawn Cops average all Cops
+          print("Respawn Player cop")
+
+          local CopXPos = {}
+          local CopYPos = {}
+          local count = 0
+
+          for i, PlInfo in ipairs(PlayerInfos) do
+              if tonumber(PlInfo.player) ~= tonumber(PlayerInfo.player) and PlInfo.team == "cop" then
+                  count = count + 1
+                  local x, y, z = table.unpack(GetEntityCoords(GetPlayerPed(PlInfo.player), false))
+                  table.insert(CopXPos, PlInfo.coord.x)
+                  table.insert(CopYPos, PlInfo.coord.y)
+              end
+          end
+
+          if count > 0 then
+              print("Other Cops")
+              coord = {
+                  x = average(CopXPos),
+                  y = average(CopYPos),
+                  z = 0.0
+              }
+          else
+              print("no Cops")
+              
+              local localBossID = GetPlayerFromServerId(ServerBossID)
+              local bx, by, bz = table.unpack(GetEntityCoords(GetPlayerPed(localBossID)))
+              
+              coord = {
+                  x = bx,
+                  y = by,
+                  z = bz
+              }
+
+          end
+      end
+
+      return coord
+end

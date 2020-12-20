@@ -6,7 +6,7 @@ local CrookTagColor = 65
 local LobbyTagColor = 210
 local BossSprite = 119
 local BossViewRange = 200.0
-local BossID
+local ServerBossID
 local playerInfos
 
 local getInfos = false
@@ -21,22 +21,10 @@ AddEventHandler('CNC:StartRound', function(PlayerInfos)
     print('Start Round Blips')
     for i,PlayerInfo in ipairs(PlayerInfos) do
         if PlayerInfo.isBoss == true then
-            BossID = PlayerInfo.player
+            ServerBossID = PlayerInfo.player
         end
     end
 end)
-
-function GetPlayers()
-	local players = {}
-
-	for i = 0, 31 do
-		if NetworkIsPlayerActive(i) then
-			table.insert(players, i)
-		end
-	end
-
-	return players
-end
 
 
 
@@ -94,7 +82,7 @@ Citizen.CreateThread(function()
 						-- Add player name to blip
 						SetBlipNameToPlayerName(new_blip, player)
 
-						if tonumber(playerServerId) == tonumber(BossID) then
+						if tonumber(playerServerId) == tonumber(ServerBossID) then
 							SetBlipSprite(new_blip, BossSprite)
                             BeginTextCommandSetBlipName("STRING")
                             AddTextComponentString("BOSS")
@@ -136,7 +124,7 @@ Citizen.CreateThread(function()
 						-- Add nametags above head
 						-- Citizen.InvokeNative(0xBFEFE3321A3F5015, playerPed, playerName, false, false, '', false)
 						
-						if tonumber(currentPlayerServerId) == tonumber(BossID) then
+						if tonumber(currentPlayerServerId) == tonumber(ServerBossID) then
 							local xcp, ycp, zcp = table.unpack(GetEntityCoords(GetPlayerPed(-1), false))
 							local xp, yp, zp = table.unpack(GetEntityCoords(GetPlayerPed(player), false))
 							if DistanceBetweenCoords2D(xcp, ycp, xp, yp) < BossViewRange then
@@ -193,7 +181,7 @@ Citizen.CreateThread(function()
 					-- Add player name to blip
 					SetBlipNameToPlayerName(new_blip, player)
 
-					if tonumber(playerServerId) == tonumber(BossID) then
+					if tonumber(playerServerId) == tonumber(ServerBossID) then
 						SetBlipSprite(new_blip, BossSprite)
                         BeginTextCommandSetBlipName("STRING")
                         AddTextComponentString("BOSS")

@@ -228,3 +228,17 @@ Citizen.CreateThread(function()
         end
     end
 end)
+
+function average( t )
+    local sum = 0
+    local count= 0
+  
+    for k,v in pairs(t) do
+      if type(v) == 'number' then
+        sum = sum + v
+        count = count + 1
+      end
+    end
+  
+    return (sum / count)
+end

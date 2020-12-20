@@ -163,7 +163,9 @@ end
 
 
 RegisterNetEvent("CNC:newSpawnPlayer")
-AddEventHandler("CNC:newSpawnPlayer", function(coord, PlayerSetting, playerInfo)
+AddEventHandler("CNC:newSpawnPlayer", function(coord, PlayerSetting, firstSpawn,  playerInfo)
+
+
     -- SET TEAM
     TriggerEvent('CNC:setTeam', playerInfo)
 
@@ -281,7 +283,6 @@ function getSpawnCoords(PlayerInfo, PlayerInfos)
       -- TriggerEvent('Debug', 'CNC:Server:player:respawnPlayer')
       local coord
       TriggerServerEvent("Log", "respawnPlayer", PlayerInfo)
-      print("Respawn Player")
       TriggerEvent("Log", "respawnPlayer - frisch geholte Player Settings", PlayerSetting)
 
       playerInfos = UpdatePlayerPositions(playerInfos)

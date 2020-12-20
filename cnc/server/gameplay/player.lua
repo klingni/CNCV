@@ -73,7 +73,7 @@ function spawnPlayer(PlayerInfo)
     rnd = math.random(1, #locmap[PlayerInfo.team]["spawnpoints"])
     coord = locmap[PlayerInfo.team]["spawnpoints"][rnd]
 
-    TriggerClientEvent("CNC:newSpawnPlayer", PlayerInfo.player, coord, PlayerSetting, PlayerInfo)
+    TriggerClientEvent("CNC:newSpawnPlayer", PlayerInfo.player, coord, PlayerSetting, true, PlayerInfo)
 end
 
 
@@ -83,7 +83,7 @@ function respawnPlayer(PlayerInfo)
         PlayerSetting = getPlayerSettings(PlayerInfo.team)
 
         Citizen.Wait(3000)
-        TriggerClientEvent("CNC:newSpawnPlayer", PlayerInfo.player, nil, PlayerSetting, PlayerInfo)
+        TriggerClientEvent("CNC:newSpawnPlayer", PlayerInfo.player, nil, PlayerSetting, false, PlayerInfo)
     end
 end
 

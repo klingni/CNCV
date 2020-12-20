@@ -24,6 +24,7 @@ AddEventHandler("CNC:eventCreateGetaway", function(getaway)
     end
 
     local vehicle = CreateVehicle(hash, getaway.coord.x, getaway.coord.y, getaway.coord.z , 0.0, true, true)
+    -- FreezeEntityPosition(vehicle, true)
     SetEntityRotation(vehicle, getaway.rot.x, getaway.rot.y, getaway.rot.z, false, true)
     
     
@@ -44,11 +45,6 @@ AddEventHandler("CNC:eventCreateGetaway", function(getaway)
     SetNetworkIdCanMigrate(veh_net, true)
     TriggerServerEvent("CNC:creatGetaway", veh_net)
 
-
-    Citizen.Wait(2000)
-
-    FreezeEntityPosition(vehicle, true)
-    SetVehicleOnGroundProperly(vehicle)
 end)
 
 

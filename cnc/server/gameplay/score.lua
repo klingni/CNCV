@@ -13,6 +13,8 @@ end)
 
 RegisterNetEvent('CNC:addPoints')
 AddEventHandler('CNC:addPoints', function(team, points)
+    print("team:" .. team)
+    print("points:" .. points)
     score[team] = score[team] + points
     if score[team] < 0 then score[team] = 0 end
     TriggerClientEvent('CNC:updateScore', -1, score)

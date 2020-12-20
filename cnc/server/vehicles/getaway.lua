@@ -65,23 +65,26 @@ AddEventHandler('cnc:baseevents:enteredVehicle', function(veh, seat, displayName
 
     if isRoundOngoing then
 
-        for i,playerInfo in ipairs(PlayerInfos) do
-            if playerInfo.team == 'crook' and tonumber(playerInfo.player) == tonumber(source) then
-                TriggerClientEvent('CNC:unfrezzeGetaway', source, veh)
-            elseif playerInfo.team == 'cop' and tonumber(playerInfo.player) == tonumber(source) then
-                TriggerClientEvent('CNC:showNotification', source, '~r~This is the Getaway, please dont move it!!!')
-            end
-        end
+        if netId == net_Getaway then
 
-        -- print('netId: ' .. netId)
-        -- print('netId_new: ' .. veh)
-        -- print('net_Getaway: ' .. net_Getaway)
-        TriggerClientEvent('CNC:id', source, veh)
-        if tonumber(source) == tonumber(BossID) and netId == net_Getaway then
-            print("Boss entered the GETA")
-            TriggerClientEvent('CNC:showNotification', -1, '~r~Boss entered the Getaway')
-            isBossInGetaway = true
-            startCoolDownThread( )
+            for i,playerInfo in ipairs(PlayerInfos) do
+                if playerInfo.team == 'crook' and tonumber(playerInfo.player) == tonumber(source) then
+                    TriggerClientEvent('CNC:unfrezzeGetaway', source, veh)
+                elseif playerInfo.team == 'cop' and tonumber(playerInfo.player) == tonumber(source) then
+                    TriggerClientEvent('CNC:showNotification', source, '~r~This is the Getaway, please dont move it!!!')
+                end
+            end
+            
+            -- print('netId: ' .. netId)
+            -- print('netId_new: ' .. veh)
+            -- print('net_Getaway: ' .. net_Getaway)
+            TriggerClientEvent('CNC:id', source, veh)
+            if tonumber(source) == tonumber(BossID) then
+                print("Boss entered the GETA")
+                TriggerClientEvent('CNC:showNotification', -1, '~r~Boss entered the Getaway')
+                isBossInGetaway = true
+                startCoolDownThread( )
+            end
         end
     end
 end)

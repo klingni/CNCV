@@ -195,7 +195,7 @@ AddEventHandler("CNC:flipGeta",function()
 
     SetVehicleOnGroundProperly(entity)
 
-    SetEntityRotation(entity , rot.x ,0.0, rot.z, false, true)
+    SetEntityRotation(entity , rot.x ,180.0, rot.z, false, true)
 
 end)
 

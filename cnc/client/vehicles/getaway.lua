@@ -23,28 +23,34 @@ AddEventHandler("CNC:eventCreateGetaway", function(getaway)
         Citizen.Wait(0)
     end
 
-    local vehicle = CreateVehicle(hash, getaway.coord.x, getaway.coord.y, getaway.coord.z, 0.0, true, true)
+    local vehicle = CreateVehicle(hash, getaway.coord.x, getaway.coord.y, getaway.coord.z , 0.0, true, true)
+    SetVehicleOnGroundProperly(vehicle)
     SetEntityRotation(vehicle, getaway.rot.x, getaway.rot.y, getaway.rot.z, false, true)
-    FreezeEntityPosition(vehicle, true)
-
-
+    
+    
     --All Getaways are godmoded, exept submarine
     if hash ~= 771711535 then
         SetEntityCanBeDamaged(vehicle, false)
     end
-
+    
     SetVehicleNumberPlateText(vehicle, 'GETAWAY')
-
+    
     NetworkRegisterEntityAsNetworked(vehicle)
     SetNetworkIdSyncToPlayer(veh_net, -1, true)
-
+    
     veh_net = VehToNet(vehicle)
-
+    
     SetNetworkIdExistsOnAllMachines(veh_net, true)
     SetEntityAsMissionEntity(veh_net, true, true)
     SetNetworkIdCanMigrate(veh_net, true)
     --print('veh_net: ' .. veh_net)
     TriggerServerEvent("CNC:creatGetaway", veh_net)
+
+
+    Citizen.Wait(2000)
+
+    FreezeEntityPosition(vehicle, true)
+    SetVehicleOnGroundProperly(vehicle)
 end)
 
 

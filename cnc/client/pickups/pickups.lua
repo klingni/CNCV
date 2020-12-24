@@ -113,14 +113,12 @@ Citizen.CreateThread(function ( )
         for i, pickupInfo in pairs(pickupInfos) do
 
             if pickupInfo.spawnedBlip then
-                DrawLightWithRange(pickupInfo.x, pickupInfo.y, pickupInfo.z - 0.5, 255, 0, 0, 3.0, 50.0)
+                -- DrawLightWithRange(pickupInfo.x, pickupInfo.y, pickupInfo.z - 0.5, 255, 0, 0, 3.0, 50.0)
 
 				if HasPickupBeenCollected(pickupInfo.pickup) --[[ and DistanceBetweenCoords(posX,posY,posZ,pickupInfo.x,pickupInfo.y,pickupInfo.z) < 2.5 ]] then
                     -- print("pickup was collected\n")
                     
                     pickupInfo.spawnedBlip = false
-                    --table.insert(respawnPickups, pickupInfo)
-                    --TriggerEvent('CNC:showNotification', 'Pickup: ' .. pickupInfo.pickupName)
                     TriggerEvent('removePickup', pickupInfo) --Importent to fix delay to Server
                     TriggerServerEvent("CNC:removePickup", pickupInfo, "pickup was collected\n")
 					break
@@ -128,6 +126,25 @@ Citizen.CreateThread(function ( )
 			end
 		end
     end
+end)
+
+
+--Light
+Citizen.CreateThread(function()
+	while loaded == true do
+		Citizen.Wait(1)
+        local playerCoords = GetEntityCoords(PlayerPedId(), true)
+
+        for i, pickupInfo in pairs(pickupInfos) do
+            if pickupInfo.spawnedBlip then
+                if #(playerCoords - vector3(pickupInfo.x, pickupInfo.y, pickupInfo.z)) < 200.0 then
+                    -- DrawLine(posX,posY,posZ, pickupInfo.x, pickupInfo.y, pickupInfo.z, 255, 255, 255, 255)
+                    DrawLightWithRange(pickupInfo.x, pickupInfo.y, pickupInfo.z - 0.5, 255, 0, 0, 3.0, 50.0)
+                end
+            end
+		end
+
+	end
 end)
 
 
@@ -167,73 +184,23 @@ function createLootThread( crashed )
 
                 --print("SPAWNED DoesPIckupExist: " .. tostring(DoesPickupExist(pickupInfo.pickup)) )
 
-                
-                if dist < 250 then boolDist = true else boolDist = false end
-                if DoesPickupExist(pickupInfo.pickup) then boolExist = true else boolExist = false end
-
-
-                if boolDist and not boolExist then
+                if dist < 250 and not DoesPickupExist(pickupInfo.pickup) then
                     --print(" / EXIST: " .. tostring(DoesPickupExist(pickupInfo.pickup)))
 --                    print("PickupID: " .. pickupInfo.pickup .. " / EXIST: " .. tostring(DoesPickupExist(pickupInfo.pickup)))
 
                     pickup = CreatePickupRotate(pickupInfo.pickupName, pickupInfo.x, pickupInfo.y, pickupInfo.z + 1.0, 0.0, 0.0, 0.0, 512, pickupInfo.ammo, 24, 24, true, pickupInfo.pickupName)
                     pickupInfos[i].pickup = pickup
                     -- print('SPAWN')
-                end
 
-                --print("Dist: " .. dist)
-
-                if not boolDist and boolExist then
+                elseif dist > 250 and DoesPickupExist(pickupInfo.pickup) then
                     RemovePickup(pickupInfo.pickup)
                     pickupInfo.pickup = 0
                     -- print("DESPAWNED")
                 end   
-
-
---                 if dist < 50 and not DoesPickupExist(pickupInfo.pickup) then
---                     --print(" / EXIST: " .. tostring(DoesPickupExist(pickupInfo.pickup)))
--- --                    print("PickupID: " .. pickupInfo.pickup .. " / EXIST: " .. tostring(DoesPickupExist(pickupInfo.pickup)))
-
---                     pickup = CreatePickupRotate(pickupInfo.pickupName, pickupInfo.x, pickupInfo.y, pickupInfo.z, 0.0, 0.0, 0.0, 512, pickupInfo.ammo, 24, 24, true, pickupInfo.pickupName)
---                     --DrawLightWithRangeAndShadow(pickupInfo.x, pickupInfo.y, pickupInfo.z + 0.1, 255, 255, 255, 3.0, 50.0, 5.0)
---                     pickupInfos[i].pickup = pickup
---                     print('SPAWN')
---                 end
-
---                 --print("Dist: " .. dist)
-
---                 if dist > 50 and DoesPickupExist(pickupInfo.pickup)then
---                     RemovePickup(pickupInfo.pickup)
---                     pickupInfo.pickup = 0
---                     print("DESPAWNED")
---                 end   
-                
-                
              end
         end
     end)
 end
-
-
--- Ligths
--- Citizen.CreateThread(function ( )
---     while loaded == true do
---         Citizen.Wait(1)
---         local posX,posY,posZ = table.unpack(GetEntityCoords(PlayerPedId(), true))
-
---         for i,pickupInfo in ipairs(pickupInfos) do   
---             local dist = DistanceBetweenCoords2D(posX, posY, pickupInfo.x, pickupInfo.y)
---             if dist < 250 then boolDist = true else boolDist = false end
---             if DoesPickupExist(pickupInfo.pickup) then boolExist = true else boolExist = false end
-            
-            
---             if boolDist and boolExist then
---                 DrawLightWithRange(pickupInfo.x, pickupInfo.y, pickupInfo.z - 0.5, 255, 0, 0, 3.0, 50.0)
-
---             end
---          end
---     end
--- end)
 
 
 Citizen.CreateThread(function()

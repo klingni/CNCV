@@ -179,11 +179,13 @@ function PlayerKilled(victim, killer)
         print('Victim-Team: ' .. victim.team)
         
         TriggerEvent("CNC:addPoints", killer.team, 100) -- Killer-Team bekommt 100 Punkte
+        TriggerClientEvent("CNC:showNotification", -1, getColoredPlayerName(victim) .. " has been murdered by " .. getColoredPlayerName(killer) .. "!")
     else
         -- getötet durch Pad
         TriggerEvent("CNC:addPoints", victim.team, -100) -- Opfer-Team bekommt -100 Punkte
+        TriggerClientEvent("CNC:showNotification", -1, getColoredPlayerName(victim) .. " has been murdered by agro Pad!")
+
     end
-    TriggerClientEvent("CNC:showNotification", -1, getColoredPlayerName(victim) .. " has been murdered by " .. getColoredPlayerName(killer) .. "!")
     
 end
 

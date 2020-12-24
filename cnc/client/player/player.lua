@@ -1,5 +1,6 @@
 local isRoundGoingOn
 local spawnRadius = 50
+local ServerBossID_player
 playerInfos = {}
 
 
@@ -191,7 +192,7 @@ AddEventHandler("CNC:newSpawnPlayer", function(coord, PlayerSetting, firstSpawn,
         coord = getSpawnCoords(playerInfo, playerInfos)
 
         spawnRadius = 150
-        spawnX = coord.xw
+        spawnX = coord.x
         spawnY = coord.y
         spawnZ = 0
     
@@ -267,9 +268,11 @@ end
 
 function UpdatePlayerPositions(PlInfos)
     for i, PlInfo in ipairs(PlInfos) do
-        local localPlayerID = GetPlayerFromServerId(PlInfo.Player)
+        local localPlayerID = GetPlayerFromServerId(tonumber(PlInfo.player))
             
-        local px, py, pz = table.unpack(GetEntityCoords(GetPlayerPed(localPlayerID)))
+        local px, py, pz = table.unpack(GetEntityCoords(GetPlayerPed(tonumber(localPlayerID))))
+
+        -- print("Player " .. PlInfo.player .."(PAD:".. GetPlayerPed(localPlayerID) .. " - LocalPlayerID:" .. localPlayerID .. ") ..- X:" .. px .. " Y:" .. py .. " Z:" .. pz)
         PlInfos[i].coord.x = px
         PlInfos[i].coord.y = py
         PlInfos[i].coord.z = pz
@@ -288,11 +291,14 @@ function getSpawnCoords(PlayerInfo, PlayerInfos)
       playerInfos = UpdatePlayerPositions(playerInfos)
       
       if PlayerInfo.team == "crook" then -- Respawn Crooks in the near of the Boss
-          print("Respawn Player crook")
+        --   print("Respawn Player crook")
+        --   print("ServerBossID: " .. ServerBossID_player)
 
-          local localBossID = GetPlayerFromServerId(ServerBossID)
+          local localBossID = GetPlayerFromServerId(tonumber(ServerBossID_player))
           
-          local bx, by, bz = table.unpack(GetEntityCoords(GetPlayerPed(localBossID)))
+          local bx, by, bz = table.unpack(GetEntityCoords(GetPlayerPed(tonumber(localBossID))))
+
+        --   print("BossCoord - X:" .. bx .. " Y:" .. by .. " Z:".. bz)
           
           coord = {
               x = bx,
@@ -326,8 +332,8 @@ function getSpawnCoords(PlayerInfo, PlayerInfos)
           else
               print("no Cops")
               
-              local localBossID = GetPlayerFromServerId(ServerBossID)
-              local bx, by, bz = table.unpack(GetEntityCoords(GetPlayerPed(localBossID)))
+              local localBossID = GetPlayerFromServerId(tonumber(ServerBossID_player))
+              local bx, by, bz = table.unpack(GetEntityCoords(GetPlayerPed(tonumber(localBossID))))
               
               coord = {
                   x = bx,
@@ -340,3 +346,14 @@ function getSpawnCoords(PlayerInfo, PlayerInfos)
 
       return coord
 end
+
+
+RegisterNetEvent('CNC:StartRound')
+AddEventHandler('CNC:StartRound', function(PlayerInfos)
+
+    for i,PlayerInfo in ipairs(PlayerInfos) do
+        if PlayerInfo.isBoss == true then
+            ServerBossID_player = PlayerInfo.player
+        end
+    end
+end)

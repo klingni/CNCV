@@ -26,6 +26,7 @@ end)
 
 RegisterNUICallback("exit", function(data)
     closeHelp()
+    TriggerEvent("CNC:startRoundIfRoundIsGoingOn")
 end)
 
 

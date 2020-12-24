@@ -212,3 +212,8 @@ function SetTrafficDensity(density)
     SetVehicleDensityMultiplierThisFrame(density)
     SetRandomVehicleDensityMultiplierThisFrame(density)
 end
+
+RegisterNetEvent("CNC:startRoundIfRoundIsGoingOn")
+AddEventHandler("CNC:startRoundIfRoundIsGoingOn", function()
+    TriggerServerEvent('CNC:startRound', 0, true, true, 0.5, 0.5)
+end)

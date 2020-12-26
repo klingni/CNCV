@@ -24,11 +24,26 @@ local PedDensity = 0.5
 startNewRoundCoolDownTime = 5
 
 
-local DEBUG_MODE = true
+local DEBUG_MODE = false
 
 
 function getPlayerInfos( )
     return PlayerInfos
+end
+
+function resetVars()
+    isRoundOngoing  = false
+    BossID = 0
+    isBossInGetaway = false
+    PlayerInfos ={}
+
+    Getaway = {}
+    net_Getaway = 0
+    net_Spawner = {}
+    net_Vehicles = {}
+    RoundCounter = 0
+    countPlayerResponse = 0
+    map ={}
 end
 
 
@@ -125,6 +140,7 @@ AddEventHandler('CNC:startRound', function(choosenMap, copHint, rndTeam, pedDens
             end
         end       
     else
+        resetVars()
         ChoosenMap = choosenMap
         CopHint = copHint
         RndTeam = rndTeam

@@ -38,10 +38,7 @@ Citizen.CreateThread(function()
 		-- local players = GetPlayers()
         
 
-		for player = 0, 25 do
-            if player ~= currentPlayer and NetworkIsPlayerActive(player) then
-
-
+		for _, player = in ipairs(GetActivePlayers()) do
 
 				local playerPed = GetPlayerPed(player)
 				local playerName = GetPlayerName(player)
@@ -253,7 +250,6 @@ Citizen.CreateThread(function()
 					blips[player] = new_blip
 
 				end
-			end
         end
         
         getInfos = false

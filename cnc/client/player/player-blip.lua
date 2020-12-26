@@ -38,7 +38,7 @@ Citizen.CreateThread(function()
 		-- local players = GetPlayers()
         
 
-		for _, player = in ipairs(GetActivePlayers()) do
+		for _, player in ipairs(GetActivePlayers()) do
 
 				local playerPed = GetPlayerPed(player)
 				local playerName = GetPlayerName(player)

@@ -128,6 +128,7 @@ Citizen.CreateThread(function ( )
     end
 end)
 
+local pickupFilter = {}
 
 --Light
 Citizen.CreateThread(function()
@@ -135,11 +136,29 @@ Citizen.CreateThread(function()
 		Citizen.Wait(1)
         local playerCoords = GetEntityCoords(PlayerPedId(), true)
 
+        for i, pickupInfo in pairs(pickupFilter) do
+            -- if pickupInfo.spawnedBlip then
+                -- if #(playerCoords - vector3(pickupInfo.x, pickupInfo.y, pickupInfo.z)) < 200.0 then
+                    -- DrawLine(posX,posY,posZ, pickupInfo.x, pickupInfo.y, pickupInfo.z, 255, 255, 255, 255)
+                    DrawLightWithRange(pickupInfo.x, pickupInfo.y, pickupInfo.z - 0.5, 255, 0, 0, 3.0, 50.0)
+                -- end
+            -- end
+		end
+
+	end
+end)
+
+Citizen.CreateThread(function()
+	while loaded == true do
+        Citizen.Wait(5000)
+        pickupFilter = {}
+        
+        local playerCoords = GetEntityCoords(PlayerPedId(), true)
+
         for i, pickupInfo in pairs(pickupInfos) do
             if pickupInfo.spawnedBlip then
                 if #(playerCoords - vector3(pickupInfo.x, pickupInfo.y, pickupInfo.z)) < 200.0 then
-                    -- DrawLine(posX,posY,posZ, pickupInfo.x, pickupInfo.y, pickupInfo.z, 255, 255, 255, 255)
-                    DrawLightWithRange(pickupInfo.x, pickupInfo.y, pickupInfo.z - 0.5, 255, 0, 0, 3.0, 50.0)
+                    table.insert( pickupFilter, pickupInfo)
                 end
             end
 		end

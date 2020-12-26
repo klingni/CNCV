@@ -40,6 +40,8 @@ Citizen.CreateThread(function()
 
 		for _, player in ipairs(GetActivePlayers()) do
 
+			if player ~= currentPlayer then
+
 				local playerPed = GetPlayerPed(player)
 				local playerName = GetPlayerName(player)
 				local playerServerId = GetPlayerServerId(player)
@@ -250,6 +252,7 @@ Citizen.CreateThread(function()
 					blips[player] = new_blip
 
 				end
+			end
         end
         
         getInfos = false

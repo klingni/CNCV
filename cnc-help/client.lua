@@ -35,11 +35,11 @@ AddEventHandler('CNC-HELP:close', function ()
     closeHelp()
 end)
 
-RegisterNetEvent('CNC-HELP:UpdatePlayer')
-AddEventHandler('CNC-HELP:UpdatePlayer', function (plCount)
-    playerCount = plCount
-    updateHelp()
-end)
+-- RegisterNetEvent('CNC-HELP:UpdatePlayer')
+-- AddEventHandler('CNC-HELP:UpdatePlayer', function (plCount)
+--     playerCount = plCount
+--     updateHelp()
+-- end)
 
 
 function closeHelp()
@@ -52,19 +52,21 @@ function closeHelp()
 end
 
 function showHelp()
-    TriggerServerEvent('CNC-HELP:getPlayerCount')
+    -- TriggerServerEvent('CNC-HELP:getPlayerCount')
+    print("PlayerCount: " .. #GetActivePlayers())
     SetNuiFocus(true, true)
     SendNUIMessage({
-        action = 'show'
+        action = 'show',
+        playerCount = #GetActivePlayers()
     })
     isShown = true
     startUp = false
     Wait(100)
 end
 
-function updateHelp()
-    SendNUIMessage({
-        action = 'update',
-        playerCount = playerCount
-    })
-end
+-- function updateHelp()
+--     SendNUIMessage({
+--         action = 'update',
+--         playerCount = playerCount
+--     })
+-- end

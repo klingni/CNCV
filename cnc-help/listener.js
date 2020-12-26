@@ -8,10 +8,11 @@ $(function () {
         }
         if(item.action == 'show') {
             $('#wrap').show();
+            $('#playerCount').html(item["playerCount"]);
         }
-        if(item.action == 'update') {
-            $('#playerCount').html(item["playerCount"])
-        }
+        // if(item.action == 'update') {
+        //     $('#playerCount').html(item["playerCount"]);
+        // }
     }, false);
 
     $("#start").click(function(){

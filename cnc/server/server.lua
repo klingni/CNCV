@@ -24,6 +24,8 @@ local PedDensity = 0.5
 startNewRoundCoolDownTime = 5
 
 
+local DEBUG_MODE = true
+
 
 function getPlayerInfos( )
     return PlayerInfos
@@ -68,7 +70,7 @@ end
 function getMap( id )
     TriggerEvent('Log', 'getMap', id)
 
-    print('getmap')
+    -- print('getmap')
     file = io.open(mapFolder .. "Maps.json", "r")
     local content = file:read("*a")
     --print(content)
@@ -86,7 +88,7 @@ function getAllMaps()
     -- TriggerEvent('Debug', 'CNC:Server:server:getAllMaps')
 
     TriggerEvent('Log', 'getAllMaps')
-    print('getmaps')
+    -- print('getmaps')
     file = io.open(mapFolder .. "Maps.json", "r")
     local content = file:read("*a")
     --print(content)
@@ -114,10 +116,10 @@ AddEventHandler('CNC:startRound', function(choosenMap, copHint, rndTeam, pedDens
             --print('PlayerInfo.player: ' .. PlayerInfo.player .. "==" .. 'Player: ' .. PlayerID)
             if tonumber(PlayerInfo.player) == tonumber(PlayerID) then
                 if PlayerInfo.team == "lobby" then
-                    print(PlayerInfo.player .. 'isLobby')
+                    -- print(PlayerInfo.player .. 'isLobby')
                     TriggerEvent('CNC:joinRunningRound', PlayerID)
                 else
-                    print(PlayerInfo.player .. 'NOTLobby')
+                    -- print(PlayerInfo.player .. ' not in Lobby')
                     TriggerClientEvent("CNC:showNotification", PlayerID, "~r~You can't join the game two times")
                 end
             end
@@ -138,7 +140,8 @@ function startCNCRound(choosenMap)
 
     TriggerEvent('Log', 'startCNCRound' , choosenMap)
     local ListAllPlayer = GetPlayers()
-    if (#ListAllPlayer<2) then
+    
+    if (#ListAllPlayer<2 and (not DEBUG_MODE)) then
         print("Can´t start the Round, not enough Player")
         TriggerClientEvent("CNC:showNotification", -1, "~r~Can´t start the Round, not enough Player")
 
@@ -190,17 +193,21 @@ function startCNCRound(choosenMap)
             end
         end
 
-         if crookCount < 1 then
-            TriggerClientEvent("CNC:showNotification", -1, "No Player in the ~o~CROOK-Team ")
-            RoundCounter = 0
-            isRoundOngoing  = false
-            return
-        end
-        if copCount < 1 then
-            TriggerClientEvent("CNC:showNotification", -1, "No Player in the ~p~COP-Team ")
-            isRoundOngoing  = false
-            RoundCounter = 0
-            return
+        if not DEBUG_MODE then
+
+            if crookCount < 1 then
+                TriggerClientEvent("CNC:showNotification", -1, "No Player in the ~o~CROOK-Team ")
+                RoundCounter = 0
+                isRoundOngoing  = false
+                return
+            end
+            if copCount < 1 then
+                TriggerClientEvent("CNC:showNotification", -1, "No Player in the ~p~COP-Team ")
+                isRoundOngoing  = false
+                RoundCounter = 0
+                return
+            end
+
         end
 
         TriggerEvent('CNC:initPoints')
@@ -234,7 +241,7 @@ function startCNCRound(choosenMap)
     TriggerClientEvent('CNC:cleanAll', -1)
 
     Citizen.Wait(2000)
-    TriggerEvent('CNC:StartRound')
+    -- TriggerEvent('CNC:StartRound')
     TriggerClientEvent('CNC:StartRound', -1, PlayerInfos)
     --TriggerEvent('chat:updatePlayerInfos', PlayerInfos)
     
@@ -519,14 +526,6 @@ AddEventHandler('CNC:Map:startInit', function ()
     print( 'CNC:Map:startInit' )
     
     local playerID = source
-    
-    print( GetPlayerName(playerID) .. ' joined' )
-    TriggerClientEvent('CNC:showNotification', -1, '~g~' .. GetPlayerName(playerID) .. ' ~s~joined the Server')
-    tmpMaps = getAllMaps()
-    TriggerClientEvent('CNC:Map:init', -1, tmpMaps)
-
-
-
     local PlayerInfo ={
         player = playerID,
         playerName = GetPlayerName(playerID);
@@ -539,8 +538,13 @@ AddEventHandler('CNC:Map:startInit', function ()
             z = 0
         }
     }
+    
+    print( PlayerInfo.playerName .. ' joined' )
+    TriggerClientEvent('CNC:showNotification', -1, '~g~' .. PlayerInfo.playerName .. ' ~s~joined the Server')
+
     table.insert( PlayerInfos, PlayerInfo )
     TriggerClientEvent('CNC:ClientUpdate', -1, PlayerInfos)
+    TriggerClientEvent('CNC:ClientUpdate:GameState', playerID, DoesRoundIsGoingOn())
 end)
 
 

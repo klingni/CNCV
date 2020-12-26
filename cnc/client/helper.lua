@@ -221,10 +221,10 @@ end)
 
 Citizen.CreateThread(function()
     while true do
-        Wait(0)
-        if IsControlPressed(0, 289) --[[ INPUT_PHONE ]] then
-        print("test")
-        TriggerServerEvent('CNC:startRound', 18, true, true, 1.0, 1.0)
+        Wait(1)
+        if IsControlJustReleased(0, 289) --[[ INPUT_PHONE ]] then
+            print("test")
+            TriggerServerEvent('CNC:startRound', 18, true, true, 1.0, 1.0)
         end
     end
 end)

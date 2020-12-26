@@ -24,6 +24,22 @@ function AddMenuMaps(menu)
         "RANDOM"
     }
 
+
+        print(#Maps)
+
+    local counter = 0
+    
+    -- Wait for Map update
+    while #Maps == 0 do
+        print(#Maps)
+        counter = counter + 1
+        if counter == 15 then
+            print("Cant load any maps!")
+            break
+        end
+        Citizen.Wait(100)
+    end
+
     for i,map in ipairs(Maps) do
         table.insert( maps,map['infos']['title'] )
     end

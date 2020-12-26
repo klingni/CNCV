@@ -19,14 +19,12 @@ end)
 
 
 RegisterNUICallback("start", function(data)
-    TriggerServerEvent('CNC:startRound', 0, true, true, 0.5, 0.5)
     closeHelp()
     TriggerServerEvent('CNC-HELP:closeAllHelpWindows')
 end)
 
 RegisterNUICallback("exit", function(data)
     closeHelp()
-    -- TriggerEvent("CNC:startRoundIfRoundIsGoingOn")
 end)
 
 
@@ -49,6 +47,9 @@ function closeHelp()
     })
     isShown = false
     Wait(100)
+
+    print("CLOSE HELP")
+    TriggerEvent("CNC:joinRoundIfRoundIsGoingOn")
 end
 
 function showHelp()

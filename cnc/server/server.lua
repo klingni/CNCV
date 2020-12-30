@@ -159,7 +159,7 @@ function startCNCRound(choosenMap)
     
     if (#ListAllPlayer<2 and (not DEBUG_MODE)) then
         print("Can´t start the Round, not enough Player")
-        TriggerClientEvent("CNC:showNotification", -1, "~r~Can´t start the Round, not enough Player")
+        TriggerClientEvent("CNC:showNotification", -1, "~r~Can´t start the Round, not enough Players")
 
         return  -- ENTFERNE KOMMETAR FÜR DIE GENUG-SPIELER-PRÜFUNG
     end

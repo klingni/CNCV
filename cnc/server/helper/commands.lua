@@ -62,7 +62,7 @@ RegisterCommand("cnc", function(source, args, rawCommand)
         TriggerClientEvent('CNC:createMarker', -1)
 
     elseif args[1] == "getTeam" then
-        TriggerClientEvent('CNC:getSelectedTeam', -1)
+        TriggerClientEvent('CNC:getTeam', -1)
 
     elseif args[1] == "showPlayerInfos" then
         TriggerEvent('CNC:showPlayerInfos')

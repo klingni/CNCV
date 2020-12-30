@@ -62,7 +62,7 @@ end)
 
 RegisterNetEvent("CNC:getTeam")
 AddEventHandler("CNC:getTeam", function()
-	--TriggerEvent('CNC:showNotification', "Team:" .. getTeam())
+	TriggerEvent('CNC:showNotification', "Team:" .. getTeam())
 end)
 
 function getTeam()

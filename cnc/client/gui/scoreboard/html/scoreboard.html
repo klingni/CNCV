@@ -8,35 +8,62 @@
 </head>
 
 <body>
-    <div style="display: none;" id="wrap">
-        <!-- <img src="nui://cnc/misc/scoreboard/res/cnc-logo.png"> -->
-        <h1>CnC - Scoreboard</h1>
-		<p>(press UP to show it again)</p>
+    <div id="wrap">
+        <div style="display: none;" id="scoreboard">
+            <!-- <img src="nui://cnc/misc/scoreboard/res/cnc-logo.png"> -->
+            <h1>CnC - Scoreboard</h1>
+            <p>(press UP to show it again)</p>
 
-        <table id="score" width="100%">
+            <table id="score" width="100%">
 
-            <tr id="cop_head">
-                <th>Cops</th>
-                <th id=cop_score>1100</th>
-            </tr>
-            <tbody id="cop_data"></tbody>
-
-
-            <tr id="crook_head">
-                <th>Crooks</th>
-                <th id=crook_score>1100</th>
-            </tr>
-            <tbody id="crook_data"> </tbody>
+                <tr id="cop_head">
+                    <th>Cops</th>
+                    <th id=cop_score>1100</th>
+                </tr>
+                <tbody id="cop_data"></tbody>
 
 
+                <tr id="crook_head">
+                    <th>Crooks</th>
+                    <th id=crook_score>1100</th>
+                </tr>
+                <tbody id="crook_data"> </tbody>
 
-            <tr id="lobby_head">
-                <th>Lobby</th>
-                <th id=lobby_score></th>
-            </tr>
-            <tbody id="lobby_data"></tbody>
 
-        </table>
+
+                <tr id="lobby_head">
+                    <th>Lobby</th>
+                    <th id=lobby_score></th>
+                </tr>
+                <tbody id="lobby_data"></tbody>
+
+            </table>
+        </div>
+
+        <div style="display: none;" id="countdown">
+            <div id="info-text" class="info-text"></div>
+            <div id="app">
+                <div class="base-timer">
+                    <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <g class="base-timer__circle">
+                        <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+                        <path
+                            id="base-timer-path-remaining"
+                            stroke-dasharray="283"
+                            class="base-timer__path-remaining"
+                            d="
+                            M 50, 50
+                            m -45, 0
+                            a 45,45 0 1,0 90,0
+                            a 45,45 0 1,0 -90,0
+                            "
+                        ></path>
+                        </g>
+                    </svg>
+                    <span id="base-timer-label" class="base-timer__label">0:21</span>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

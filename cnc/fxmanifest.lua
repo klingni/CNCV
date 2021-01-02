@@ -20,7 +20,7 @@ client_script {
     "client/gui/notifications.lua",
     "client/gui/menu.lua",
     "client/gui/scoreboard/scoreboard.lua",
-    "client/gui/help/help.lua"
+    "client/gui/help/help.lua",
 
 }
 
@@ -51,7 +51,7 @@ files {
     "client/gui/loadscreen/bankgothic.ttf",
     "client/gui/loadscreen/loadscreen.jpg",
     "client/gui/loadscreen/cnc5.png",
-    
+
     -- SCOREBOARD
     'client/gui/scoreboard/html/scoreboard.html',
     'client/gui/scoreboard/html/style.css',
@@ -63,6 +63,7 @@ files {
     'client/gui/scoreboard/res/futurastd-medium.ttf',
     'client/gui/scoreboard/res/futurastd-medium.svg',
     'client/gui/scoreboard/res/cnc-logo.png',
+
 
     
 }

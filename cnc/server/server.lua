@@ -21,10 +21,11 @@ local RndTeam = false
 local TrafficDensity = 0.5
 local PedDensity = 0.5
 
-startNewRoundCoolDownTime = 5
+countdownStartNextRound = 10
+countdownBossInGetway = 40
 
 
-local DEBUG_MODE = false
+local DEBUG_MODE = true
 
 
 function getPlayerInfos( )
@@ -282,7 +283,7 @@ function startCNCRound(choosenMap)
     
     -- SPAWN Vehicles
     Citizen.Wait(500)
-    TriggerClientEvent('CNC:eventCreateVehicles', PlayerInfos[1].player, map['vehicle'] )
+    TriggerClientEvent('CNC:eventCreateVehicles', BossID, map['vehicle'] )
     
     -- Set Density
     TriggerClientEvent('CNC:setDensity', -1, PedDensity, TrafficDensity )
@@ -373,16 +374,20 @@ end)
 
 Citizen.CreateThread(function (  )
     function startCoolDownThread( )
-        local time = 30
+        local time = countdownBossInGetway
+        TriggerClientEvent("CNC:showCountdown", -1, true, time, "Boss entered getaway")
+
         for i=1, time do
             if not isBossInGetaway then
+            TriggerClientEvent("CNC:showCountdown", -1, false, time, "Boss entered getaway")
+                
                 return
             end
 
-            TriggerClientEvent('CNC:showNotification', -1, 'Round ends in: ' .. time - i)
+            -- TriggerClientEvent('CNC:showNotification', -1, 'Round ends in: ' .. time - i)
             Citizen.Wait(1000)
         end
-        TriggerEvent('CNC:addPoints','crook', 1000)
+        
         crooksWinsTheRound( )
     end
 end)
@@ -391,6 +396,7 @@ end)
 function crooksWinsTheRound( )
     TriggerEvent('Log', 'crooksWinsTheRound')
     print('Crooks win the Round')
+    TriggerEvent('CNC:addPoints','crook', 1000)
     TriggerClientEvent('CNC:showNotification', -1, 'Crooks wins the Round!')
     Citizen.Wait(5000)
     StopGame(false)
@@ -407,6 +413,7 @@ end
 
 
 function StopGame( hardReste )
+    TriggerClientEvent("CNC:showCountdown", -1, false, time, "Boss entered getaway")
     TriggerEvent('Log', 'StopGame')
     TriggerEvent('CNC:clearVehicles')
     isRoundOngoing = false
@@ -453,13 +460,14 @@ end
 
 
 function startNewRoundCoolDown()
-    local time = startNewRoundCoolDownTime
+    local time = countdownStartNextRound
+    TriggerClientEvent("CNC:showCountdown", -1, true, time, "Start next round ...")
     --TriggerClientEvent('CNC:showSBA', -1,  true)
     for i=1, time do
-        TriggerClientEvent('CNC:showNotification', -1, 'Next Round starts in: ' .. time - i)
+        -- TriggerClientEvent('CNC:showNotification', -1, 'Next Round starts in: ' .. time - i)
         Citizen.Wait(1000)
     end
-    --TriggerClientEvent('CNC:showSBA', -1,  false)
+    TriggerClientEvent("CNC:showCountdown", -1, false, time, "Start next round ...")
     startCNCRound(ChoosenMap)
 end
 

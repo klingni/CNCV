@@ -145,6 +145,9 @@ RegisterCommand("cnc", function(source, args, rawCommand)
     elseif args[1] == "getid" then
         TriggerClientEvent('CNC:getid', source, args[2])
 
+    elseif args[1] == "showCountdown" then
+        TriggerClientEvent('CNC:showCountdown', source, args[2])
 
     end
 end, false)
+

@@ -14,9 +14,10 @@ Citizen.CreateThread(function()
             if not listOn then
                 local players = {}
 
-
-                
                 SendNUIMessage({
+                    scoreboard = {
+                        show = true
+                    },
                     PlayerInfos = playerInfos,
                     Score = score
                     })
@@ -27,13 +28,44 @@ Citizen.CreateThread(function()
                     if(IsControlPressed(0, 27) == false and showSBA == false) then
                         listOn = false
                         SendNUIMessage({
-                            meta = 'close'
+                            scoreboard = {
+                                show = false
+                            }
                         })
                         break
                     end
                 end
             end
         end
+
+
+        -- if IsControlPressed(0, 173) or showSBA--[[ INPUT_PHONE ]] then
+        --     if not listOn then
+        --         local players = {}
+
+        --         SendNUIMessage({
+        --             countdown = {
+        --                 show = true,
+        --                 time = 50,
+        --                 text = "Starting Round ..."
+        --             },
+        --             })
+
+        --         listOn = true
+        --         while listOn do
+        --             Wait(0)
+        --             if(IsControlPressed(0, 173) == false and showSBA == false) then
+        --                 listOn = false
+        --                 SendNUIMessage({
+        --                     countdown = {
+        --                         show = false
+        --                     }
+        --                 })
+        --                 break
+        --             end
+        --         end
+        --     end
+        -- end
     end
 end)
 
@@ -71,4 +103,15 @@ end)
 RegisterNetEvent("CNC:showSBA")
 AddEventHandler("CNC:showSBA", function(toggle)
     showSBA = toggle
+end)
+
+RegisterNetEvent("CNC:showCountdown")
+AddEventHandler("CNC:showCountdown", function(bool, time, message)
+    SendNUIMessage({
+        countdown = {
+            show = bool,
+            time = time,
+            text = message
+        },
+        })
 end)

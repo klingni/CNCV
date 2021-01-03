@@ -343,13 +343,18 @@ AddEventHandler('CNC:joinRunningRound', function (playerID, team)
         end
     end
     
-    if team == 'cop' then
+    if team == 'cop' and CopHint then
         TriggerClientEvent('CNC:eventCreateCopHints', playerID, map )
     end
     TriggerClientEvent('CNC:StartRound', -1, PlayerInfos)
     TriggerEvent('chat:updatePlayerInfos', PlayerInfos)
     TriggerEvent('CNC:startSpawnPickupsJoiningPlayer', playerID )
     TriggerClientEvent('CNC:setDensity', -1, PedDensity, TrafficDensity )
+
+    if team == 'crook' then
+        TriggerEvent('CNC:forceCreateGetawayBlip', playerID )
+    end
+
 end)
 
 

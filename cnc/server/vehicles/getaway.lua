@@ -7,11 +7,16 @@ local checked = false
 
 
 RegisterNetEvent('CNC:forceCreateGetawayBlip')
-AddEventHandler('CNC:forceCreateGetawayBlip', function()
+AddEventHandler('CNC:forceCreateGetawayBlip', function(player)
 
-    for i,playerInfo in ipairs(PlayerInfos) do
-        if playerInfo.team == 'crook' then
-            TriggerClientEvent("CNC:CreateGetawayBlip", playerInfo.player, net_Getaway)
+    if player then
+        TriggerClientEvent("CNC:CreateGetawayBlip", player, net_Getaway)
+    else
+
+        for i,playerInfo in ipairs(PlayerInfos) do
+            if playerInfo.team == 'crook' then
+                TriggerClientEvent("CNC:CreateGetawayBlip", playerInfo.player, net_Getaway)
+            end
         end
     end
 

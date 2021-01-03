@@ -130,6 +130,8 @@ AddEventHandler("CNC:CreateGetawayBlip",function(ga_netid)
     AddTextComponentString("Getaway")
     EndTextCommandSetBlipName(getaway_blip)
 
+    checkGetawayIsDriveable(GA_Entity)
+
 end)
 
 
@@ -188,6 +190,18 @@ AddEventHandler("CNC:unfrezzeGetaway", function(veh)
     print("UNFREZZE GETAWAY")
     FreezeEntityPosition(veh, false)
     SetEntityCanBeDamaged(veh, true)
-
-
 end)
+
+
+function checkGetawayIsDriveable(vehicle)
+    Citizen.CreateThread(function()
+        running = true
+        while running do
+            if not IsVehicleDriveable(vehicle, false) then
+                TriggerServerEvent("CNC:GetawayIsNotDriveable")
+                running = false
+            end
+            Citizen.Wait(2000)
+        end
+    end)
+end

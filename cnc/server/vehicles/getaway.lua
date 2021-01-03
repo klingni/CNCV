@@ -40,7 +40,7 @@ AddEventHandler('cnc:baseevents:leftVehicle', function(veh, seat, displayName,ne
 
 
 
-    TriggerClientEvent("cnc:baseevents:playerLeftdGeta", source)
+TriggerClientEvent("cnc:baseevents:playerLeftdGeta", source)
     if isRoundOngoing then
         --if tonumber(source) == tonumber(BossInfo.player) and veh == Getaway then
         if tonumber(source) == tonumber(BossID) and netId == net_Getaway then
@@ -87,4 +87,17 @@ AddEventHandler('cnc:baseevents:enteredVehicle', function(veh, seat, displayName
             end
         end
     end
+end)
+
+
+RegisterNetEvent('CNC:GetawayIsNotDriveable')
+AddEventHandler('CNC:GetawayIsNotDriveable', function()
+
+    if IsGetawayDriveable then
+        IsGetawayDriveable = false
+        print("Getaway is broken")
+        TriggerClientEvent('CNC:showNotification', -1, 'Getaway is broken!')
+        copsWinsTheRound( )
+    end
+
 end)

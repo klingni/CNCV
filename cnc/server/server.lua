@@ -4,6 +4,7 @@ isBossInGetaway = false
 PlayerInfos ={}
 
 Getaway = {}
+IsGetawayDriveable = true
 net_Getaway = 0
 net_Spawner = {}
 net_Vehicles = {}
@@ -418,6 +419,7 @@ function StopGame( hardReste )
     TriggerEvent('CNC:clearVehicles')
     isRoundOngoing = false
     isBossInGetaway = false
+    IsGetawayDriveable = true
     net_Getaway = nil
     BossID = 0
     --BossInfo = nil

@@ -76,9 +76,13 @@ $(function () {
             
         } else if(item.countdown && item.countdown.show == true){
             timeLeft = item.countdown.time;
-            TIME_LIMIT = item.countdown.time
+            TIME_LIMIT = item.countdown.time;
+            remainingPathColor = COLOR_CODES.info.color;
+
             document.getElementById("base-timer-label").innerHTML = formatTime(timeLeft);
             document.getElementById("info-text").innerHTML = item.countdown.text;
+            document.getElementById("base-timer-path-remaining").classList.remove(COLOR_CODES.alert.color);
+            document.getElementById("base-timer-path-remaining").classList.remove(COLOR_CODES.warning.color);
             document.getElementById("base-timer-path-remaining").classList.add(remainingPathColor);
             startTimer();
             $('#countdown').show();

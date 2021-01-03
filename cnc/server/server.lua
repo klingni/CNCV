@@ -375,11 +375,11 @@ end)
 Citizen.CreateThread(function (  )
     function startCoolDownThread( )
         local time = countdownBossInGetway
-        TriggerClientEvent("CNC:showCountdown", -1, true, time, "Boss entered getaway")
+        TriggerClientEvent("CNC:showCountdown", -1, true, time, "Boss in getaway")
 
         for i=1, time do
             if not isBossInGetaway then
-            TriggerClientEvent("CNC:showCountdown", -1, false, time, "Boss entered getaway")
+            TriggerClientEvent("CNC:showCountdown", -1, false, time, "Boss in getaway")
                 
                 return
             end

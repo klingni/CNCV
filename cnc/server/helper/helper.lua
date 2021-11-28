@@ -36,7 +36,7 @@ end
 
 RegisterNetEvent('Debug')
 AddEventHandler('Debug', function (arg)
-    print("DEBUG -" .. os.date("%X") .. ": " .. dump(arg))
+    print("DEBUG -" .. os.date("%X") .. ": " .. Dump(arg))
     --RconPrint(arg)
 end)
 
@@ -45,7 +45,7 @@ AddEventHandler('Log', function (funct, args)
 
     
         --print('write Log')
-        local logLine = os.date("%X") .. ' - ' .. 'Function:' .. funct .. ' - Param: ' .. dump( args ) .. "\n"
+        local logLine = os.date("%X") .. ' - ' .. 'Function:' .. funct .. ' - Param: ' .. Dump( args ) .. "\n"
         --print(logLine)
         
         Date = os.date("*t")
@@ -91,12 +91,12 @@ end)
 
 
 
-function dump(o)
+function Dump(o)
     if type(o) == 'table' then
        local s = '{ '
        for k,v in pairs(o) do
           if type(k) ~= 'number' then k = '"'..k..'"' end
-          s = s .. '['..k..'] = ' .. dump(v) .. ','
+          s = s .. '['..k..'] = ' .. Dump(v) .. ','
        end
        return s .. '} '
     else

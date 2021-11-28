@@ -3,7 +3,7 @@ local removedPickups = {}
 
 RegisterNetEvent('CNC:startSpawnPickups')
 AddEventHandler('CNC:startSpawnPickups', function ( )
-    local globalMapSettings = getGlobalMapSettings() --test
+    local globalMapSettings = GetGlobalMapSettings() --test
     
     Citizen.Trace('startSpawnPickups')
     TriggerEvent('CNC:clearPickups')
@@ -70,7 +70,7 @@ AddEventHandler('CNC:removePickup', function ( pickupInfo )
 
         if pickup.x == pickupInfo.x and pickup.y == pickupInfo.y and pickup.z == pickupInfo.z then
             table.remove(pickupInfos, i)
-            collectedPickupInfo = pickupInfo
+            local collectedPickupInfo = pickupInfo
             collectedPickupInfo.time = os.time()
             table.insert( removedPickups, collectedPickupInfo )
             TriggerClientEvent("removePickup", -1, pickupInfo)

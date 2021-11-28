@@ -35,10 +35,11 @@ AddEventHandler("CNC:eventCreateGetaway", function(getaway)
     
     SetVehicleNumberPlateText(vehicle, 'GETAWAY')
     
+    local veh_net = VehToNet(vehicle)
+    
     NetworkRegisterEntityAsNetworked(vehicle)
     SetNetworkIdSyncToPlayer(veh_net, -1, true)
     
-    veh_net = VehToNet(vehicle)
     
     SetNetworkIdExistsOnAllMachines(veh_net, true)
     SetEntityAsMissionEntity(veh_net, true, true)
@@ -69,7 +70,7 @@ AddEventHandler("CNC:clearGA",function(getaway_net)
 
     print("ClearGetaway NET: " .. getaway_net)
 
-    veh = NetToVeh(tonumber(getaway_net))
+    local veh = NetToVeh(tonumber(getaway_net))
     print("ClearGetaway Veh: " .. veh)
     SetVehicleAsNoLongerNeeded(veh)
     DeleteVehicle(veh)
@@ -130,7 +131,7 @@ AddEventHandler("CNC:CreateGetawayBlip",function(ga_netid)
     AddTextComponentString("Getaway")
     EndTextCommandSetBlipName(getaway_blip)
 
-    checkGetawayIsDriveable(GA_Entity)
+    CheckGetawayIsDriveable(GA_Entity)
 
 end)
 
@@ -193,9 +194,9 @@ AddEventHandler("CNC:unfrezzeGetaway", function(veh)
 end)
 
 
-function checkGetawayIsDriveable(vehicle)
+function CheckGetawayIsDriveable(vehicle)
     Citizen.CreateThread(function()
-        running = true
+        local running = true
         while running do
             if not IsVehicleDriveable(vehicle, false) then
                 TriggerServerEvent("CNC:GetawayIsNotDriveable")

@@ -1,7 +1,7 @@
 local isRoundGoingOn
 local spawnRadius = 50
 local ServerBossID_player
-playerInfos = {}
+local playerInfos = {}
 
 
 RegisterNetEvent('CNC:ClientUpdate')
@@ -44,6 +44,7 @@ AddEventHandler("CNC:setTeam", function(PlayerInfo)
 
     TriggerServerEvent('Log', '['.. PlayerId() .. ']' .. GetPlayerName(PlayerId()) .. ' - CNC:setTeam', PlayerInfo.team)
 
+    local teamID = 0
 
     if PlayerInfo.team == "crook" then
         teamID = 1
@@ -62,10 +63,10 @@ end)
 
 RegisterNetEvent("CNC:getTeam")
 AddEventHandler("CNC:getTeam", function()
-	TriggerEvent('CNC:showNotification', "Team:" .. getTeam())
+	TriggerEvent('CNC:showNotification', "Team:" .. GetTeam())
 end)
 
-function getTeam()
+function GetTeam()
 	return GetPlayerTeam(PlayerId())
 end
 
@@ -102,7 +103,7 @@ AddEventHandler("CNC:getPos", function()
     TriggerServerEvent('Log', '['.. PlayerId() .. ']' .. GetPlayerName(PlayerId()) .. ' - CNC:getPos')
 
     local px, py, pz = table.unpack(GetEntityCoords(GetPlayerPed(-1), false))
-    coord = {x = px, y=py, z=pz}
+    local coord = {x = px, y=py, z=pz}
     print("getPlayerPosition - X: " .. px .. " / Y: " .. py .. " / Z: " .. pz)
 end)
 
@@ -131,7 +132,7 @@ Citizen.CreateThread(function (  )
 end)
 
 
-function playerStartNotification(playerInfo)
+function PlayerStartNotification(playerInfo)
     local option = {}
 
         if playerInfo.team == 'cop' then
@@ -183,23 +184,23 @@ AddEventHandler("CNC:newSpawnPlayer", function(coord, PlayerSetting, firstSpawn,
             skipFade = false
         }, function(spawn)
             TriggerServerEvent('Log', '['.. PlayerId() .. ']' .. GetPlayerName(PlayerId()) .. ' - FirstSpawn', spawn)
-            playerStartNotification(playerInfo)
-            setWeapons(PlayerSetting)
+            PlayerStartNotification(playerInfo)
+            SetWeapons(PlayerSetting)
     
         end)
 
     elseif not coord then
-        coord = getSpawnCoords(playerInfo, playerInfos)
+        coord = GetSpawnCoords(playerInfo, playerInfos)
 
         spawnRadius = 150
-        spawnX = coord.x
-        spawnY = coord.y
-        spawnZ = 0
+        local spawnX = coord.x
+        local spawnY = coord.y
+        local spawnZ = 0
     
         
-        i = 0
-        j = 0
-        k = 0
+        local i = 0
+        local j = 0
+        local k = 0
     
         FreezeEntityPosition(GetPlayerPed(PlayerId()), true)
         SetEntityCoords(GetPlayerPed(PlayerId()), coord.x, coord.y, coord.z + 100, 1, 0, 0, 1)
@@ -241,7 +242,7 @@ AddEventHandler("CNC:newSpawnPlayer", function(coord, PlayerSetting, firstSpawn,
     
         spawnZ = spawnZ + 0.2
     
-        spawn = {
+        local spawn = {
             x = spawnX,
             y = spawnY,
             z = spawnZ,
@@ -252,13 +253,13 @@ AddEventHandler("CNC:newSpawnPlayer", function(coord, PlayerSetting, firstSpawn,
     
         exports.spawnmanager:spawnPlayer(spawn,
             function(spawn)
-            setWeapons(PlayerSetting)
+            SetWeapons(PlayerSetting)
         end)
     end
 end)
 
 
-function setWeapons(PlayerSetting)
+function SetWeapons(PlayerSetting)
     -- TriggerServerEvent('Log', '['.. PlayerId() .. ']' .. GetPlayerName(PlayerId()) .. ' - setWeapons', PlayerSetting['weapons'])
     for k,v in pairs(PlayerSetting['weapons']) do
         GiveWeaponToPed(GetPlayerPed(-1), GetHashKey(v['type']), v['ammo'],true, v['equipt'])
@@ -282,7 +283,7 @@ function UpdatePlayerPositions(PlInfos)
 
 end
 
-function getSpawnCoords(PlayerInfo, PlayerInfos)
+function GetSpawnCoords(PlayerInfo, PlayerInfos)
       -- TriggerEvent('Debug', 'CNC:Server:player:respawnPlayer')
       local coord
       TriggerServerEvent("Log", "respawnPlayer", PlayerInfo)
@@ -325,8 +326,8 @@ function getSpawnCoords(PlayerInfo, PlayerInfos)
           if count > 0 then
               print("Other Cops")
               coord = {
-                  x = average(CopXPos),
-                  y = average(CopYPos),
+                  x = Average(CopXPos),
+                  y = Average(CopYPos),
                   z = 0.0
               }
           else

@@ -17,14 +17,14 @@ RegisterCommand("cnc", function(source, args, rawCommand)
 
         print('spawn Player command')
        
-        spawnPlayer(args[2], getMap(1), tonumber(args[3]), tobool(args[4]))
+        SpawnPlayer(args[2])
 
         --local player = args[2] or -1
         --TriggerClientEvent('eventSetTeam', player, getPlayerSettings(args[3]))
 
         
     elseif args[1] == "startRound" then
-        startCNCRound( source ) 
+        StartCNCRound( source ) 
        
 
     elseif args[1] == "showPlayers" then
@@ -34,7 +34,7 @@ RegisterCommand("cnc", function(source, args, rawCommand)
         end
 
     elseif args[1] == "spawnGeta" then
-        local map = getMap(1)
+        local map = GetMap(1)
         TriggerClientEvent('CNC:eventCreateGetaway', -1, map['getaway'])
 
 

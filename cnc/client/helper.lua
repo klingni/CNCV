@@ -12,7 +12,7 @@ function DistanceBetweenCoords2D(x1,y1,x2,y2)
 	local deltax = x1 - x2
 	local deltay = y1 - y2
 
-	dist = math.sqrt((deltax * deltax) + (deltay * deltay))
+	local dist = math.sqrt((deltax * deltax) + (deltay * deltay))
 
 	return dist
 end
@@ -229,7 +229,7 @@ Citizen.CreateThread(function()
     end
 end)
 
-function average( t )
+function Average( t )
     local sum = 0
     local count= 0
   

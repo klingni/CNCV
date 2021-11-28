@@ -1,3 +1,4 @@
+---@diagnostic disable-next-line: discard-returns
 math.randomseed(os.time())
 
 
@@ -5,11 +6,11 @@ RegisterNetEvent('EventSavePosition')
 AddEventHandler('EventSavePosition', function (Pos)
     
     
-    pos = "{\"x\":" .. PosX .. ", \"y\":".. PosY .. ", \"z\": " .. PosZ .."},"
+    local pos = "{\"x\":" .. PosX .. ", \"y\":".. PosY .. ", \"z\": " .. PosZ .."},"
     print("save current Position: " .. pos)
-    file = io.open("weapons.lua", "a+")
-    file:write(pos .. "\n")
-    file:close()
+    File = io.open("weapons.lua", "a+")
+    File:write(pos .. "\n")
+    File:close()
 end)
 
 

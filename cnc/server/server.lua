@@ -1,55 +1,55 @@
-isRoundOngoing  = false
+IsRoundOngoing  = false
 BossID = 0
-isBossInGetaway = false
+IsBossInGetaway = false
 PlayerInfos ={}
 
 Getaway = {}
 IsGetawayDriveable = true
-net_Getaway = 0
-net_Spawner = {}
-net_Vehicles = {}
+Net_Getaway = 0
+Net_Spawner = {}
+Net_Vehicles = {}
 
 local RoundCounter = 0
 local RoundsToPlay = 2
 local countPlayerResponse = 0
-local mapFolder = "resources//[cnc]//cnc-map//"
-local settingsFolder = "resources//[cnc]//cnc//Settings//"
+local mapFolder = GetResourcePath(GetCurrentResourceName()) .. "/../cnc-map/"
+local settingsFolder = GetResourcePath(GetCurrentResourceName()) .. "/Settings/"
 
 local ChoosenMap
-map ={}
+local map ={}
 local CopHint = false
 local RndTeam = false
 local TrafficDensity = 0.5
 local PedDensity = 0.5
 
-countdownStartNextRound = 10
-countdownBossInGetway = 40
+local countdownStartNextRound = 10
+local countdownBossInGetway = 40
 
 
 local DEBUG_MODE = true
 
 
-function getPlayerInfos( )
+function GetPlayerInfos( )
     return PlayerInfos
 end
 
-function resetVars()
-    isRoundOngoing  = false
+function ResetVars()
+    IsRoundOngoing  = false
     BossID = 0
-    isBossInGetaway = false
+    IsBossInGetaway = false
     PlayerInfos ={}
 
     Getaway = {}
-    net_Getaway = 0
-    net_Spawner = {}
-    net_Vehicles = {}
+    Net_Getaway = 0
+    Net_Spawner = {}
+    Net_Vehicles = {}
     RoundCounter = 0
     countPlayerResponse = 0
     map ={}
 end
 
 
-function getBossInfo( )
+function GetBossInfo( )
     for i,playerInfo in ipairs(PlayerInfos) do
         if playerInfo.player == BossID then
             return playerInfo
@@ -60,38 +60,38 @@ end
 
 
 function DoesRoundIsGoingOn( )
-    return isRoundOngoing
+    return IsRoundOngoing
 end
 
 
-function getGlobalMapSettings()
-    file = io.open(mapFolder .. "GlobalMap.json", "r")
-    local content = file:read("*a")
-    file:close()
+function GetGlobalMapSettings()
+    File = io.open(mapFolder .. "GlobalMap.json", "r")
+    local content = File:read("*a")
+    File:close()
     local testObj, pos, testErro = json.decode(content)
     return testObj
 end
 
 
-function getPlayerSettings(team)
+function GetPlayerSettings(team)
     TriggerEvent('Log', 'getPlayerSettings', team)
 
-    file = io.open(settingsFolder .. "Player.json", "r")
-    local content = file:read("*a")
-    file:close()
+    File = io.open(settingsFolder .. "Player.json", "r")
+    local content = File:read("*a")
+    File:close()
     local testObj, pos, testErro = json.decode(content)
     return testObj[team]
 end
 
 
-function getMap( id )
+function GetMap( id )
     TriggerEvent('Log', 'getMap', id)
 
     -- print('getmap')
-    file = io.open(mapFolder .. "Maps.json", "r")
-    local content = file:read("*a")
+    File = io.open(mapFolder .. "Maps.json", "r")
+    local content = File:read("*a")
     --print(content)
-    file:close()
+    File:close()
     local testObj, pos, testErro = json.decode(content)
     if id == 0 then
         id = math.random( 1, #testObj )
@@ -101,15 +101,15 @@ function getMap( id )
     return testObj[id]
 end
 
-function getAllMaps()
+function GetAllMaps()
     -- TriggerEvent('Debug', 'CNC:Server:server:getAllMaps')
 
     TriggerEvent('Log', 'getAllMaps')
     -- print('getmaps')
-    file = io.open(mapFolder .. "Maps.json", "r")
-    local content = file:read("*a")
+    File = io.open(mapFolder .. "Maps.json", "r")
+    local content = File:read("*a")
     --print(content)
-    file:close()
+    File:close()
     local testObj, pos, testErro = json.decode(content)
     --print("Objekte:" .. #testObj)
     return testObj
@@ -128,7 +128,7 @@ AddEventHandler('CNC:startRound', function(choosenMap, copHint, rndTeam, pedDens
     --print('Cophint: ' .. tostring(copHint) )
 
     
-    if isRoundOngoing then
+    if IsRoundOngoing then
         for i,PlayerInfo in ipairs(PlayerInfos) do
             --print('PlayerInfo.player: ' .. PlayerInfo.player .. "==" .. 'Player: ' .. PlayerID)
             if tonumber(PlayerInfo.player) == tonumber(PlayerID) then
@@ -142,18 +142,18 @@ AddEventHandler('CNC:startRound', function(choosenMap, copHint, rndTeam, pedDens
             end
         end       
     else
-        resetVars()
+        ResetVars()
         ChoosenMap = choosenMap
         CopHint = copHint
         RndTeam = rndTeam
         PedDensity = pedDensity
         TrafficDensity = trafficDensity
-        startCNCRound(ChoosenMap)
+        StartCNCRound(ChoosenMap)
     end
 end)
 
 -- Start Round
-function startCNCRound(choosenMap)
+function StartCNCRound(choosenMap)
     -- TriggerEvent('Debug', 'CNC:Server:server:startCNCRound')
 
     TriggerEvent('Log', 'startCNCRound' , choosenMap)
@@ -166,21 +166,21 @@ function startCNCRound(choosenMap)
         return  -- ENTFERNE KOMMETAR FÜR DIE GENUG-SPIELER-PRÜFUNG
     end
 
-    if isRoundOngoing then
+    if IsRoundOngoing then
         print("Round can't start, round is already running.")
         return
     end
 
-    isRoundOngoing = true
+    IsRoundOngoing = true
     
-    isBossInGetaway = false
+    IsBossInGetaway = false
     RoundCounter = RoundCounter + 1
     print("start Round " .. RoundCounter .. "!")
 
     if RoundCounter == 1 then
         print("RoundCounter 1")
         PlayerInfos = {}
-        net_Getaway = nil
+        Net_Getaway = nil
         --BossInfo = nil
         BossID = 0
         
@@ -200,7 +200,7 @@ function startCNCRound(choosenMap)
             }
             table.insert( PlayerInfos, PlayerInfo )
         end
-        randomizeTeams(RndTeam)
+        RandomizeTeams(RndTeam)
 
         local copCount = 0
         local crookCount = 0
@@ -216,12 +216,12 @@ function startCNCRound(choosenMap)
             if crookCount < 1 then
                 TriggerClientEvent("CNC:showNotification", -1, "No Player in the ~o~CROOK-Team ")
                 RoundCounter = 0
-                isRoundOngoing  = false
+                IsRoundOngoing  = false
                 return
             end
             if copCount < 1 then
                 TriggerClientEvent("CNC:showNotification", -1, "No Player in the ~p~COP-Team ")
-                isRoundOngoing  = false
+                IsRoundOngoing  = false
                 RoundCounter = 0
                 return
             end
@@ -253,7 +253,7 @@ function startCNCRound(choosenMap)
         end
     end
     
-    map = getMap(choosenMap)
+    map = GetMap(choosenMap)
     local rndGetaway = math.random(1, #map['getaway'])
     --local rndGetaway = 1
     TriggerClientEvent('CNC:cleanAll', -1)
@@ -265,7 +265,7 @@ function startCNCRound(choosenMap)
     
 
     -- CREATE SPAWNER
-    local globMap = getGlobalMapSettings()
+    local globMap = GetGlobalMapSettings()
     TriggerClientEvent('CNC:eventCreateSpawner', -1, globMap['vehicles'] )
     
     
@@ -280,7 +280,7 @@ function startCNCRound(choosenMap)
     
     -- SPAWN PLAYERS
     Citizen.Wait(1000)
-    spawnPlayers(map)
+    SpawnPlayers(map)
     
     -- SPAWN Vehicles
     Citizen.Wait(500)
@@ -339,7 +339,7 @@ AddEventHandler('CNC:joinRunningRound', function (playerID, team)
     for i,PlayerInfo in ipairs(PlayerInfos) do
         if tonumber(PlayerInfo.player) == tonumber(playerID) then
             PlayerInfo.team = team
-            respawnPlayer(PlayerInfo)
+            RespawnPlayer(PlayerInfo)
         end
     end
     
@@ -379,12 +379,12 @@ end)
 
 
 Citizen.CreateThread(function (  )
-    function startCoolDownThread( )
+    function StartCoolDownThread( )
         local time = countdownBossInGetway
         TriggerClientEvent("CNC:showCountdown", -1, true, time, "Boss in getaway")
 
         for i=1, time do
-            if not isBossInGetaway then
+            if not IsBossInGetaway then
             TriggerClientEvent("CNC:showCountdown", -1, false, time, "Boss in getaway")
                 
                 return
@@ -394,12 +394,12 @@ Citizen.CreateThread(function (  )
             Citizen.Wait(1000)
         end
         
-        crooksWinsTheRound( )
+        CrooksWinsTheRound( )
     end
 end)
 
 
-function crooksWinsTheRound( )
+function CrooksWinsTheRound( )
     TriggerEvent('Log', 'crooksWinsTheRound')
     print('Crooks win the Round')
     TriggerEvent('CNC:addPoints','crook', 1000)
@@ -409,7 +409,7 @@ function crooksWinsTheRound( )
 end
 
 
-function copsWinsTheRound( )
+function CopsWinsTheRound( )
     TriggerEvent('Log', 'copsWinsTheRound')
     print('Cops win the Round')
     TriggerClientEvent('CNC:showNotification', -1, 'Cops wins the Round!')
@@ -422,10 +422,10 @@ function StopGame( hardReste )
     TriggerClientEvent("CNC:showCountdown", -1, false, time, "Boss entered getaway")
     TriggerEvent('Log', 'StopGame')
     TriggerEvent('CNC:clearVehicles')
-    isRoundOngoing = false
-    isBossInGetaway = false
+    IsRoundOngoing = false
+    IsBossInGetaway = false
     IsGetawayDriveable = true
-    net_Getaway = nil
+    Net_Getaway = nil
     BossID = 0
     --BossInfo = nil
 
@@ -454,7 +454,7 @@ function StopGame( hardReste )
     end
 
     if RoundCounter < RoundsToPlay  then
-        startNewRoundCoolDown()
+        StartNewRoundCoolDown()
     elseif RoundCounter == RoundsToPlay then
         RoundCounter = 0
         TriggerClientEvent('CNC:clearPickups', -1)
@@ -466,7 +466,7 @@ function StopGame( hardReste )
 end
 
 
-function startNewRoundCoolDown()
+function StartNewRoundCoolDown()
     local time = countdownStartNextRound
     TriggerClientEvent("CNC:showCountdown", -1, true, time, "Start next round ...")
     --TriggerClientEvent('CNC:showSBA', -1,  true)
@@ -475,17 +475,17 @@ function startNewRoundCoolDown()
         Citizen.Wait(1000)
     end
     TriggerClientEvent("CNC:showCountdown", -1, false, time, "Start next round ...")
-    startCNCRound(ChoosenMap)
+    StartCNCRound(ChoosenMap)
 end
 
 
-function randomizeTeams(rnd)
+function RandomizeTeams(rnd)
     print("Randomize Teams")
     countPlayerResponse = 0
 
     if rnd then
         print('PlayerInfos:' .. #PlayerInfos)
-        PlayerInfos = shuffle(PlayerInfos)
+        PlayerInfos = Shuffle(PlayerInfos)
         local bool = true
         for i,playerInfo in ipairs(PlayerInfos) do
             if bool then
@@ -527,7 +527,7 @@ end)
 
 RegisterNetEvent('CNC:creatPlayerBlip')
 AddEventHandler('CNC:creatPlayerBlip', function( )
-    players = GetPlayers()
+    local players = GetPlayers()
     TriggerClientEvent("CNC:createPlayerBlip", -1, players[2])
 end)
 
@@ -583,7 +583,7 @@ RegisterNetEvent('CNC:Map:refreshMap')
 AddEventHandler('CNC:Map:refreshMap', function ()
     local playerID = source
     
-    tmpMaps = getAllMaps()
+    local tmpMaps = GetAllMaps()
     TriggerClientEvent('CNC:Map:init', -1, tmpMaps)
 
 end)

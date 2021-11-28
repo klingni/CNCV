@@ -1,6 +1,6 @@
-_menuPool = NativeUI.CreatePool()
-_menuPool:RefreshIndex()
-mainMenu = nil
+MenuPool = NativeUI.CreatePool()
+MenuPool:RefreshIndex()
+MainMenu = nil
 
 -- _menuPool:MouseControlsEnabled(false)
 -- _menuPool:ControlDisablingEnabled(false)
@@ -20,7 +20,7 @@ end
 
 
 function AddMenuGlobalMap(menu)
-    local globalmenu = _menuPool:AddSubMenu(menu, "Global Map", "contains Pickups and Spawner")
+    local globalmenu = MenuPool:AddSubMenu(menu, "Global Map", "contains Pickups and Spawner")
     
     local globLoad = NativeUI.CreateItem("load", "load the Globalmap")
     local globSave = NativeUI.CreateItem("save", "save the Globalmap")
@@ -45,9 +45,9 @@ end
     
 
 function AddMenuMap(menu)
-    local mapmenu = _menuPool:AddSubMenu(menu, "Map", "contains Getaways, Cops and Crook spawns, Vehicle spawns")
+    local mapmenu = MenuPool:AddSubMenu(menu, "Map", "contains Getaways, Cops and Crook spawns, Vehicle spawns")
     
-    loadmenu = _menuPool:AddSubMenu(mapmenu, "load Map", "open a Map")
+    loadmenu = MenuPool:AddSubMenu(mapmenu, "load Map", "open a Map")
 
     mapmenu.OnMenuChanged = function(menu, newmenu, forward)
         Citizen.Trace('Change Menü:' .. tostring(menu['Title']))
@@ -64,7 +64,7 @@ function AddMenuMap(menu)
     
     
 
-    local editmenu = _menuPool:AddSubMenu(mapmenu, "edit", "edit current Map")
+    local editmenu = MenuPool:AddSubMenu(mapmenu, "edit", "edit current Map")
         local mapSetCop = NativeUI.CreateItem("add Cop spawn", "add a cop spawn position")
         local mapSetCrk = NativeUI.CreateItem("add Crook spawn", "add a crook spawn position")
         local mapToVehi = NativeUI.CreateItem("curr. Vehicel -> Vehicel", "saves the current vehicle to vehicle")
@@ -88,7 +88,7 @@ function AddMenuMap(menu)
             if item == mapToGeta then TriggerEvent("CNCE:Map:forceSetCurrentVehicleToGetaway") end
             if item == mapRemSwn then TriggerEvent("CNCE:Map:forceRemoveSpawn") end
             if item == mapRename then
-                _menuPool:CloseAllMenus()
+                MenuPool:CloseAllMenus()
                 TriggerEvent("CNCE:Map:forceRenameMap")
             end
         end
@@ -101,10 +101,10 @@ function AddMenuMap(menu)
 
     mapmenu.OnItemSelect = function (sender, item, index)
         if item == mapSave then
-            _menuPool:CloseAllMenus()
+            MenuPool:CloseAllMenus()
             TriggerEvent("CNCE:Map:saveMap") end
         if item == mapAdd then
-            _menuPool:CloseAllMenus()
+            MenuPool:CloseAllMenus()
             TriggerEvent("CNCE:Map:addNewMap")
         end
     end
@@ -130,16 +130,16 @@ end)
 
 
 
-function openMenu( )
+function OpenMenu( )
     TriggerServerEvent('CNCE:Map:startInit')
     Citizen.Trace('open Menue')
-    mainMenu = NativeUI.CreateMenu("CnC Editor", "~b~CNC Editor")
-    _menuPool:Add(mainMenu)
-    AddMenuGlobalMap(mainMenu)
-    AddMenuMap(mainMenu)
-    AddMenuItemClear(mainMenu)
-    _menuPool:RefreshIndex()
-    mainMenu:Visible(true)
+    MainMenu = NativeUI.CreateMenu("CnC Editor", "~b~CNC Editor")
+    MenuPool:Add(MainMenu)
+    AddMenuGlobalMap(MainMenu)
+    AddMenuMap(MainMenu)
+    AddMenuItemClear(MainMenu)
+    MenuPool:RefreshIndex()
+    MainMenu:Visible(true)
 end
 
 
@@ -148,18 +148,18 @@ end
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
-         _menuPool:MouseControlsEnabled(false)
-        _menuPool:ControlDisablingEnabled(false)
+         MenuPool:MouseControlsEnabled(false)
+        MenuPool:ControlDisablingEnabled(false)
 
-        _menuPool:ProcessMenus()
+        MenuPool:ProcessMenus()
         if IsControlJustPressed(1, 166) then
-            if mainMenu == nil then
-                openMenu()
+            if MainMenu == nil then
+                OpenMenu()
             else
-                if (not _menuPool:IsAnyMenuOpen()) then
-                    openMenu()
+                if (not MenuPool:IsAnyMenuOpen()) then
+                    OpenMenu()
                 else
-                    _menuPool:CloseAllMenus()
+                    MenuPool:CloseAllMenus()
                 end
             end
         end

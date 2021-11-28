@@ -22,19 +22,19 @@ end)
 RegisterNetEvent("CNCE:Map:createMap")
 AddEventHandler("CNCE:Map:createMap",function(map, createVehicle)
     loaded = false
-    clear()
+    Clear()
     Citizen.Wait(1000)
     Map = map
 
     for i,crook in ipairs(Map['crook']['spawnpoints']) do
-        blip = createBlipMap(crook.x, crook.y, crook.z, 81, 1)
+        local blip = CreateBlipMap(crook.x, crook.y, crook.z, 81, 1)
         BeginTextCommandSetBlipName("STRING")
         AddTextComponentString("Crook spawn")
         EndTextCommandSetBlipName(blip)
     end
 
     for i,cop in ipairs(Map['cop']['spawnpoints']) do
-        blip = createBlipMap(cop.x, cop.y, cop.z, 27, 1)
+        local blip = CreateBlipMap(cop.x, cop.y, cop.z, 27, 1)
         BeginTextCommandSetBlipName("STRING")
         AddTextComponentString("Cop spawn")
         EndTextCommandSetBlipName(blip)
@@ -42,7 +42,7 @@ AddEventHandler("CNCE:Map:createMap",function(map, createVehicle)
 
     for i,getaway in ipairs(Map['getaway']) do
 
-        blip = createBlipMap(getaway.coord.x, getaway.coord.y, getaway.coord.z, 81, 225)
+        local blip = CreateBlipMap(getaway.coord.x, getaway.coord.y, getaway.coord.z, 81, 225)
         BeginTextCommandSetBlipName("STRING")
         AddTextComponentString("Getaway")
         EndTextCommandSetBlipName(blip)
@@ -50,7 +50,7 @@ AddEventHandler("CNCE:Map:createMap",function(map, createVehicle)
 
     for i,vehicle in ipairs(Map['vehicle']) do
 
-        blip = createBlipMap(vehicle.coord.x, vehicle.coord.y, vehicle.coord.z, 74, 225)
+        local blip = CreateBlipMap(vehicle.coord.x, vehicle.coord.y, vehicle.coord.z, 74, 225)
         BeginTextCommandSetBlipName("STRING")
         AddTextComponentString("Vehicle")
         EndTextCommandSetBlipName(blip)
@@ -97,10 +97,10 @@ end)
 RegisterNetEvent("CNCE:Map:clear")
 AddEventHandler("CNCE:Map:clear",function()
     Citizen.Trace('clearEvent')
-    clear()
+    Clear()
 end)
 
-function clear( )
+function Clear( )
     Map = {}
     
     for i,blip in ipairs(MapBlips) do
@@ -115,8 +115,8 @@ function clear( )
     
     Citizen.InvokeNative(0x957838AAF91BD12D, 0, 0, 0, 10000.0, false, false, false, false)
 
-    players = GetPlayersNetworkID()
-    ids = {}
+    local players = GetPlayersNetworkID()
+    local ids = {}
 
     for i=1,999 do
         table.insert( ids, i )
@@ -156,7 +156,7 @@ RegisterNetEvent("CNCE:Map:forceAddCop")
 AddEventHandler("CNCE:Map:forceAddCop",function()
 
     local x, y, z = table.unpack(GetEntityCoords(GetPlayerPed(-1), false))
-    coord = {x=x, y = y, z = z}
+    local coord = {x=x, y = y, z = z}
     TriggerServerEvent('CNCE:Map:addCop', coord)
 end)
 
@@ -164,17 +164,17 @@ RegisterNetEvent("CNCE:Map:forceAddCrook")
 AddEventHandler("CNCE:Map:forceAddCrook",function()
 
     local x, y, z = table.unpack(GetEntityCoords(GetPlayerPed(-1), false))
-    coord = {x=x, y = y, z = z}
+    local coord = {x=x, y = y, z = z}
     TriggerServerEvent('CNCE:Map:addCrook', coord)
 end)
 
 
 RegisterNetEvent("CNCE:Map:forceRemoveSpawn")
 AddEventHandler("CNCE:Map:forceRemoveSpawn",function()
-    removeSpawn()
+    RemoveSpawn()
 end)
 
-function removeSpawn()
+function RemoveSpawn()
     Citizen.CreateThread(function (  )
         local x, y, z = table.unpack(GetEntityCoords(GetPlayerPed(-1), false))
         for i,coord in ipairs(Map['cop']['spawnpoints']) do
@@ -206,7 +206,7 @@ AddEventHandler("CNCE:Map:forceSetCurrentVehicleToGetaway",function()
 
     if IsPedSittingInAnyVehicle(PlayerPedId()) then
 
-        currentVehicle = GetVehiclePedIsUsing(PlayerPedId())
+        local currentVehicle = GetVehiclePedIsUsing(PlayerPedId())
 
         VehicleCoord = GetEntityCoords(currentVehicle, true)
         VehicleRot = GetEntityRotation(currentVehicle, false)
@@ -231,7 +231,7 @@ AddEventHandler("CNCE:Map:forceSetCurrentVehicleToVehicle",function()
 
     if IsPedSittingInAnyVehicle(PlayerPedId()) then
 
-        currentVehicle = GetVehiclePedIsUsing(PlayerPedId())
+        local currentVehicle = GetVehiclePedIsUsing(PlayerPedId())
 
         VehicleCoord = GetEntityCoords(currentVehicle, true)
         VehicleRot = GetEntityRotation(currentVehicle, false)
@@ -262,8 +262,8 @@ AddEventHandler("CNCE:Map:forceRenameMap",function()
 end)
 
 
-function createBlipMap( x,y,z, color, sprite )
-    blip = AddBlipForCoord(x, y, z)
+function CreateBlipMap( x,y,z, color, sprite )
+    local blip = AddBlipForCoord(x, y, z)
     SetBlipSprite(blip, sprite)
     SetBlipColour(blip, color)
     SetBlipAsShortRange(blip, true)

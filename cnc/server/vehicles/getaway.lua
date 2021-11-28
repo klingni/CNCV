@@ -10,12 +10,12 @@ RegisterNetEvent('CNC:forceCreateGetawayBlip')
 AddEventHandler('CNC:forceCreateGetawayBlip', function(player)
 
     if player then
-        TriggerClientEvent("CNC:CreateGetawayBlip", player, net_Getaway)
+        TriggerClientEvent("CNC:CreateGetawayBlip", player, Net_Getaway)
     else
 
         for i,playerInfo in ipairs(PlayerInfos) do
             if playerInfo.team == 'crook' then
-                TriggerClientEvent("CNC:CreateGetawayBlip", playerInfo.player, net_Getaway)
+                TriggerClientEvent("CNC:CreateGetawayBlip", playerInfo.player, Net_Getaway)
             end
         end
     end
@@ -31,7 +31,7 @@ AddEventHandler('CNC:creatGetaway', function(net_getaway)
     TriggerEvent('Log', 'CNC:creatGetaway-NetGeta', net_getaway)
 
 
-    net_Getaway = net_getaway
+    Net_Getaway = net_getaway
     TriggerEvent('CNC:forceCreateGetawayBlip')
 end)
 
@@ -46,12 +46,12 @@ AddEventHandler('cnc:baseevents:leftVehicle', function(veh, seat, displayName,ne
 
 
 TriggerClientEvent("cnc:baseevents:playerLeftdGeta", source)
-    if isRoundOngoing then
+    if IsRoundOngoing then
         --if tonumber(source) == tonumber(BossInfo.player) and veh == Getaway then
-        if tonumber(source) == tonumber(BossID) and netId == net_Getaway then
+        if tonumber(source) == tonumber(BossID) and netId == Net_Getaway then
             print("Boss left the GETA")
             TriggerClientEvent('CNC:showNotification', -1, '~r~Boss left the Getaway')
-            isBossInGetaway = false
+            IsBossInGetaway = false
         end
     end
 
@@ -68,9 +68,9 @@ AddEventHandler('cnc:baseevents:enteredVehicle', function(veh, seat, displayName
     TriggerEvent('Log', 'baseevents:enteredVehicle-veh', veh)
     TriggerEvent('Log', 'baseevents:enteredVehicle-netId', netId)
 
-    if isRoundOngoing then
+    if IsRoundOngoing then
 
-        if netId == net_Getaway then
+        if netId == Net_Getaway then
 
             for i,playerInfo in ipairs(PlayerInfos) do
                 if playerInfo.team == 'crook' and tonumber(playerInfo.player) == tonumber(source) then
@@ -87,8 +87,8 @@ AddEventHandler('cnc:baseevents:enteredVehicle', function(veh, seat, displayName
             if tonumber(source) == tonumber(BossID) then
                 print("Boss entered the GETA")
                 TriggerClientEvent('CNC:showNotification', -1, '~r~Boss entered the Getaway')
-                isBossInGetaway = true
-                startCoolDownThread( )
+                IsBossInGetaway = true
+                StartCoolDownThread( )
             end
         end
     end
@@ -102,7 +102,7 @@ AddEventHandler('CNC:GetawayIsNotDriveable', function()
         IsGetawayDriveable = false
         print("Getaway is broken")
         TriggerClientEvent('CNC:showNotification', -1, 'Getaway is broken!')
-        copsWinsTheRound( )
+        CopsWinsTheRound( )
     end
 
 end)

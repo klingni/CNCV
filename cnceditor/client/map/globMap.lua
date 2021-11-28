@@ -28,7 +28,7 @@ local MapBlips = {}
 RegisterNetEvent("CNCE:globMap:createMap")
 AddEventHandler("CNCE:globMap:createMap",function(globalMap)
     loaded = false
-    cleaning()
+    Cleaning()
 
     Citizen.Wait(150)
     locGlobalMap = globalMap
@@ -52,7 +52,7 @@ AddEventHandler("CNCE:globMap:createMap",function(globalMap)
         table.insert( Vehicles, Vehicle )
         --Citizen.Trace(Vehicle)
 
-        blip = AddBlipForEntity(Vehicle)
+        local blip = AddBlipForEntity(Vehicle)
         SetBlipSprite(blip, 225)
         SetBlipColour(blip, 69)
 
@@ -67,7 +67,7 @@ AddEventHandler("CNCE:globMap:createMap",function(globalMap)
     Citizen.Wait(70)
     for i,pickup in ipairs(locGlobalMap['pickups']['positions']) do
 
-        createBlipPickup(pickup.x, pickup.y, pickup.z)
+        CreateBlipPickup(pickup.x, pickup.y, pickup.z)
 
 
     end
@@ -78,7 +78,7 @@ end)
 
 
 
-function cleaning( )
+function Cleaning( )
     Citizen.Trace('CLEAR')
     locGlobalMap = {}
 
@@ -112,10 +112,10 @@ end)
 
 
 
-function createBlipPickup( x,y,z )
+function CreateBlipPickup( x,y,z )
     
     --Citizen.Trace(x)
-    blip = AddBlipForCoord(x, y, z)
+    local blip = AddBlipForCoord(x, y, z)
     SetBlipSprite(blip, 1)
     SetBlipColour(blip, 1)
     SetBlipAsShortRange(blip, true)
@@ -132,12 +132,12 @@ end
 
 RegisterNetEvent('CNCE:globMap:Pickup:createPickup')
 AddEventHandler('CNCE:globMap:Pickup:createPickup', function ()
-    createPickup( )
+    CreatePickup( )
 end)
 
-function createPickup( )
+function CreatePickup( )
     local x, y, z = table.unpack(GetEntityCoords(GetPlayerPed(-1), false))
-    coord = {x=x, y = y, z = z}
+    local coord = {x=x, y = y, z = z}
     TriggerServerEvent('CNCE:globMap:Pickup:forceAddPickup', coord)
 end
 
@@ -145,10 +145,10 @@ end
 
 RegisterNetEvent('CNCE:globMap:Pickup:removePickup')
 AddEventHandler('CNCE:globMap:Pickup:removePickup', function ()
-    removePickup( )
+    RemovePickup( )
 end)
 
-function removePickup()
+function RemovePickup()
     Citizen.CreateThread(function (  )
         local x, y, z = table.unpack(GetEntityCoords(GetPlayerPed(-1), false))
         for i,coord in ipairs(locGlobalMap['pickups']['positions']) do
@@ -168,7 +168,7 @@ AddEventHandler("CNCE:globMap:forceSetCurrentVehicleToSpawner",function()
     if IsPedSittingInAnyVehicle(PlayerPedId()) then
 
         Citizen.Trace('SPAWN')
-        currentVehicle = GetVehiclePedIsUsing(PlayerPedId())
+        local currentVehicle = GetVehiclePedIsUsing(PlayerPedId())
 
         VehicleCoord = GetEntityCoords(currentVehicle, true)
         VehicleRot = GetEntityRotation(currentVehicle, false)
@@ -195,7 +195,7 @@ function DistanceBetweenCoords2D(x1,y1,x2,y2)
 	local deltax = x1 - x2
 	local deltay = y1 - y2
 
-	dist = math.sqrt((deltax * deltax) + (deltay * deltay))
+	local dist = math.sqrt((deltax * deltax) + (deltay * deltay))
 
 	return dist
 end

@@ -1,5 +1,5 @@
 local listOn = false
-showSBA = false
+local showSBA = false
 local score = {
     cops = 0,
     crooks = 0
@@ -83,7 +83,7 @@ function GetPlayers()
     return players
 end
 
-function sanitize(txt)
+function Sanitize(txt)
     local replacements = {
         ['&' ] = '&amp;', 
         ['<' ] = '&lt;', 

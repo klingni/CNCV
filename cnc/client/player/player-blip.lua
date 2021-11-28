@@ -108,9 +108,9 @@ Citizen.CreateThread(function()
                         -- Add nametags above head
                         
 
-						gamerTag = Citizen.InvokeNative(0xBFEFE3321A3F5015, playerPed, playerName, false, false, '', false)
-						SetMpGamerTagColour(gamerTag, 0, TagColor)
-						SetMpGamerTagVisibility(gamerTag, 0, HasEntityClearLosToEntity(PlayerPedId(), playerPed, 17))
+						GamerTag = Citizen.InvokeNative(0xBFEFE3321A3F5015, playerPed, playerName, false, false, '', false)
+						SetMpGamerTagColour(GamerTag, 0, TagColor)
+						SetMpGamerTagVisibility(GamerTag, 0, HasEntityClearLosToEntity(PlayerPedId(), playerPed, 17))
 
 	
 						-- Record blip so we don't keep recreating it
@@ -152,9 +152,9 @@ Citizen.CreateThread(function()
                                 AddTextComponentString("Cop")
                                 EndTextCommandSetBlipName(new_blip)
 
-								gamerTag = Citizen.InvokeNative(0xBFEFE3321A3F5015, playerPed, playerName, false, false, '', false)
-								SetMpGamerTagColour(gamerTag, 0, TagColor)
-								SetMpGamerTagVisibility(gamerTag, 0, HasEntityClearLosToEntity(PlayerPedId(), playerPed, 17))
+								GamerTag = Citizen.InvokeNative(0xBFEFE3321A3F5015, playerPed, playerName, false, false, '', false)
+								SetMpGamerTagColour(GamerTag, 0, TagColor)
+								SetMpGamerTagVisibility(GamerTag, 0, HasEntityClearLosToEntity(PlayerPedId(), playerPed, 17))
 
 
 								-- Record blip so we don't keep recreating it
@@ -162,9 +162,9 @@ Citizen.CreateThread(function()
                             end
                             
                         else
-                            gamerTag = Citizen.InvokeNative(0xBFEFE3321A3F5015, playerPed, playerName, false, false, '', false)
-							SetMpGamerTagColour(gamerTag, 0, TagColor)
-							SetMpGamerTagVisibility(gamerTag, 0, HasEntityClearLosToEntity(PlayerPedId(), playerPed, 17))
+                            GamerTag = Citizen.InvokeNative(0xBFEFE3321A3F5015, playerPed, playerName, false, false, '', false)
+							SetMpGamerTagColour(GamerTag, 0, TagColor)
+							SetMpGamerTagVisibility(GamerTag, 0, HasEntityClearLosToEntity(PlayerPedId(), playerPed, 17))
                         end
                         
 
@@ -209,9 +209,9 @@ Citizen.CreateThread(function()
                     AddTextComponentString("Cop")
                     EndTextCommandSetBlipName(new_blip)
 
-					gamerTag = Citizen.InvokeNative(0xBFEFE3321A3F5015, playerPed, playerName, false, false, '', false)
-					SetMpGamerTagColour(gamerTag, 0, TagColor)
-                    SetMpGamerTagVisibility(gamerTag, 0, HasEntityClearLosToEntity(PlayerPedId(), playerPed, 17))
+					GamerTag = Citizen.InvokeNative(0xBFEFE3321A3F5015, playerPed, playerName, false, false, '', false)
+					SetMpGamerTagColour(GamerTag, 0, TagColor)
+                    SetMpGamerTagVisibility(GamerTag, 0, HasEntityClearLosToEntity(PlayerPedId(), playerPed, 17))
 
 
 					-- Record blip so we don't keep recreating it
@@ -243,9 +243,9 @@ Citizen.CreateThread(function()
                     EndTextCommandSetBlipName(new_blip)
 					
                     
-					gamerTag = Citizen.InvokeNative(0xBFEFE3321A3F5015, playerPed, playerName, false, false, '', false)
-					SetMpGamerTagColour(gamerTag, 0, TagColor)
-                    SetMpGamerTagVisibility(gamerTag, 0, HasEntityClearLosToEntity(PlayerPedId(), playerPed, 17))
+					GamerTag = Citizen.InvokeNative(0xBFEFE3321A3F5015, playerPed, playerName, false, false, '', false)
+					SetMpGamerTagColour(GamerTag, 0, TagColor)
+                    SetMpGamerTagVisibility(GamerTag, 0, HasEntityClearLosToEntity(PlayerPedId(), playerPed, 17))
 
                     
 					-- Record blip so we don't keep recreating it

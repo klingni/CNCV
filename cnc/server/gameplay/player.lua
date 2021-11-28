@@ -36,27 +36,27 @@ RegisterNetEvent("CNC:Respawn")
 AddEventHandler("CNC:Respawn", function()
         for i, PlayerInfo in ipairs(PlayerInfos) do
             if tonumber(PlayerInfo.player) == tonumber(source) then
-                respawnPlayer(PlayerInfo)
+                RespawnPlayer(PlayerInfo)
                 break
             end
         end
     end
 )
 
-function spawnPlayers(map)
+function SpawnPlayers(map)
     -- TriggerEvent('Debug', 'CNC:Server:player:spawnPlayers')
 
     print("spawn Players")
     locmap = map
     for i, PlayerInfo in ipairs(PlayerInfos) do
         if PlayerInfo.team ~= "lobby" then
-            spawnPlayer(PlayerInfo)
+            SpawnPlayer(PlayerInfo)
         end
     end
 end
 
 
-function spawnPlayer(PlayerInfo)
+function SpawnPlayer(PlayerInfo)
     -- TriggerEvent('Debug', 'CNC:Server:player:spawnPlayer')
     local coord
     TriggerEvent("Log", "spawnPlayer", PlayerInfo)
@@ -64,23 +64,23 @@ function spawnPlayer(PlayerInfo)
     print("PlayerInfoTeam:" .. PlayerInfo.team)
 
     if PlayerInfo.isBoss == true then
-        PlayerSetting = getPlayerSettings("boss")
+        PlayerSetting = GetPlayerSettings("boss")
         print(PlayerInfo.playerName .. " is Boss")
     else
-        PlayerSetting = getPlayerSettings(PlayerInfo.team)
+        PlayerSetting = GetPlayerSettings(PlayerInfo.team)
     end
 
-    rnd = math.random(1, #locmap[PlayerInfo.team]["spawnpoints"])
+    local rnd = math.random(1, #locmap[PlayerInfo.team]["spawnpoints"])
     coord = locmap[PlayerInfo.team]["spawnpoints"][rnd]
 
     TriggerClientEvent("CNC:newSpawnPlayer", PlayerInfo.player, coord, PlayerSetting, true, PlayerInfo)
 end
 
 
-function respawnPlayer(PlayerInfo)
+function RespawnPlayer(PlayerInfo)
     if DoesRoundIsGoingOn() then
 
-        PlayerSetting = getPlayerSettings(PlayerInfo.team)
+        PlayerSetting = GetPlayerSettings(PlayerInfo.team)
 
         Citizen.Wait(3000)
         TriggerClientEvent("CNC:newSpawnPlayer", PlayerInfo.player, nil, PlayerSetting, false, PlayerInfo)
@@ -88,7 +88,7 @@ function respawnPlayer(PlayerInfo)
 end
 
 
-function showPlayers()
+function ShowPlayers()
     local ListAllPlayer = GetPlayers()
     for i, PlayerInfo in ipairs(ListAllPlayer) do
         print("ID: " .. PlayerInfo .. " / Name: " .. GetPlayerName(PlayerInfo))
@@ -104,7 +104,7 @@ AddEventHandler("playerDropped", function()
         if droppedPlayerID == tonumber(BossID) then
             TriggerClientEvent(
                 "CNC:showNotification", -1, "BOSS(" .. GetPlayerName(droppedPlayerID) .. ") disconnected!")
-            copsWinsTheRound()
+            CopsWinsTheRound()
         else
             TriggerClientEvent("CNC:showNotification", -1, GetPlayerName(droppedPlayerID) .. " disconnected!")
             Citizen.Wait(5000)
@@ -118,7 +118,7 @@ AddEventHandler("playerDropped", function()
             end
         end
         
-        if isRoundOngoing then
+        if IsRoundOngoing then
             local copCount = 0
             for i, PlayerInfo in ipairs(PlayerInfos) do
                 if PlayerInfo.team == "cop" then
@@ -141,7 +141,7 @@ function PlayerDiedV2(killtype, killerid)
     local victim
     local killer = nil
 
-    if isRoundOngoing then
+    if IsRoundOngoing then
 
         print('SOURCE: ' .. source)
 
@@ -163,9 +163,9 @@ function PlayerDiedV2(killtype, killerid)
         if tonumber(source) == tonumber(BossID) then -- If Boss died
             TriggerClientEvent("CNC:showNotification", -1, "~r~ ~h~Boss died!")
             TriggerEvent("CNC:addPoints", "cop", 1000)
-            copsWinsTheRound()
+            CopsWinsTheRound()
         else
-            respawnPlayer(victim)
+            RespawnPlayer(victim)
             Citizen.Wait(5000)
         end
     end
@@ -179,11 +179,11 @@ function PlayerKilled(victim, killer)
         print('Victim-Team: ' .. victim.team)
         
         TriggerEvent("CNC:addPoints", killer.team, 100) -- Killer-Team bekommt 100 Punkte
-        TriggerClientEvent("CNC:showNotification", -1, getColoredPlayerName(victim) .. " has been murdered by " .. getColoredPlayerName(killer) .. "!")
+        TriggerClientEvent("CNC:showNotification", -1, GetColoredPlayerName(victim) .. " has been murdered by " .. GetColoredPlayerName(killer) .. "!")
     else
         -- getötet durch Pad
         TriggerEvent("CNC:addPoints", victim.team, -100) -- Opfer-Team bekommt -100 Punkte
-        TriggerClientEvent("CNC:showNotification", -1, getColoredPlayerName(victim) .. " has been murdered by agro Pad!")
+        TriggerClientEvent("CNC:showNotification", -1, GetColoredPlayerName(victim) .. " has been murdered by agro Pad!")
 
     end
     
@@ -193,11 +193,11 @@ end
 function PlayerSuicide(victim)
     --Selbstmord
     TriggerEvent("CNC:addPoints", victim.team, -100) -- Selbstmörder-Team bekommt -100 Punkte
-    TriggerClientEvent("CNC:showNotification", -1, getColoredPlayerName(victim) .. " committed suicide!")
+    TriggerClientEvent("CNC:showNotification", -1, GetColoredPlayerName(victim) .. " committed suicide!")
 end
 
 
-function getColoredPlayerName(playerInfo)
+function GetColoredPlayerName(playerInfo)
     if playerInfo.team == "cop" then
         return "~p~" .. playerInfo.playerName .. "~s~"
     elseif playerInfo.team == "crook" then

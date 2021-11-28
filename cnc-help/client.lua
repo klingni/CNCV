@@ -8,9 +8,9 @@ Citizen.CreateThread(function()
         Wait(0)
         if IsControlPressed(0, 288) or startUp--[[ INPUT_PHONE ]] then
             if isShown then
-                closeHelp()
+                CloseHelp()
             else
-                showHelp()
+                ShowHelp()
             end
         end
     end
@@ -19,20 +19,20 @@ end)
 
 
 RegisterNUICallback("start", function(data)
-    closeHelp()
+    CloseHelp()
     TriggerServerEvent('CNC-HELP:closeAllHelpWindows')
     TriggerServerEvent('CNC:startRound', 0, true, true, 0.5, 0.5)
 end)
 
 RegisterNUICallback("exit", function(data)
-    closeHelp()
+    CloseHelp()
     TriggerEvent("CNC:joinRoundIfRoundIsGoingOn")
 end)
 
 
 RegisterNetEvent('CNC-HELP:close')
 AddEventHandler('CNC-HELP:close', function ()
-    closeHelp()
+    CloseHelp()
 end)
 
 -- RegisterNetEvent('CNC-HELP:UpdatePlayer')
@@ -42,7 +42,7 @@ end)
 -- end)
 
 
-function closeHelp()
+function CloseHelp()
     SetNuiFocus(false, false)
     SendNUIMessage({
         action = 'close'
@@ -54,7 +54,7 @@ function closeHelp()
     
 end
 
-function showHelp()
+function ShowHelp()
     -- TriggerServerEvent('CNC-HELP:getPlayerCount')
     print("PlayerCount: " .. #GetActivePlayers())
     SetNuiFocus(true, true)

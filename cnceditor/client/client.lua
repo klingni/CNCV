@@ -45,7 +45,7 @@ end)
 RegisterNetEvent("del")
 AddEventHandler("del",function(args)
     Citizen.Trace('DEL: ' .. args)
-    i  = tonumber(args)
+    local i  = tonumber(args)
 
     if NetworkDoesNetworkIdExist(i) then
         DeleteEntity(NetworkGetEntityFromNetworkId(i))
@@ -56,8 +56,8 @@ end)
 RegisterNetEvent("delall")
 AddEventHandler("delall",function(args)
 
-    players = GetPlayersNetworkID()
-    ids = {}
+    local players = GetPlayersNetworkID()
+    local ids = {}
 
     for i=1,999 do
         table.insert( ids, i )

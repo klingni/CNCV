@@ -9,8 +9,8 @@ function GetUserInput( title )
         end
         Citizen.Wait(0)
     end
-    status = UpdateOnscreenKeyboard()
-    result = GetOnscreenKeyboardResult()
+    local status = UpdateOnscreenKeyboard()
+    local result = GetOnscreenKeyboardResult()
 
     if (result ~="" and result ~= nil and status == 1) then
         --Citizen.Trace( 'Result:' .. result)

@@ -9,11 +9,11 @@ local visiblePickups = {}
 RegisterNetEvent("CNC:clearPickups")
 AddEventHandler("CNC:clearPickups", function()
     print('clearPickups Handler')
-    clearPickups()
+    ClearPickups()
 end)
 
 Citizen.CreateThread(function ( )
-    function clearPickups( )
+    function ClearPickups( )
         -- print('clearPickup')
         while #pickupInfos > 0 do
             Citizen.Wait(0)
@@ -101,12 +101,12 @@ end)
 
 RegisterNetEvent("createLootThread")
 AddEventHandler("createLootThread", function()
-    createLootThread(true)
+    CreateLootThread(true)
 end)
 
 -- Collect pickups thread
 Citizen.CreateThread(function ( )
-    while loaded == true do
+    while Loaded == true do
         Citizen.Wait(1)
 
         -- local posX,posY,posZ = table.unpack(GetEntityCoords(PlayerPedId(), true))
@@ -132,7 +132,7 @@ local pickupFilter = {}
 
 --Light
 Citizen.CreateThread(function()
-	while loaded == true do
+	while Loaded == true do
 		Citizen.Wait(1)
         local playerCoords = GetEntityCoords(PlayerPedId(), true)
 
@@ -149,7 +149,7 @@ Citizen.CreateThread(function()
 end)
 
 Citizen.CreateThread(function()
-	while loaded == true do
+	while Loaded == true do
         Citizen.Wait(5000)
         pickupFilter = {}
         
@@ -167,14 +167,14 @@ Citizen.CreateThread(function()
 end)
 
 
-function createLootThread( crashed )
+function CreateLootThread( crashed )
     if crashed ~= nil then
         --print("Loot fixed ...")
         --TriggerEvent('CNC:showNotification', "Loot fixed...")
     end
     
     Citizen.CreateThread(function ( )
-        while loaded == true do
+        while Loaded == true do
             Citizen.Wait(500)
             isThreadActive = true
             local counter = 0
@@ -207,7 +207,7 @@ function createLootThread( crashed )
                     --print(" / EXIST: " .. tostring(DoesPickupExist(pickupInfo.pickup)))
 --                    print("PickupID: " .. pickupInfo.pickup .. " / EXIST: " .. tostring(DoesPickupExist(pickupInfo.pickup)))
 
-                    pickup = CreatePickupRotate(pickupInfo.pickupName, pickupInfo.x, pickupInfo.y, pickupInfo.z + 1.0, 0.0, 0.0, 0.0, 512, pickupInfo.ammo, 24, 24, true, pickupInfo.pickupName)
+                    local pickup = CreatePickupRotate(pickupInfo.pickupName, pickupInfo.x, pickupInfo.y, pickupInfo.z + 1.0, 0.0, 0.0, 0.0, 512, pickupInfo.ammo, 24, 24, true, pickupInfo.pickupName)
                     pickupInfos[i].pickup = pickup
                     -- print('SPAWN')
 
@@ -223,7 +223,7 @@ end
 
 
 Citizen.CreateThread(function()
-	while loaded == true do
+	while Loaded == true do
 		Citizen.Wait(1)
 		if isThreadActive then
 			threadCheckAttempts = 0
@@ -239,5 +239,5 @@ Citizen.CreateThread(function()
 	end
 end)
 
-loaded = true
-createLootThread()
+Loaded = true
+CreateLootThread()

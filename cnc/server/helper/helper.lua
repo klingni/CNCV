@@ -1,12 +1,11 @@
+---@diagnostic disable-next-line: discard-returns
 math.randomseed(os.time())
-local currentFolder = "resources//[cnc]//cnc//Log//"
+local currentFolder = GetResourcePath(GetCurrentResourceName()) .."/Log/"
 
 
-
-
-function shuffle(tbl)
+function Shuffle(tbl)
     print('SHUFFLE')
-    size = #tbl
+    local size = #tbl
     for i = size, 1, -1 do
       local rand = math.random(size)
       tbl[i], tbl[rand] = tbl[rand], tbl[i]
@@ -15,7 +14,7 @@ function shuffle(tbl)
   end
 
 
-function showTeams( )
+function ShowTeams( )
     print("#### ALL PLAYERS ###")
     for i=1,#ListAllPlayer do
         print(ListAllPlayer[i])
@@ -49,19 +48,20 @@ AddEventHandler('Log', function (funct, args)
         local logLine = os.date("%X") .. ' - ' .. 'Function:' .. funct .. ' - Param: ' .. dump( args ) .. "\n"
         --print(logLine)
         
-        date = os.date("*t")
-        file = io.open(currentFolder .. "Log_" .. date.year .. date.month .. date.day .. ".log", "a")
-        file:write(logLine)
-        file:close()
+        Date = os.date("*t")
+        File = io.open(currentFolder .. "Log_" .. Date.year .. Date.month .. Date.day .. ".log", "a")
+        
+        File:write(logLine)
+        File:close()
 
 end)
 
-function startRound()
-    randomizeTeams()
+function StartRound()
+    RandomizeTeams()
 end
 
 
-function tobool( v )
+function ToBool( v )
     if v == 'true' then
         return true
     elseif v == false then
@@ -69,7 +69,7 @@ function tobool( v )
     end
 end
 
-function average( t )
+function Average( t )
     local sum = 0
     local count= 0
   
@@ -116,7 +116,7 @@ function dump(o)
 	local deltax = x1 - x2
 	local deltay = y1 - y2
 
-	dist = math.sqrt((deltax * deltax) + (deltay * deltay))
+	local dist = math.sqrt((deltax * deltax) + (deltay * deltay))
 
 	return dist
 end

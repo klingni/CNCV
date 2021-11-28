@@ -25,7 +25,7 @@ AddEventHandler("CNC:eventCreateVehicles", function(vehicles)
         SetEntityRotation(curVehicle, vehicle.rot.x, vehicle.rot.y, vehicle.rot.z, false, true)
         SetVehicleNumberPlateText(curVehicle, 'Vehicle')  
 
-        veh_net = VehToNet(curVehicle)
+        local veh_net = VehToNet(curVehicle)
         print('net_Veh: ' .. veh_net)
         SetNetworkIdExistsOnAllMachines(veh_net, true)
         SetEntityAsMissionEntity(veh_net, true, true)
@@ -42,7 +42,7 @@ AddEventHandler("CNC:clearVehicle",function(net_Vehicle)
 
     print('delete Vehicles: ' .. #net_Vehicle)
     for i,vehicle in ipairs(net_Vehicle) do
-        veh = NetToVeh(tonumber(vehicle))
+        local veh = NetToVeh(tonumber(vehicle))
         --print('ID:' .. i ..' Net:' .. vehicle .. ' Veh:' .. veh)
         SetVehicleAsNoLongerNeeded(veh)
         DeleteVehicle(veh)
@@ -85,10 +85,10 @@ AddEventHandler("eventSpawnCar",function(car, coord)
     --SetNetworkIdExistsOnAllMachines(vehicle, true)
 
 
-    veh_net = VehToNet(vehicle)
+    local veh_net = VehToNet(vehicle)
     -- print('NetworkID von Cheat Karre: ' .. veh_net)
 
-    veh = NetToVeh(veh_net)
+    local veh = NetToVeh(veh_net)
     -- print('VehicleID von Cheat Karre: ' .. veh)
     -- print('Veh aus Net:' .. NetToVeh(veh_net))
     -- print('Ent aus Net:' .. NetToEnt(veh_net))
@@ -102,7 +102,7 @@ AddEventHandler("eventSpawnCar",function(car, coord)
 
     SetBlipSprite(blip, 103)
     SetBlipColour(blip, 57)
-    getaway_blip = blip
+    local getaway_blip = blip
 end)
 
 

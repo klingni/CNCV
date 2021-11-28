@@ -1,5 +1,5 @@
 
-local currentFolder = "resources//[cnc]//cnc-map//"
+local currentFolder = GetResourcePath(GetCurrentResourceName()) .. "/../cnc-map/"
 
 
 RegisterCommand("cnc", function(source, args, rawCommand)

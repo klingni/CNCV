@@ -1,4 +1,4 @@
-local currentFolder = "resources//[cnc]//cnc-map//"
+local currentFolder = GetResourcePath(GetCurrentResourceName()) .. "/../cnc-map/"
 local globalMap = {}
 local currentMap = {}
 
@@ -6,17 +6,17 @@ local currentMap = {}
 RegisterNetEvent('CNCE:globMap:callLoadMap')
 AddEventHandler('CNCE:globMap:callLoadMap', function ()
     if globalMap['vehicles'] == nil then
-        globalMap = getGlobalMapSettings()
+        globalMap = GetGlobalMapSettings()
     end
     --print(#globalMap['pickups']['positions'])
     TriggerClientEvent('CNCE:globMap:createMap', -1, globalMap)
 end)
 
 
-function getGlobalMapSettings()
-    file = io.open(currentFolder .. "GlobalMap.json", "r")
-    local content = file:read("*a")
-    file:close()
+function GetGlobalMapSettings()
+    File = io.open(currentFolder .. "GlobalMap.json", "r")
+    local content = File:read("*a")
+    File:close()
     local testObj, pos, testErro = json.decode(content)
     --print(testObj['pickups'])
 
@@ -42,26 +42,26 @@ end)
 
 RegisterNetEvent('CNCE:globMap:save')
 AddEventHandler('CNCE:globMap:save', function ()
-    savePickups(globalMap)
+    SavePickups(globalMap)
     TriggerClientEvent('CNC:showNotification', -1, 'saving was successful')
 end)
 
 
-function savePickups(globalMap)
+function SavePickups(globalMap)
         --print('getSettingsS')
 
         local text = json.encode(globalMap)
 
         print('start saving')
         
-        file = io.open(currentFolder .. "GlobalMap.json", "w")
-        file:write(text)
-        file:close()
+        File = io.open(currentFolder .. "GlobalMap.json", "w")
+        File:write(text)
+        File:close()
 
-        date = os.date("*t")
-        backupfile = io.open(currentFolder .. "GlobalMap_" .. date.year .. date.month .. date.day .."_" .. date.hour .. date.min .. date.sec .. ".json", "w")
-        backupfile:write(text)
-        backupfile:close()
+        Date = os.date("*t")
+        BackupFile = io.open(currentFolder .. "GlobalMap_" .. Date.year .. Date.month .. Date.day .."_" .. Date.hour .. Date.min .. Date.sec .. ".json", "w")
+        BackupFile:write(text)
+        BackupFile:close()
         print('saving was successful')
 end
 

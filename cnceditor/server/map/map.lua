@@ -1,4 +1,4 @@
-local currentFolder = "resources//[cnc]//cnc-map//"
+local currentFolder = GetResourcePath(GetCurrentResourceName()) .. "/../cnc-map/"
 local Maps = {}
 local TestMaps = {}
 local currendMapId = 0
@@ -7,7 +7,7 @@ local tmpMaps = {}
 local adminpwd = "cnc4ever"
 
 
-function createMap()
+function CreateMap()
     Players = GetPlayers()
 
     -- TriggerClientEvent('CNCE:Map:createMap_forAll', -1, currentMap)
@@ -22,21 +22,21 @@ end
 RegisterNetEvent('CNCE:Map:loadMap')
 AddEventHandler('CNCE:Map:loadMap', function (mapId)
     if currendMapId == 0 or mapId then
-        Maps = getMapSettings()
+        Maps = GetMapSettings()
         print('LoadMap ' .. mapId)
         currendMapId = mapId
         currentMap = Maps[mapId]
     end
 
-    createMap()
+    CreateMap()
 end)
 
 
-function getMapSettings()
+function GetMapSettings()
     --print('getSettingsS')
-    file = io.open(currentFolder .. "Maps.json", "r")
-    local content = file:read("*a")
-    file:close()
+    File = io.open(currentFolder .. "Maps.json", "r")
+    local content = File:read("*a")
+    File:close()
     local testObj, pos, testErro = json.decode(content)
     --print(testObj[1]['cop']['spawnpoints'][1]['x'])
 
@@ -46,7 +46,7 @@ end
 
 RegisterNetEvent('CNCE:Map:startInit')
 AddEventHandler('CNCE:Map:startInit', function ()
-    tmpMaps = getMapSettings()
+    tmpMaps = GetMapSettings()
     TriggerClientEvent('CNCE:Map:init', -1, tmpMaps, currendMapId)
 end)
 
@@ -55,14 +55,14 @@ RegisterNetEvent('CNCE:Map:addCop')
 AddEventHandler('CNCE:Map:addCop', function (coord)
     --print(#currentMap['cop']['spawnpoints'])
     table.insert( currentMap['cop']['spawnpoints'], coord )
-    createMap()
+    CreateMap()
 end)
 
 RegisterNetEvent('CNCE:Map:addCrook')
 AddEventHandler('CNCE:Map:addCrook', function (coord)
     --print(#currentMap['crook']['spawnpoints'])
     table.insert( currentMap['crook']['spawnpoints'], coord )
-    createMap()
+    CreateMap()
 end)
 
 RegisterNetEvent('CNCE:Map:removeSpawn')
@@ -77,7 +77,7 @@ AddEventHandler('CNCE:Map:removeSpawn', function ( type, i)
     elseif type == 'vehicle' then
         table.remove( currentMap['vehicle'], i )
     end
-    createMap()
+    CreateMap()
 end)
 
 RegisterNetEvent('CNCE:Map:addGetaway')
@@ -86,7 +86,7 @@ AddEventHandler('CNCE:Map:addGetaway', function ( GetawayInfo)
     --print(#currentMap['getaway'])
     table.insert( currentMap['getaway'] , GetawayInfo )
 
-    createMap()
+    CreateMap()
 end)
 
 RegisterNetEvent('CNCE:Map:addVehicle')
@@ -94,7 +94,7 @@ AddEventHandler('CNCE:Map:addVehicle', function ( VehicleInfo )
     --print(#currentMap['vehicle'])
     table.insert( currentMap['vehicle'] , VehicleInfo )
 
-    createMap()
+    CreateMap()
 end)
 
 RegisterNetEvent('CNCE:Map:renameMap')
@@ -118,14 +118,14 @@ AddEventHandler('CNCE:Map:saveMap', function ( password )
 
         print('start saving')
         
-        file = io.open(currentFolder .. "Maps.json", "w")
-        file:write(text)
-        file:close()
+        File = io.open(currentFolder .. "Maps.json", "w")
+        File:write(text)
+        File:close()
 
-        date = os.date("*t")
-        backupfile = io.open(currentFolder .. "Maps_" .. date.year .. date.month .. date.day .."_" .. date.hour .. date.min .. date.sec .. ".json", "w")
-        backupfile:write(text)
-        backupfile:close()
+        Date = os.date("*t")
+        BackupFile = io.open(currentFolder .. "Maps_" .. Date.year .. Date.month .. Date.day .."_" .. Date.hour .. Date.min .. Date.sec .. ".json", "w")
+        BackupFile:write(text)
+        BackupFile:close()
         print('saving was successful')
         TriggerClientEvent('CNC:showNotification', source, '~g~saving was successful')
 
@@ -146,14 +146,14 @@ AddEventHandler('CNCE:Map:saveNewMap', function (  )
 
         print('start saving')
         
-        file = io.open(currentFolder .. "Maps.json", "w")
-        file:write(text)
-        file:close()
+        File = io.open(currentFolder .. "Maps.json", "w")
+        File:write(text)
+        File:close()
 
-        date = os.date("*t")
-        backupfile = io.open(currentFolder .. "Maps_" .. date.year .. date.month .. date.day .."_" .. date.hour .. date.min .. date.sec .. ".json", "w")
-        backupfile:write(text)
-        backupfile:close()
+        Date = os.date("*t")
+        BackupFile = io.open(currentFolder .. "Maps_" .. Date.year .. Date.month .. Date.day .."_" .. Date.hour .. Date.min .. Date.sec .. ".json", "w")
+        BackupFile:write(text)
+        BackupFile:close()
         print('saving was successful')
         TriggerClientEvent('CNC:showNotification', source, '~g~saving was successful')
 end)
@@ -167,7 +167,7 @@ AddEventHandler('CNCE:Map:addNewMap', function ( title, autor, password )
 
     if #Maps == 0 then
         --TriggerEvent('CNCE:Map:loadMap', 1)
-        Maps = getMapSettings()
+        Maps = GetMapSettings()
         Citizen.Wait(2000)
     end
 

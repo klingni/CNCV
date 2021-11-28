@@ -9,7 +9,7 @@ RegisterNetEvent('CNC:createVehicle')
 AddEventHandler('CNC:createVehicle', function(vehicles)
     TriggerEvent('Log', 'CNC:createVehicle', vehicles)
     -- print('Spawner:' .. #vehicles)
-    net_Vehicles = vehicles
+    Net_Vehicles = vehicles
 end)
 
 
@@ -22,9 +22,9 @@ AddEventHandler('CNC:clearVehicles', function()
     -- print('SPAWNER:' .. #net_Spawner)
     -- print('VEHICLES:' .. #net_Vehicles)
 
-    TriggerClientEvent('CNC:clearSpawner', -1, net_Spawner)
-    TriggerClientEvent('CNC:clearVehicle', -1, net_Vehicles)
-    TriggerClientEvent('CNC:clearGA', -1, net_Getaway)
+    TriggerClientEvent('CNC:clearSpawner', -1, Net_Spawner)
+    TriggerClientEvent('CNC:clearVehicle', -1, Net_Vehicles)
+    TriggerClientEvent('CNC:clearGA', -1, Net_Getaway)
 
     --net_Spawner = {}
     --net_Vehicles = {}

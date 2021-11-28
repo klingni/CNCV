@@ -14,6 +14,6 @@ AddEventHandler("CNC:updateScore", function(newScore)
 end)
 
 
-function updateHudMapName( mapName )
+function UpdateHudMapName( mapName )
     MapName = mapName
 end

@@ -1,5 +1,5 @@
-_menuPool = MenuPool.New()
-mainMenu = UIMenu.New("Switch", "~b~select Mode")
+local _menuPool = MenuPool.New()
+local mainMenu = UIMenu.New("Switch", "~b~select Mode")
 _menuPool:Add(mainMenu)
 
 _menuPool:MouseControlsEnabled(false)

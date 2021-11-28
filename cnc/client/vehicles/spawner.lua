@@ -29,7 +29,7 @@ AddEventHandler("CNC:eventCreateSpawner", function(vehicles)
         -- end
 
         
-        spawner_blip = AddBlipForCoord(vehicle.coord.x, vehicle.coord.y, vehicle.coord.z)
+        local spawner_blip = AddBlipForCoord(vehicle.coord.x, vehicle.coord.y, vehicle.coord.z)
         SetBlipSprite(spawner_blip, 64)
         SetBlipColour(spawner_blip, 9)
         SetBlipAsShortRange(spawner_blip, true)
@@ -52,7 +52,7 @@ AddEventHandler("CNC:clearSpawner",function(net_Spawner)
 
     print('delete Spawner: ' .. #net_Spawner)
     for i,vehicle in ipairs(net_Spawner) do
-        veh = NetToVeh(tonumber(vehicle))
+        local veh = NetToVeh(tonumber(vehicle))
         --print('ID:' .. i ..' Net:' .. vehicle .. ' Veh:' .. veh)
         SetVehicleAsNoLongerNeeded(veh)
         DeleteVehicle(veh)

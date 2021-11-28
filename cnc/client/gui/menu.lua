@@ -1,6 +1,6 @@
-_menuPool = MenuPool.New()
-_menuPool:RefreshIndex()
-mainMenu = nil
+MenuPool = MenuPool.New()
+MenuPool:RefreshIndex()
+MainMenu = nil
 
 
 local Maps = {}
@@ -95,7 +95,7 @@ function AddMenuStartRound(menu)
         if item == newitem then
             local string = "Start/Join Round"
             ShowNotification(string)
-            _menuPool:CloseAllMenus()
+            MenuPool:CloseAllMenus()
             --TriggerServerEvent('CNC:startRound', choosenMap, true, randomeTeams)
             TriggerServerEvent('CNC:startRound', choosenMap, copHint, randomeTeams, choosenPedDensity, choosenTrafficDensity)
         end
@@ -112,43 +112,43 @@ end)
 
 RegisterNetEvent('CNC:StartRound')
 AddEventHandler('CNC:StartRound', function ()
-    _menuPool:CloseAllMenus()
+    MenuPool:CloseAllMenus()
 end)
 
 
-function openMenu( )
+function OpenMenu( )
     TriggerServerEvent('CNC:Map:refreshMap')
     choosenMap = 0
     --Citizen.Trace('open Menue')
-    mainMenu = NativeUI.CreateMenu("Settings", "~b~Settings")
-    _menuPool:Add(mainMenu)
-    AddMenuMaps(mainMenu)
-    AddMenuCopHint(mainMenu)
+    MainMenu = NativeUI.CreateMenu("Settings", "~b~Settings")
+    MenuPool:Add(MainMenu)
+    AddMenuMaps(MainMenu)
+    AddMenuCopHint(MainMenu)
     --AddMenuTeamChoice(mainMenu)
     --AddMenuTrafficDensity(mainMenu)
     --AddMenuPadDensity(mainMenu)
-    AddMenuStartRound(mainMenu)
+    AddMenuStartRound(MainMenu)
 
 
-    _menuPool:RefreshIndex()
-    mainMenu:Visible(true)
+    MenuPool:RefreshIndex()
+    MainMenu:Visible(true)
 end
 
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(1)
-         _menuPool:MouseControlsEnabled(false)
-        _menuPool:ControlDisablingEnabled(false)
+         MenuPool:MouseControlsEnabled(false)
+        MenuPool:ControlDisablingEnabled(false)
 
-        _menuPool:ProcessMenus()
+        MenuPool:ProcessMenus()
         if IsControlJustPressed(1, 166) then
-            if mainMenu == nil then
-                openMenu()
+            if MainMenu == nil then
+                OpenMenu()
             else
-                if (not _menuPool:IsAnyMenuOpen()) then
-                    openMenu()
+                if (not MenuPool:IsAnyMenuOpen()) then
+                    OpenMenu()
                 else
-                    _menuPool:CloseAllMenus()
+                    MenuPool:CloseAllMenus()
                 end
             end
         end

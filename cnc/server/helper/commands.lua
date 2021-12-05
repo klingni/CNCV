@@ -148,6 +148,9 @@ RegisterCommand("cnc", function(source, args, rawCommand)
     elseif args[1] == "showCountdown" then
         TriggerClientEvent('CNC:showCountdown', source, args[2])
 
+    elseif args[1] == "debug" then
+        print("CONVAR: " .. GetConvar('cncdebug', 'false'))
+
     end
 end, false)
 

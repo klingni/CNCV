@@ -24,14 +24,13 @@ local PedDensity = 0.5
 
 local countdownStartNextRound = 10
 local countdownBossInGetway = 40
-
-
-local DEBUG_MODE = true
+local DEBUG_MODE = false
 
 
 function GetPlayerInfos( )
     return PlayerInfos
 end
+
 
 function ResetVars()
     IsRoundOngoing  = false
@@ -118,6 +117,8 @@ end
 RegisterNetEvent('CNC:startRound')
 AddEventHandler('CNC:startRound', function(choosenMap, copHint, rndTeam, pedDensity, trafficDensity)
     -- TriggerEvent('Debug', 'CNC:Server:server:startRound')
+
+    DEBUG_MODE = ToBool(GetConvar('cncdebug', 'false'))
 
     local PlayerID = source
     --print('Player: ' .. PlayerID)

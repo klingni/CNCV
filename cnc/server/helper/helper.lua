@@ -64,7 +64,7 @@ end
 function ToBool( v )
     if v == 'true' then
         return true
-    elseif v == false then
+    elseif v == 'false' then
         return false
     end
 end

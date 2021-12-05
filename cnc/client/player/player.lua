@@ -4,6 +4,10 @@ local ServerBossID_player
 local playerInfos = {}
 
 
+function GetPlayerInfos()
+    return playerInfos
+end
+
 RegisterNetEvent('CNC:ClientUpdate')
 AddEventHandler('CNC:ClientUpdate', function(PlayerInfos)
     print('CNC:ClientUpdate')

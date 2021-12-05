@@ -1,9 +1,10 @@
 local listOn = false
 local showSBA = false
 local score = {
-    cops = 0,
-    crooks = 0
+    cop = 0,
+    crook = 0
 }
+
 
 Citizen.CreateThread(function()
     listOn = false
@@ -12,7 +13,7 @@ Citizen.CreateThread(function()
 
         if IsControlPressed(0, 27) or showSBA--[[ INPUT_PHONE ]] then
             if not listOn then
-                local players = {}
+                local playerInfos = GetPlayerInfos()
 
                 SendNUIMessage({
                     scoreboard = {

@@ -26,6 +26,7 @@ let remainingPathColor = COLOR_CODES.info.color;
 
 $(function () {
     window.addEventListener('message', function (event) {
+
         var item = event.data;
         var buf = $('#scoreboard');
 
@@ -41,6 +42,8 @@ $(function () {
         } else if (item.scoreboard && item.scoreboard.show == true){
             var Score = item["Score"];
             var PlayerInfos = item["PlayerInfos"];
+
+            
     
             document.getElementById("cop_score").innerHTML = Score['cop'];
             document.getElementById("crook_score").innerHTML = Score['crook'];

@@ -274,17 +274,20 @@ function StartCNCRound(choosenMap)
         TriggerEvent('CNC:startSpawnPickups', PlayerInfos[1].player)
     end
     
-    TriggerClientEvent('CNC:eventCreateGetaway', BossID, map['getaway'][rndGetaway] )
+    -- TriggerClientEvent('CNC:eventCreateGetaway', BossID, map['getaway'][rndGetaway] )
+    CreateGetaway(map['getaway'][rndGetaway] )
     
     --TriggerClientEvent('CNC:eventCreateSpawner', BossID, globMap['vehicles'] )
     
     -- SPAWN PLAYERS
     Citizen.Wait(1000)
+    print("trigger spawn Players")
     SpawnPlayers(map)
     
     -- SPAWN Vehicles
     Citizen.Wait(500)
-    TriggerClientEvent('CNC:eventCreateVehicles', BossID, map['vehicle'] )
+    CreateVehicles(map['vehicle'])
+    -- TriggerClientEvent('CNC:eventCreateVehicles', BossID, map['vehicle'] )
     
     -- Set Density
     TriggerClientEvent('CNC:setDensity', -1, PedDensity, TrafficDensity )

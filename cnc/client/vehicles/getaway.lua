@@ -6,47 +6,47 @@ local OldGetawayCoord = {x=0, y=0, z=0}
 
 
 -- spawn Getaway
-RegisterNetEvent("CNC:eventCreateGetaway")
-AddEventHandler("CNC:eventCreateGetaway", function(getaway)
+-- RegisterNetEvent("CNC:eventCreateGetaway")
+-- AddEventHandler("CNC:eventCreateGetaway", function(getaway)
 
-    -- TriggerServerEvent('Debug', 'CNC:Client:getaway:enebtCreateGetaway')
+--     -- TriggerServerEvent('Debug', 'CNC:Client:getaway:enebtCreateGetaway')
 
-    TriggerServerEvent('Log', '['.. PlayerId() .. ']' .. GetPlayerName(PlayerId()) .. ' - CNC:eventCreateGetaway', getaway)
+--     TriggerServerEvent('Log', '['.. PlayerId() .. ']' .. GetPlayerName(PlayerId()) .. ' - CNC:eventCreateGetaway', getaway)
     
-    --local hash = GetHashKey(getaway['model'])
-    local hash = getaway['hash']
+--     --local hash = GetHashKey(getaway['model'])
+--     local hash = getaway['hash']
 
-    RequestModel(hash)
+--     RequestModel(hash)
 
-    while not HasModelLoaded(hash) do
-        RequestModel(hash)
-        Citizen.Wait(0)
-    end
+--     while not HasModelLoaded(hash) do
+--         RequestModel(hash)
+--         Citizen.Wait(0)
+--     end
 
-    local vehicle = CreateVehicle(hash, getaway.coord.x, getaway.coord.y, getaway.coord.z , 0.0, true, true)
-    -- FreezeEntityPosition(vehicle, true)
-    SetEntityRotation(vehicle, getaway.rot.x, getaway.rot.y, getaway.rot.z, false, true)
+--     local vehicle = CreateVehicle(hash, getaway.coord.x, getaway.coord.y, getaway.coord.z , 0.0, true, true)
+--     -- FreezeEntityPosition(vehicle, true)
+--     SetEntityRotation(vehicle, getaway.rot.x, getaway.rot.y, getaway.rot.z, false, true)
     
     
-    --All Getaways are godmoded, exept submarine
-    if hash ~= 771711535 then
-        SetEntityCanBeDamaged(vehicle, false)
-    end
+--     --All Getaways are godmoded, exept submarine
+--     if hash ~= 771711535 then
+--         SetEntityCanBeDamaged(vehicle, false)
+--     end
     
-    SetVehicleNumberPlateText(vehicle, 'GETAWAY')
+--     SetVehicleNumberPlateText(vehicle, 'GETAWAY')
     
-    local veh_net = VehToNet(vehicle)
+--     local veh_net = VehToNet(vehicle)
     
-    NetworkRegisterEntityAsNetworked(vehicle)
-    SetNetworkIdSyncToPlayer(veh_net, -1, true)
+--     NetworkRegisterEntityAsNetworked(vehicle)
+--     SetNetworkIdSyncToPlayer(veh_net, -1, true)
     
     
-    SetNetworkIdExistsOnAllMachines(veh_net, true)
-    SetEntityAsMissionEntity(veh_net, true, true)
-    SetNetworkIdCanMigrate(veh_net, true)
-    TriggerServerEvent("CNC:creatGetaway", veh_net)
+--     SetNetworkIdExistsOnAllMachines(veh_net, true)
+--     SetEntityAsMissionEntity(veh_net, true, true)
+--     SetNetworkIdCanMigrate(veh_net, true)
+--     TriggerServerEvent("CNC:creatGetaway", veh_net)
 
-end)
+-- end)
 
 
 RegisterNetEvent("CNC:eventCreateGetawayWaypoint")
@@ -108,32 +108,6 @@ AddEventHandler("CNC:UpdateGetawayBlip",function(coord)
 
 end)
 
-
-RegisterNetEvent("CNC:CreateGetawayBlip")
-AddEventHandler("CNC:CreateGetawayBlip",function(ga_netid)
-
-    print("set Getaway Blip")
-
-    while not NetworkDoesNetworkIdExist(ga_netid) do
-        Citizen.Wait(1000)
-    end
-
-
-    print("GA_NetId: " .. ga_netid)
-    
-    local GA_Entity = NetToVeh(tonumber(ga_netid))
-    print("GA_Entity: " .. GA_Entity)
-    
-    getaway_blip = AddBlipForEntity(GA_Entity)
-    SetBlipSprite(getaway_blip, 315)
-    SetBlipColour(getaway_blip, 47)
-    BeginTextCommandSetBlipName("STRING")
-    AddTextComponentString("Getaway")
-    EndTextCommandSetBlipName(getaway_blip)
-
-    CheckGetawayIsDriveable(GA_Entity)
-
-end)
 
 
 

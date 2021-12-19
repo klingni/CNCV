@@ -7,9 +7,8 @@ local LobbyTagColor = 210
 local BossSprite = 119
 local BossViewRange = 200.0
 local ServerBossID
-local playerInfos
 
-local getInfos = false
+Blips = {}
 
 
 RegisterNetEvent('CNC:StartRound')
@@ -17,9 +16,8 @@ AddEventHandler('CNC:StartRound', function(PlayerInfos)
 
 	TriggerServerEvent('Log', '['.. PlayerId() .. ']' .. GetPlayerName(PlayerId()) .. ' - CNC:StartRound', PlayerInfos)
 
-    playerInfos = PlayerInfos
     print('Start Round Blips')
-    for i,PlayerInfo in ipairs(PlayerInfos) do
+    for _,PlayerInfo in ipairs(PlayerInfos) do
         if PlayerInfo.isBoss == true then
             ServerBossID = PlayerInfo.player
         end
@@ -27,37 +25,27 @@ AddEventHandler('CNC:StartRound', function(PlayerInfos)
 end)
 
 
-
 Citizen.CreateThread(function()
-	local blips = {}
-	local currentPlayer = PlayerId()
+	local myPlayer = PlayerId()
 	
 	while true do
 		Wait(100)
-		local currentPlayerTeam = GetPlayerTeam(currentPlayer)
-		-- local players = GetPlayers()
-        
+		local myPlayerTeam = GetPlayerTeam(myPlayer)
 
 		for _, player in ipairs(GetActivePlayers()) do
 
-			if player ~= currentPlayer then
+			if player ~= myPlayer then
+                RemoveBlip(Blips[player])
 
 				local playerPed = GetPlayerPed(player)
 				local playerName = GetPlayerName(player)
 				local playerServerId = GetPlayerServerId(player)
-				local currentPlayerServerId = GetPlayerServerId(currentPlayer)
+				local myPlayerServerId = GetPlayerServerId(myPlayer)
 				local Color
                 local TagColor
                 local Team = GetPlayerTeam(player)
                 
 
-                if getInfos then
-                    TriggerServerEvent('Debug', '(' .. currentPlayer .. ')-'..'[' .. player .. ']' .. playerName .. ' - Team:'.. Team)	
-
-                end
-
-                
-				--print(GetPlayerTeam(1))
                 if  Team == 1 then		-- CROOK
 					Color = CrookColor
 					TagColor = CrookTagColor
@@ -71,204 +59,52 @@ Citizen.CreateThread(function()
                     Color = 52
 				end
 				
-				if currentPlayerTeam == 1 then     -- If CurrentPlayer == CROOK
+				if myPlayerTeam == 1 then     -- If CurrentPlayer == CROOK
 					
 					if Team == 1 then      -- If Player == CROOK
-						RemoveBlip(blips[player])
-	
-						local new_blip = AddBlipForEntity(playerPed)
-	
-						-- Add player name to blip
-						SetBlipNameToPlayerName(new_blip, player)
-
-						if tonumber(playerServerId) == tonumber(ServerBossID) then
-							SetBlipSprite(new_blip, BossSprite)
-                            BeginTextCommandSetBlipName("STRING")
-                            AddTextComponentString("BOSS")
-                            EndTextCommandSetBlipName(new_blip)
-						else
-                            SetBlipSprite(new_blip, 1)
-                            BeginTextCommandSetBlipName("STRING")
-                            AddTextComponentString("Crook")
-                            EndTextCommandSetBlipName(new_blip)
-						end
-	
-						-- Make blip white
-						SetBlipColour(new_blip, Color)
-	
-						-- Enable text on blip
-						SetBlipCategory(new_blip, 2)
-	
-						-- Set the blip to shrink when not on the minimap
-						Citizen.InvokeNative(0x2B6D467DAB714E8D, new_blip, true)
-	
-						-- Shrink player blips slightly
-                        SetBlipScale(new_blip, 0.9)
-	
-                        -- Add nametags above head
-                        
-
-						GamerTag = Citizen.InvokeNative(0xBFEFE3321A3F5015, playerPed, playerName, false, false, '', false)
-						SetMpGamerTagColour(GamerTag, 0, TagColor)
-						SetMpGamerTagVisibility(GamerTag, 0, HasEntityClearLosToEntity(PlayerPedId(), playerPed, 17))
-
-	
-						-- Record blip so we don't keep recreating it
-						blips[player] = new_blip
+						CreatePlayerBlip(player, playerServerId, playerPed,playerName, ServerBossID, BossSprite, Color)
 
 					elseif Team == 2 then  -- If Player == COP
-
-						RemoveBlip(blips[player])
 	
-						-- Add nametags above head
-						-- Citizen.InvokeNative(0xBFEFE3321A3F5015, playerPed, playerName, false, false, '', false)
-						
-						if tonumber(currentPlayerServerId) == tonumber(ServerBossID) then
+						if tonumber(myPlayerServerId) == tonumber(ServerBossID) then
 							local xcp, ycp, zcp = table.unpack(GetEntityCoords(GetPlayerPed(-1), false))
 							local xp, yp, zp = table.unpack(GetEntityCoords(GetPlayerPed(player), false))
 							if DistanceBetweenCoords2D(xcp, ycp, xp, yp) < BossViewRange then
-								RemoveBlip(blips[player])
-
-								local new_blip = AddBlipForEntity(playerPed)
-
-								-- Add player name to blip
-								SetBlipNameToPlayerName(new_blip, player)
-
-
-								-- Make blip white
-								SetBlipColour(new_blip, Color)
-
-								-- Enable text on blip
-								SetBlipCategory(new_blip, 2)
-
-								-- Set the blip to shrink when not on the minimap
-								Citizen.InvokeNative(0x2B6D467DAB714E8D, new_blip, true)
-
-								-- Shrink player blips slightly
-								SetBlipScale(new_blip, 0.9)
-
-                                -- Add nametags above head
-                                BeginTextCommandSetBlipName("STRING")
-                                AddTextComponentString("Cop")
-                                EndTextCommandSetBlipName(new_blip)
-
-								GamerTag = Citizen.InvokeNative(0xBFEFE3321A3F5015, playerPed, playerName, false, false, '', false)
-								SetMpGamerTagColour(GamerTag, 0, TagColor)
-								SetMpGamerTagVisibility(GamerTag, 0, HasEntityClearLosToEntity(PlayerPedId(), playerPed, 17))
-
-
-								-- Record blip so we don't keep recreating it
-								blips[player] = new_blip
+                                CreatePlayerBlip(player, playerServerId, playerPed,playerName, ServerBossID, BossSprite, Color)
                             end
-                            
                         else
-                            GamerTag = Citizen.InvokeNative(0xBFEFE3321A3F5015, playerPed, playerName, false, false, '', false)
+                            GamerTag = CreateFakeMpGamerTag(playerPed, playerName, false, false, '', false)
 							SetMpGamerTagColour(GamerTag, 0, TagColor)
 							SetMpGamerTagVisibility(GamerTag, 0, HasEntityClearLosToEntity(PlayerPedId(), playerPed, 17))
                         end
-                        
-
 					end
 
-				elseif currentPlayerTeam == 2 then -- If CurrentPlayer == COP
-
-					--print('currentTeam: ' .. currentPlayerTeam)
-					RemoveBlip(blips[player])
-
-					local new_blip = AddBlipForEntity(playerPed)
-
-					-- Add player name to blip
-					SetBlipNameToPlayerName(new_blip, player)
-
-					if tonumber(playerServerId) == tonumber(ServerBossID) then
-						SetBlipSprite(new_blip, BossSprite)
-                        BeginTextCommandSetBlipName("STRING")
-                        AddTextComponentString("BOSS")
-                        EndTextCommandSetBlipName(new_blip)
-					else
-                        SetBlipSprite(new_blip, 1)
-                        BeginTextCommandSetBlipName("STRING")
-                        AddTextComponentString("Crook")
-                        EndTextCommandSetBlipName(new_blip)
-					end
-
-					-- Make blip white
-					SetBlipColour(new_blip, Color)
-
-					-- Enable text on blip
-					SetBlipCategory(new_blip, 2)
-
-					-- Set the blip to shrink when not on the minimap
-					Citizen.InvokeNative(0x2B6D467DAB714E8D, new_blip, true)
-
-					-- Shrink player blips slightly
-					SetBlipScale(new_blip, 0.9)
-
-                    -- Add nametags above head
-                    BeginTextCommandSetBlipName("STRING")
-                    AddTextComponentString("Cop")
-                    EndTextCommandSetBlipName(new_blip)
-
-					GamerTag = Citizen.InvokeNative(0xBFEFE3321A3F5015, playerPed, playerName, false, false, '', false)
-					SetMpGamerTagColour(GamerTag, 0, TagColor)
-                    SetMpGamerTagVisibility(GamerTag, 0, HasEntityClearLosToEntity(PlayerPedId(), playerPed, 17))
-
-
-					-- Record blip so we don't keep recreating it
-					blips[player] = new_blip
-
-				elseif currentPlayerTeam == 0 then -- If CurrentPlayer == LOOBY
-					RemoveBlip(blips[player])
-
-					local new_blip = AddBlipForEntity(playerPed)
-
-					-- Add player name to blip
-					SetBlipNameToPlayerName(new_blip, player)
-
-					-- Make blip white
-					SetBlipColour(new_blip, Color)
-
-					-- Enable text on blip
-					SetBlipCategory(new_blip, 2)
-
-					-- Set the blip to shrink when not on the minimap
-					Citizen.InvokeNative(0x2B6D467DAB714E8D, new_blip, true)
-
-					-- Shrink player blips slightly
-					SetBlipScale(new_blip, 0.9)
-
-                    -- Add nametags above head
-                    BeginTextCommandSetBlipName("STRING")
-                    AddTextComponentString("Lobby")
-                    EndTextCommandSetBlipName(new_blip)
-					
-                    
-					GamerTag = Citizen.InvokeNative(0xBFEFE3321A3F5015, playerPed, playerName, false, false, '', false)
-					SetMpGamerTagColour(GamerTag, 0, TagColor)
-                    SetMpGamerTagVisibility(GamerTag, 0, HasEntityClearLosToEntity(PlayerPedId(), playerPed, 17))
-
-                    
-					-- Record blip so we don't keep recreating it
-					blips[player] = new_blip
-
+				elseif myPlayerTeam == 2 then -- If CurrentPlayer == COP
+                    CreatePlayerBlip(player, playerServerId, playerPed,playerName, ServerBossID, BossSprite, Color)
+				elseif myPlayerTeam == 0 then -- If CurrentPlayer == LOOBY
+					CreatePlayerBlip(player, playerServerId, playerPed,playerName, ServerBossID, BossSprite, Color)
 				end
 			end
         end
-        
-        getInfos = false
-
 	end
 end)
 
-RegisterNetEvent('CNC:debugBlip')
-AddEventHandler('CNC:debugBlip', function()
-    
-    getInfos = true
+function CreatePlayerBlip(player, playerServerId, playerPed, playerName, serverBossID, bossSprite, color)
 
-    local ID = PlayerId()
-    local name = GetPlayerName(ID)
-    local team = GetPlayerTeam(ID)
-    
-    --print('[' .. ID .. ']' .. name .. ' - Team:'.. team)
-    TriggerServerEvent('Debug', '[' .. ID .. ']' .. name .. ' - Team:'.. team)	
-end)
+	local new_blip = AddBlipForEntity(playerPed)
+
+	if tonumber(playerServerId) == tonumber(serverBossID) then
+		SetBlipSprite(new_blip, bossSprite)
+	else
+		SetBlipSprite(new_blip, 1)
+	end
+	
+	SetBlipNameToPlayerName(new_blip, player)
+	SetBlipColour(new_blip, color)
+	SetBlipCategory(new_blip, 2)
+	SetBlipScale(new_blip, 0.9)
+    SetBlipShrink(new_blip, true)
+	CreateFakeMpGamerTag(playerPed, playerName, false, false, '', false)
+
+	Blips[player] = new_blip
+end

@@ -12,42 +12,22 @@ function CreateGetaway(getaway)
         SetEntityRotation(getawayVehicle, getaway.rot.x, getaway.rot.y, getaway.rot.z, false, true)
         SetVehicleNumberPlateText(getawayVehicle, 'GETAWAY')
         
-        Wait(2000)
-
-        SetEntityDistanceCullingRadius(getawayVehicle, 100000.0)   
-        Net_Getaway = NetworkGetNetworkIdFromEntity(getawayVehicle)
-        ForceCreateGetawayBlip(getawayVehicle)
-
-end
-
-
-function ForceCreateGetawayBlip(getawayVehicle)
-    Citizen.CreateThread(function ()
-        local oldGetawayCoords = {x=0.0, y=0.0, z=0.0}
-        local currentGetawayCoords = {x=0.0, y=0.0, z=0.0}
-        local dist
-
-        while true do
-            currentGetawayCoords.x, currentGetawayCoords.y, currentGetawayCoords.z = table.unpack(GetEntityCoords(getawayVehicle))
-
-            dist = DistanceBetweenCoords2D(currentGetawayCoords.x, currentGetawayCoords.y, oldGetawayCoords.x, oldGetawayCoords.y )
-
-            if dist > BlipUpdateDistance then
-                oldGetawayCoords.x = currentGetawayCoords.x
-                oldGetawayCoords.y = currentGetawayCoords.y
-                SendGetawyCoordsToClients(currentGetawayCoords)
-            end
-
+        while not DoesEntityExist(getawayVehicle) do
             Citizen.Wait(10)
         end
-    end)
+
+        Wait(2000)
+
+        Net_Getaway = NetworkGetNetworkIdFromEntity(getawayVehicle)
+
+        ForceCreateGetawayBlip(Net_Getaway)
 end
 
 
-function SendGetawyCoordsToClients(Coords)
+function ForceCreateGetawayBlip(Net_Getaway)
     for i,playerInfo in ipairs(PlayerInfos) do
         if playerInfo.team == 'crook' then
-            TriggerClientEvent("CNC:UpdateGetawayBlip", playerInfo.player, Coords)
+            TriggerClientEvent("CNC:CreateGetawayBlip", playerInfo.player, Net_Getaway)
         end
     end
 end
@@ -74,7 +54,7 @@ end)
 RegisterNetEvent('cnc:baseevents:enteredVehicle')
 AddEventHandler('cnc:baseevents:enteredVehicle', function(veh, seat, displayName, netId)
 
-    -- TriggerEvent('Debug', 'CNC:Server:getaway:enteredVehicle')
+
     TriggerClientEvent("cnc:baseevents:playerEnteredGeta", source)
 
     TriggerEvent('Log', 'baseevents:enteredVehicle-veh', veh)
@@ -85,16 +65,11 @@ AddEventHandler('cnc:baseevents:enteredVehicle', function(veh, seat, displayName
         if netId == Net_Getaway then
 
             for i,playerInfo in ipairs(PlayerInfos) do
-                if playerInfo.team == 'crook' and tonumber(playerInfo.player) == tonumber(source) then
-                    TriggerClientEvent('CNC:unfrezzeGetaway', source, veh)
-                elseif playerInfo.team == 'cop' and tonumber(playerInfo.player) == tonumber(source) then
+                if playerInfo.team == 'cop' and tonumber(playerInfo.player) == tonumber(source) then
                     TriggerClientEvent('CNC:showNotification', source, '~r~This is the Getaway, please dont move it!!!')
                 end
             end
-            
-            -- print('netId: ' .. netId)
-            -- print('netId_new: ' .. veh)
-            -- print('net_Getaway: ' .. net_Getaway)
+
             TriggerClientEvent('CNC:id', source, veh)
             if tonumber(source) == tonumber(BossID) then
                 print("Boss entered the GETA")
@@ -110,7 +85,7 @@ end)
 RegisterNetEvent('CNC:GetawayIsNotDriveable')
 AddEventHandler('CNC:GetawayIsNotDriveable', function()
 
-    if IsGetawayDriveable then
+    if IsGetawayDriveable and IsRoundOngoing then
         IsGetawayDriveable = false
         print("Getaway is broken")
         TriggerClientEvent('CNC:showNotification', -1, 'Getaway is broken!')

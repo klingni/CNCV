@@ -195,26 +195,16 @@ function CreateLootThread( crashed )
                     end
                 end
 
-               --DrawLightWithRange(pickupInfo.x, pickupInfo.y, pickupInfo.z + 0.1, 255, 255, 255, 3.0, 50.0)
-
-                
                 local dist = DistanceBetweenCoords2D(posX, posY, pickupInfo.x, pickupInfo.y)
-                --local dist = 150
-
-                --print("SPAWNED DoesPIckupExist: " .. tostring(DoesPickupExist(pickupInfo.pickup)) )
 
                 if dist < 250 and not DoesPickupExist(pickupInfo.pickup) then
-                    --print(" / EXIST: " .. tostring(DoesPickupExist(pickupInfo.pickup)))
---                    print("PickupID: " .. pickupInfo.pickup .. " / EXIST: " .. tostring(DoesPickupExist(pickupInfo.pickup)))
-
                     local pickup = CreatePickupRotate(pickupInfo.pickupName, pickupInfo.x, pickupInfo.y, pickupInfo.z + 1.0, 0.0, 0.0, 0.0, 512, pickupInfo.ammo, 24, 24, true, pickupInfo.pickupName)
                     pickupInfos[i].pickup = pickup
-                    -- print('SPAWN')
 
                 elseif dist > 250 and DoesPickupExist(pickupInfo.pickup) then
                     RemovePickup(pickupInfo.pickup)
                     pickupInfo.pickup = 0
-                    -- print("DESPAWNED")
+
                 end   
              end
         end

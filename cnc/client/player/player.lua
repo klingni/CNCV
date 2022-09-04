@@ -1,4 +1,3 @@
-local isRoundGoingOn
 local spawnRadius = 50
 local ServerBossID_player
 local playerInfos = {}
@@ -21,15 +20,12 @@ end)
 RegisterNetEvent('CNC:StartRound')
 AddEventHandler('CNC:StartRound', function(PlayerInfos)
     TriggerServerEvent('Log', '['.. PlayerId() .. ']' .. GetPlayerName(PlayerId()) .. ' - CNC:StartRound', PlayerInfos)
-
-    isRoundGoingOn = true
     playerInfos = PlayerInfos
     playerInfos = UpdatePlayerPositions(playerInfos)
 end)
 
 RegisterNetEvent('CNC:StopRound')
 AddEventHandler('CNC:StopRound', function()
-	isRoundGoingOn = false
 	TriggerEvent('CNC:setTeam')
 end)
 
@@ -90,7 +86,7 @@ end)
 
 AddEventHandler('playerSpawned', function(spawn)
     TriggerServerEvent('Log', '['.. PlayerId() .. ']' .. GetPlayerName(PlayerId()) .. ' - playerSpawned', spawn)
-    if isRoundGoingOn then
+    if isRoundOngoing then
         --Citizen.Wait(5000)
         --TriggerServerEvent('CNC:Respawn')
 	else

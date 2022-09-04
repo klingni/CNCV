@@ -21,6 +21,7 @@ client_script {
     "client/gui/menu.lua",
     "client/gui/scoreboard/scoreboard.lua",
     "client/gui/help/help.lua",
+    "Settings/config.lua",
 
 }
 

@@ -1,52 +1,8 @@
 local getaway_blip
 local getaway_hint_blips = {}
 local spawned = false
-local isRoundOngoing = false
 local OldGetawayCoord = {x=0, y=0, z=0}
 
-
--- spawn Getaway
--- RegisterNetEvent("CNC:eventCreateGetaway")
--- AddEventHandler("CNC:eventCreateGetaway", function(getaway)
-
---     -- TriggerServerEvent('Debug', 'CNC:Client:getaway:enebtCreateGetaway')
-
---     TriggerServerEvent('Log', '['.. PlayerId() .. ']' .. GetPlayerName(PlayerId()) .. ' - CNC:eventCreateGetaway', getaway)
-    
---     --local hash = GetHashKey(getaway['model'])
---     local hash = getaway['hash']
-
---     RequestModel(hash)
-
---     while not HasModelLoaded(hash) do
---         RequestModel(hash)
---         Citizen.Wait(0)
---     end
-
---     local vehicle = CreateVehicle(hash, getaway.coord.x, getaway.coord.y, getaway.coord.z , 0.0, true, true)
---     -- FreezeEntityPosition(vehicle, true)
---     SetEntityRotation(vehicle, getaway.rot.x, getaway.rot.y, getaway.rot.z, false, true)
-    
-    
---     --All Getaways are godmoded, exept submarine
---     if hash ~= 771711535 then
---         SetEntityCanBeDamaged(vehicle, false)
---     end
-    
---     SetVehicleNumberPlateText(vehicle, 'GETAWAY')
-    
---     local veh_net = VehToNet(vehicle)
-    
---     NetworkRegisterEntityAsNetworked(vehicle)
---     SetNetworkIdSyncToPlayer(veh_net, -1, true)
-    
-    
---     SetNetworkIdExistsOnAllMachines(veh_net, true)
---     SetEntityAsMissionEntity(veh_net, true, true)
---     SetNetworkIdCanMigrate(veh_net, true)
---     TriggerServerEvent("CNC:creatGetaway", veh_net)
-
--- end)
 
 
 RegisterNetEvent("CNC:eventCreateGetawayWaypoint")
@@ -56,7 +12,6 @@ AddEventHandler("CNC:eventCreateGetawayWaypoint", function(getaway)
         Wait(1)
         SetNewWaypoint(getaway.coord.x, getaway.coord.y)
     end
-
 end)
 
 
@@ -78,38 +33,24 @@ end)
 
 
 
-RegisterNetEvent("CNC:StartRound")
-AddEventHandler("CNC:StartRound",function()
-    TriggerServerEvent('Log', '['.. PlayerId() .. ']' .. GetPlayerName(PlayerId()) .. ' - CNC:StartRound')
-    isRoundOngoing = true
-end)
+RegisterNetEvent("CNC:CreateGetawayBlip")
+AddEventHandler("CNC:CreateGetawayBlip",function(getaway)
 
-RegisterNetEvent("CNC:StopRound")
-AddEventHandler("CNC:StopRound",function()
-    TriggerServerEvent('Log', '['.. PlayerId() .. ']' .. GetPlayerName(PlayerId()) .. ' - CNC:StopRound')
-    isRoundOngoing = false
-end)
+    print('CREATE GETAWAY BLIP: ' .. getaway)
 
-
-
-
-
-
-RegisterNetEvent("CNC:UpdateGetawayBlip")
-AddEventHandler("CNC:UpdateGetawayBlip",function(coord)
     RemoveBlip(getaway_blip)
-    
-    getaway_blip = AddBlipForCoord(coord.x, coord.y, coord.z)
+
+
+    getaway_blip = AddBlipForEntity(NetToVeh(tonumber(getaway)))
     SetBlipSprite(getaway_blip, 315)
     SetBlipColour(getaway_blip, 47)
     BeginTextCommandSetBlipName("STRING")
     AddTextComponentString("Getaway")
     EndTextCommandSetBlipName(getaway_blip)
 
+    CheckGetawayIsDriveable(NetToVeh(tonumber(getaway)))
+
 end)
-
-
-
 
 
 RegisterNetEvent("CNC:eventCreateCopHints")
@@ -157,14 +98,6 @@ AddEventHandler("CNC:cleanAll", function()
     print("STOP clean Map-Getaway")
 
 
-end)
-
-
-RegisterNetEvent("CNC:unfrezzeGetaway")
-AddEventHandler("CNC:unfrezzeGetaway", function(veh)
-    print("UNFREZZE GETAWAY")
-    FreezeEntityPosition(veh, false)
-    SetEntityCanBeDamaged(veh, true)
 end)
 
 

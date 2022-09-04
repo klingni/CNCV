@@ -1,0 +1,6 @@
+Server konfiguration:
+
+Sobald onesync läuft funktionieren die Blips nicht mehr, weil diese zu weit weg sein könnten
+dann folgende Konfiguration nutzen:
+    set onesync_distanceCullVehicles false
+    set onesync_distanceCulling false

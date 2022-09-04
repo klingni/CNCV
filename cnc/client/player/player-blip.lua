@@ -1,11 +1,3 @@
-local CopColor = 50
-local CrookColor = 64
-local LobbyColor = 69
-local CopTagColor = 255
-local CrookTagColor = 65
-local LobbyTagColor = 210
-local BossSprite = 119
-local BossViewRange = 200.0
 local ServerBossID
 
 Blips = {}
@@ -47,14 +39,14 @@ Citizen.CreateThread(function()
                 
 
                 if  Team == 1 then		-- CROOK
-					Color = CrookColor
-					TagColor = CrookTagColor
+					Color = Config.CrookColor
+					TagColor = Config.CrookTagColor
                 elseif Team == 2 then	-- COP
-					Color = CopColor
-					TagColor = CopTagColor
+					Color = Config.CopColor
+					TagColor = Config.CopTagColor
                 elseif Team == 0 then	-- LOBBY
-					Color = LobbyColor
-					TagColor = LobbyTagColor
+					Color = Config.LobbyColor
+					TagColor = Config.LobbyTagColor
                 else
                     Color = 52
 				end
@@ -62,15 +54,15 @@ Citizen.CreateThread(function()
 				if myPlayerTeam == 1 then     -- If CurrentPlayer == CROOK
 					
 					if Team == 1 then      -- If Player == CROOK
-						CreatePlayerBlip(player, playerServerId, playerPed,playerName, ServerBossID, BossSprite, Color)
+						CreatePlayerBlip(player, playerServerId, playerPed,playerName, ServerBossID, Config.BossSprite, Color)
 
 					elseif Team == 2 then  -- If Player == COP
 	
 						if tonumber(myPlayerServerId) == tonumber(ServerBossID) then
 							local xcp, ycp, zcp = table.unpack(GetEntityCoords(GetPlayerPed(-1), false))
 							local xp, yp, zp = table.unpack(GetEntityCoords(GetPlayerPed(player), false))
-							if DistanceBetweenCoords2D(xcp, ycp, xp, yp) < BossViewRange then
-                                CreatePlayerBlip(player, playerServerId, playerPed,playerName, ServerBossID, BossSprite, Color)
+							if DistanceBetweenCoords2D(xcp, ycp, xp, yp) < Config.BossViewRange then
+                                CreatePlayerBlip(player, playerServerId, playerPed,playerName, ServerBossID, Config.BossSprite, Color)
                             end
                         else
                             GamerTag = CreateFakeMpGamerTag(playerPed, playerName, false, false, '', false)
@@ -80,9 +72,9 @@ Citizen.CreateThread(function()
 					end
 
 				elseif myPlayerTeam == 2 then -- If CurrentPlayer == COP
-                    CreatePlayerBlip(player, playerServerId, playerPed,playerName, ServerBossID, BossSprite, Color)
+                    CreatePlayerBlip(player, playerServerId, playerPed,playerName, ServerBossID, Config.BossSprite, Color)
 				elseif myPlayerTeam == 0 then -- If CurrentPlayer == LOOBY
-					CreatePlayerBlip(player, playerServerId, playerPed,playerName, ServerBossID, BossSprite, Color)
+					CreatePlayerBlip(player, playerServerId, playerPed,playerName, ServerBossID, Config.BossSprite, Color)
 				end
 			end
         end
